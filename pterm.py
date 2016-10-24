@@ -1,4 +1,4 @@
-#Python Terminal - v1.13.1
+#Python Terminal - v1.14
 
 #LEAVE THIS PART IN FOR CREDITS, AND YOU ARE FREE TO DO WHATEVER UNDER THE LICENSE:
 #originally found on GitHub: github.com/o355/pyterm
@@ -15,7 +15,6 @@ print("Beginning load...")
 print("|===========| |           |")
 import sys
 print("|           |  |         |")
-import pygame
 print("|           |   |       |")
 from time import gmtime
 import os
@@ -23,9 +22,7 @@ print("|           |    |     |  ")
 from time import strftime
 import tkinter
 print("|           |     |   |")
-pygame.init()
 print("|           |      | |")
-pygame.quit()
 print("|           |       |")
 def print_slow(str):
     for letter in str:
@@ -43,11 +40,11 @@ done = False
 print("|                   |")
 startname = "Anonymous"
 print("|                   |")
-version = "1.13.2 LTS"
-ptermsize = "37 KB"
+version = "1.14"
+ptermsize = "35.6 KB"
 lines = "740"
 print("|    P Y T H O N    |")
-builddate = "Jul 1, 2016"
+builddate = "October 23, 2016"
 print("|                   |")
 greeting = "Welcome to PyTerm,"
 print("|                   |")
@@ -106,13 +103,14 @@ while not done:
         print("shutdown - Shuts down the terminal")
         print("madlibs - Mad Libs - 1")
         print("ls - Lists all files in the current directory")
-        print("setup - Sets up Gaming Terminal for you")
+        print("setup - Sets up PyTerm for you")
         print("notes - Launches the notes program")
         print("ascii - ASCII Art")
         print("farmstate - Prints out a poem about State Farm")
         print("poem - Prints out a Python poem")
         print("textadventure - You venture into Shia's forest. It doesn't end well.")
-		print("There are probably some secret commands that I forgot to list here.")
+	print("cputest - Does a CPU test (REQUIRES PYGAME)")
+	print("salesbuster - Bust the sales. (REQUIRES PYGAME)")
         cmd = ""
         continue
     elif cmd == "ascii":
@@ -456,11 +454,6 @@ while not done:
         print_slow("\nGO GO GO GO GO SWITCH")
         print_slow("This poem has been approved by the man himself, Statefarm, or Farmstate.")
         print_slow("Thanks.")
-        continue
-    elif cmd == "ls":
-        print("the ls command will get updated with a real thing.")
-		print("maybe later. Sorry to dissapoint.")
-        cmd = ""
         continue
     elif cmd == "setup":
         print("Launching program - Setup - v2.1")
