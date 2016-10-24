@@ -1,0 +1,40 @@
+==PYTHON TERMINAL/SALES BUSTER - BETA CHANGELOG==
+
+2.0 beta 1 (PyTerm):
+-Start has been redone, looks pretty, and now has a log of everything
+-Made the greeting appear once
+-The username, name, and greeting use files for now, but they can't be changed from inside the terminal
+-Uptime command added
+-Help adds some extra commands
+-Began to add the same log format to starting programs as startup (active in uptime for now)
+-Began to add dependency warnings for programs (active in salesbuster for now)
+-Added a bash-like prompt
+-Removed the ls command (useless)
+-Began to change user inputs to the bash standard (active in salesbuster for now)
+-Added a secret command
+-The notes program now stores notes in /ptfiles
+
+3.0 beta 1 (Sales Buster):
+-Added comments
+-Added a version comment at the top
+
+=== PLANNED ===
+
+2.0 beta 2 (PyTerm):
+-Make the setup program personalization, and have a redirect for setup
+-Put the python poem (inside the poem command) in a text file, unlimited reads!
+-Start deploying the user inputs to the text adventure, and mad libs, and fully in the personalization command
+-Making help more useful
+-Adding the log format for starting programs to every program
+-Adding the dependency warning to cpubench
+-Improving cpubench
+-Making the timer count down per second in the timer program
+-Password protected notes (3 for beta 2, and the password will be stored in plain text, later that'll be 7 and the pwd will be hashed in SHA 512 and salted further on. Takes a lot of work.)
+-MOAR SECRET COMMANDS
+-System info command (dependency free or not, I don't know)
+-Improving the CPU bench app, so you can set how many cycles you want
+-Probably other stuff
+
+3.0 beta 2 (Sales Buster):
+-Making the ball work
+-Anything else I commented for Beta 2
