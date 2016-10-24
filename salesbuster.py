@@ -1,3 +1,5 @@
+#Sales Buster - version 3.0-beta1
+
 #To run this you need PyGame, it won't load without it.
 #PyGame actually is a pain to install, Google instructions for your OS
 #Installing it on Linux is easier than Windows, by the way.
@@ -27,6 +29,7 @@ def thegame():
 
     bubble = pygame.image.load("assets\sb_bubble.jpg").convert_alpha()
     paddle = pygame.image.load("assets\sb_paddle.jpg").convert_alpha()
+    #I will get the ball to work in beta2.
     ball2 = pygame.image.load("gabe-newell.jpg").convert_alpha()
 
     move_left = False
@@ -178,7 +181,7 @@ def thegame():
         draw_player()
         draw_bubbles()
         ball = pygame.draw.circle(screen, (0, 0, 0), (x_position, y_position), 6, 0)
-
+#During the game, I plan to add more stuff to the HUD, beta 2 or 3.
         if alive:
             draw_text('Money saved: $%s' % (score), font, screen, 5, 5)
             draw_text('Sales left: %s' % (lives), font, screen, 510, 5)
