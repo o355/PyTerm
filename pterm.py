@@ -1,4 +1,5 @@
-#Python Terminal - v2.0
+#Python Terminal - v2.0-beta1
+#THIS IS A BETA BUILD! BE WARNED.
 
 #LEAVE THIS PART IN FOR CREDITS, AND YOU ARE FREE TO DO WHATEVER UNDER THE LICENSE:
 #originally found on GitHub: github.com/o355/pyterm
@@ -6,8 +7,8 @@
 #(c) 2016 under the MIT license.
 
 #importing time - necessary for counting load time
-print("Python Terminal - Version 2.0")
-print("Built on October 21, 2016")
+print("Python Terminal - Version 2.0 (beta 1)")
+print("Built on October 23, 2016")
 print("Starting up...")
 print("Beginning pre-load...")
 print("Pre-Load | Importing time...")
@@ -54,7 +55,7 @@ print(round(time.time() - entireload,4), "| Defined functions: print_slow, print
 print(round(time.time() - entireload,4), "| Defining 9 variables...")
 done = False
 startname = "Anonymous"
-version = "2.0-dev"
+version = "2.0-beta1"
 ptermsize = "SKIPPED"
 lines = "SKIPPED"
 print(round(time.time() - entireload,4), "| Skipped loading variables: ptermsize, lines (dev version)")
@@ -86,8 +87,8 @@ note5 = ""
 note6 = ""
 note7 = ""
 cmd = ""
-promptver = "@pyterm-2.0dev:~$ "
-promptver2 = "pyterm-2.0dev:~$ "
+promptver = "@pyterm-2.0-beta1:~$ "
+promptver2 = "pyterm-2.0-beta1:~$ "
 print(round(time.time() - entireload,4), "| Defined 8 of 16 varibles...")
 place = ""
 drink = ""
@@ -102,11 +103,12 @@ print(round(time.time() - entireload,4), "| Startup finished! Welcome to PyTerm!
 print("")
 print(greeting + " " + username + "!")
 print("You are running PyTerm version " + version)
+print("This is a beta build, and will be unfinished and unstable.")
 print("The current date is", strftime("%A, %B %d, %Y. The time is %I:%M %p"))
 print("Enter a command in the prompt below. Type help for help.")
 #entire cmd loop
 while not done:
-    #start of the cmd loo
+    #start of the cmd loop
     cmd = input(username + promptver).lower()
     if cmd == "help":
         print("Launching program - Help - v1.5")
@@ -193,7 +195,7 @@ while not done:
         print("Closing this program now!")
         continue
     elif cmd == "salesbuster":
-        print(round(time.time() - entireload,4), "| Launching program - Sales Buster (version 3.0)")
+        print(round(time.time() - entireload,4), "| Launching program - Sales Buster (version 3.0-beta1)")
         print("")
         sb_depwarning = ""
         sb_depwarning_loop = False
