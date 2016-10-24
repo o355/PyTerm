@@ -1,5 +1,6 @@
-# Python Terminal - Python
-My final project for Python, Python Terminal (or PyTerm) is a terminal emulator, with some actually cool functions.
-Make sure when you run this, you have every file in this directory, as it's necessary for running this.
+# PyTerm (Python Terminal)
+At the basic level, PyTerm is a "terminal emulator" for Python. But not really. It adds some cool, extra stuff.
 
-When running the notes command, and when you edit notes, it'll create note1fd through note7fd as text files. It's harmless, it's where the notes are stored in the end.
+Right now, the much needed Version 2.0 is coming, under rapid development. It contains a huge, huge, HUGE amount of UI improvements, fixes, updates, and unification across the board. 2.0 will also utilize file storage, and a new file structure, and a bunch of new improvements to programs.
+
+Version 2.0 is scheduled to launch in December 2016, considering time constraints. The current version will soon be updated to 1.14 to help fix some bugs.
