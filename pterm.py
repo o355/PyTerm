@@ -1,4 +1,4 @@
-#Python Terminal - v1.14
+#Python Terminal - v2.0
 
 #LEAVE THIS PART IN FOR CREDITS, AND YOU ARE FREE TO DO WHATEVER UNDER THE LICENSE:
 #originally found on GitHub: github.com/o355/pyterm
@@ -6,94 +6,108 @@
 #(c) 2016 under the MIT license.
 
 #importing time - necessary for counting load time
+print("Python Terminal - Version 2.0")
+print("Built on October 21, 2016")
+print("Starting up...")
+print("Beginning pre-load...")
+print("Pre-Load | Importing time...")
 import time
+print("Pre-Load | Imported time!")
+print("Pre-Load | Starting clock for load time/uptime...")
 #begins load timer for the entire terminal
 entireload = time.time()
+print(round(time.time() - entireload,4), "| Pre-load complete, clock for load time/uptime loaded!")
+print(round(time.time() - entireload,4), "| Now converting variable entireload from a float into an int through variable entireload_int...")
+entireload_int = int(time.time() - entireload)
+print(round(time.time() - entireload,4), "| Operation completed. Output from type(entireload_int):", type(entireload_int))
 #Entire load sequence
-print("Starting up...")
-print("Beginning load...")
-print("|===========| |           |")
+
+print(round(time.time() - entireload,4), "| Importing sys...")
 import sys
-print("|           |  |         |")
-print("|           |   |       |")
+print(round(time.time() - entireload,4), "| Imported sys!")
+print(round(time.time() - entireload,4), "| Importing gmtime from time...")
 from time import gmtime
+print(round(time.time() - entireload,4), "| Imported gmtime from time!")
+print(round(time.time() - entireload,4), "| Importing os...")
 import os
-print("|           |    |     |  ")
+print(round(time.time() - entireload,4), "| Imported os!")
+print(round(time.time() - entireload,4), "| Importing strftime from time...")
 from time import strftime
+print(round(time.time() - entireload,4), "| Imported strftime from time!")
+print(round(time.time() - entireload,4), "| Importing tkinter...")
 import tkinter
-print("|           |     |   |")
-print("|           |      | |")
-print("|           |       |")
+print(round(time.time() - entireload,4), "| Defining variable username...")
+username = "user"
+print(round(time.time() - entireload,4), "| Defined variable username to: user!")
+print(round(time.time() - entireload,4), "| Defining functions: print_slow, print_fast...")
 def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
         time.sleep(0.07)
-print("|============       |")
 def print_fast(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
         time.sleep(0.035)
-print("|                   |")
+print(round(time.time() - entireload,4), "| Defined functions: print_slow, print_fast!")
+print(round(time.time() - entireload,4), "| Defining 9 variables...")
 done = False
-print("|                   |")
 startname = "Anonymous"
-print("|                   |")
-version = "1.14"
-ptermsize = "35.6 KB"
-lines = "740"
-print("|    P Y T H O N    |")
-builddate = "October 23, 2016"
-print("|                   |")
-greeting = "Welcome to PyTerm,"
-print("|                   |")
+version = "2.0-dev"
+ptermsize = "SKIPPED"
+lines = "SKIPPED"
+print(round(time.time() - entireload,4), "| Skipped loading variables: ptermsize, lines (dev version)")
+builddate = "Oct 21, 2016"
+print(round(time.time() - entireload,4), "| Skipped loading variables: builddate (dev version)")
+greeting2 = "Welcome to PyTerm,"
 note1 = ""
-print("|                   |")
 note2 = ""
+print(round(time.time() - entireload,4), "| Defined 6 variables, skipped 3 (dev version).")
+print(round(time.time() - entireload,4), "| Defining 3 functions, 3 variables, and reading/closing 3 files...")
 
-print("=============================")
+greet = open('ptfiles\\greeting.txt')
+greeting = greet.read()
+greet.close()
+
+usernme = open('ptfiles\\username.txt')
+username = usernme.read()
+usernme.close()
+
+nme = open('ptfiles\\name.txt')
+name = nme.read()
+nme.close()
+
+print(round(time.time() - entireload,4), "| Defined 2 functions, 2 variables, and read/closed 2 files!")
+print(round(time.time() - entireload,4), "| Defining 16 variables...")
 note3 = ""
-print("|    \                      |")
 note4 = ""
-print("|     \                     |")
 note5 = ""
 note6 = ""
 note7 = ""
-print("|      \                    |")
 cmd = ""
-print("|       \                   |")
-name = ""
-print("|        \                  |")
+promptver = "@pyterm-2.0dev:~$ "
+promptver2 = "pyterm-2.0dev:~$ "
+print(round(time.time() - entireload,4), "| Defined 8 of 16 varibles...")
 place = ""
-print("|         |                 |")
 drink = ""
-print("|        /                  |")
 feeling = ""
-print("|       /                   |")
 num1 = ""
-print("|      /                    |")
 instructor = ""
-print("|     /    T E R M I N A L  |")
 action = ""
-print("|    /     ---------------  |")
 tell = ""
-print("   " + version + " - PyTerm")
 st = True
-print("=============================")
-print("ASCII Art for - PyTerm")
-print("Looks amazing, doesn't it?")
-print("It took", time.time() - entireload, "seconds to load PyTerm version " + version)
-print("Load finished! Welcome to PyTerm!")
-
+print(round(time.time() - entireload,4), "| Defined 16 variables!")
+print(round(time.time() - entireload,4), "| Startup finished! Welcome to PyTerm!")
+print("")
+print(greeting + " " + username + "!")
+print("You are running PyTerm version " + version)
+print("The current date is", strftime("%A, %B %d, %Y. The time is %I:%M %p"))
+print("Enter a command in the prompt below. Type help for help.")
 #entire cmd loop
 while not done:
-    #start of the cmd loop
-    print("")
-    print(greeting + " " + startname)
-    print("You are running PyTerm version " + version)
-    print("The current time is", strftime("%A, %B %d, %Y %I:%M %p"))
-    cmd = input("Enter a command. Type help for help.")
+    #start of the cmd loo
+    cmd = input(username + promptver).lower()
     if cmd == "help":
         print("Launching program - Help - v1.5")
         print("")
@@ -101,16 +115,25 @@ while not done:
         print("help - Lists this command")
         print("about - Lists information about this Python Terminal")
         print("shutdown - Shuts down the terminal")
-        print("madlibs - Mad Libs - 1")
-        print("ls - Lists all files in the current directory")
-        print("setup - Sets up PyTerm for you")
+        print("madlibs - Mad Libs")
+        print("setup - Sets up Python Terminal for you")
         print("notes - Launches the notes program")
         print("ascii - ASCII Art")
         print("farmstate - Prints out a poem about State Farm")
         print("poem - Prints out a Python poem")
         print("textadventure - You venture into Shia's forest. It doesn't end well.")
-	print("cputest - Does a CPU test (REQUIRES PYGAME)")
-	print("salesbuster - Bust the sales. (REQUIRES PYGAME)")
+        print("salesbuster - Launches you into a great game called Sales Buster.")
+        print("uptime - Best way to check your uptime of PyTerm.")
+        cmd = ""
+        continue
+    elif cmd == "uptime":
+        print(round(time.time() - entireload,4), "| Launching program - Uptime (version 1.0)")
+        print("")
+        entireload_int = int(time.time() - entireload)
+        m, s = divmod(entireload_int, 60)
+        h, m = divmod(m, 60)
+        d, h = divmod(h, 24)
+        print(strftime("%H:%M:%S") + " up %d days, %02d:%02d:%02d" % (d, h, m, s))
         cmd = ""
         continue
     elif cmd == "ascii":
@@ -170,11 +193,30 @@ while not done:
         print("Closing this program now!")
         continue
     elif cmd == "salesbuster":
-        print("Launching program - Salesbuster - v2.0.1")
+        print(round(time.time() - entireload,4), "| Launching program - Sales Buster (version 3.0)")
         print("")
-        print("Sales Buster only works once per startup. If you want to play it again, restart PyTerm.")
-        print("Sales Buster launches in a separate window. View Sales Buster in that separate window!")
-        import salesbuster
+        sb_depwarning = ""
+        sb_depwarning_loop = False
+        print("DEPENDENCIES WARNING:")
+        print("Sales Buster needs these dependencies to work properly:")
+        print("PyGame")
+        print("Please ensure you have these dependencies installed to start the game!")
+        print("Would you like to start the game? Yes or No.")
+        while not sb_depwarning_loop:
+            sb_depwarning = input("sb_depwarning-userinput@salesbuster-prgm-" + promptver2).lower()
+            if sb_depwarning == "yes":
+                print("Sales Buster only works once per startup. If you want to play it again, restart PyTerm.")
+                print("Sales Buster launches in a separate window. View Sales Buster in that separate window!")
+                sb_depwarning = ""
+                import salesbuster
+                break
+            elif sb_depwarning == "no":
+                print("Exiting out of Sales Buster.")
+                sb_depwarning = ""
+                break
+            else:
+                print("Invalid input! Valid inputs are: yes, no.")
+                continue
         continue
     elif cmd == "notes":
         print("Launching program - Notes - v4.0")
@@ -182,7 +224,23 @@ while not done:
         print("Notes has been redone now using a filesystem system. It's cool.")
         print("Welcome to Notes!")
         ndone = False
-
+    elif cmd == "coolthingz":
+        print(round(time.time() - entireload,4), "| Launching program - Coolthingz (version 1.3.3.7)")
+        print("")
+        print("Fun fact: I made the entire base for PyTerm (basically the initial games and commands, and the style for how extra commands/games would be added) in around a day, 4-5 hours. The instructor was VERY impressed.")
+        print("Fun fact: I think my instructor got pissed at me for going ham on my project")
+        print("Fun fact: Python has been the only language I've gone after, and for one reason: It's simple. REALLY simple. $750 well paid.")
+        print("Fun fact: I took a Unity and Java class later. Java is complex, and I don't know if I forgot Unity")
+        print("Fun fact: Out of the 3 weeks that I scheduled for tech camp, I thought Python would be the most boring, I didn't look forward to it. Well look where it got me...")
+        print("Fun fact: On the last day of camp (family presentations day), a Tornado Warning was issued during family presentations, and the power went out at the college were it was at.")
+        print("The warning was issued at 3:40pm and we had to evacuate to a room 20 feet away that didn't have windows. On the way out back home trees were down and there was some local flooding")
+        print("Fun fact: During that tornado warning, my good friend was going to his car in the worst of it, and his umbrella flew away. He said visibility was about 10 feet.")
+        print("Fun fact: PyTerm was made (and still is made) with only a basic knowledge of how Python works, and Stack Overflow. I kid you not.")
+        print("Fun fact: Originally, PyTerm was going to be named Gaming Terminal, in which you would launch games from the terminal. PyTerm has 3 games, but obviously got many other functions.")
+        print("I ended up wanting to spruce up the terminal by adding some Linux-like commands, since I had a decent basic knowledge of Linux then (after my MC server switched to a VPS earlier in late April).")
+        print("FYI: I don't have a Minecraft server anymore. I ask you NOT to spam my GitHub inbox with the question: What's the IP to ur MC server!!!!1???!!!")
+        cmd = ""
+        continue
         while not ndone:
             print("Would you like to open, edit, clear, or exit?")
             ninput = input("Enter an option.")
@@ -454,6 +512,10 @@ while not done:
         print_slow("\nGO GO GO GO GO SWITCH")
         print_slow("This poem has been approved by the man himself, Statefarm, or Farmstate.")
         print_slow("Thanks.")
+        continue
+    elif cmd == "ls":
+        print("later in time")
+        cmd = ""
         continue
     elif cmd == "setup":
         print("Launching program - Setup - v2.1")
