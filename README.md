@@ -1,8 +1,6 @@
-# PyTerm (Python Terminal)
-At the basic level, PyTerm is a "terminal emulator" for Python. But not really. It adds some cool, extra stuff.
+# PyTerm (Python Terminal) - Beta Branch
+Want a sneak peak at Version 2.0? Here's your chance.
 
-Right now, the much needed Version 2.0 is coming, under rapid development. It contains a huge, huge, HUGE amount of UI improvements, fixes, updates, and unification across the board. 2.0 will also utilize file storage, and a new file structure, and a bunch of new improvements to programs.
+Many betas are coming, and as milestones are met, I'll push more betas until the software is done. Full disclosure, things may be out of whack, or just straight up buggy, and unfinished.
 
-Version 2.0 is scheduled to launch in December 2016, considering time constraints. The current version will soon be updated to 1.14 to help fix some bugs.
-
-Public betas for Version 2.0 will come out in the future, albeit at unfinished states.
+The betas are supposed to give you a feel for what 2.0 will feel and look like, and not be a finished product. Proceed at your own risk.
