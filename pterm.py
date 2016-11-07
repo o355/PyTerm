@@ -345,7 +345,7 @@ while not done:
         cmd = ""
         continue
     elif cmd == "notes":
-        print(round(time.time() - entireload,4)), "| Launching program - Notes (version " + notes_ver + ")")
+        print(round(time.time() - entireload,4), "| Launching program - Notes (version " + notes_ver + ")")
         print("")
         print("Notes has been redone now using a filesystem system. It's cool.")
         print("Welcome to Notes!")
