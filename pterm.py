@@ -138,7 +138,7 @@ while not done:
         print(round(time.time() - entireload,4), "| Launching program: Restart (version " + restart_ver + ")")
         print("")
         print("Restarting PyTerm...")
-        exec(open(".\\pterm.py").read())
+        exec(open('ipterm.py').read())
     elif cmd == "ping":
         print(round(time.time() - entireload,4), "| Launching program: Ping (version 0ms)")
         from random import randint
