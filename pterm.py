@@ -354,10 +354,10 @@ while not done:
             print("Would you like to open, edit, clear, or exit?")
             notes_start = input("notes_start-userinput@notes-prgm-" + promptver2)
             if notes_start == "open":
-                print("Which note would you like to open? Enter a number between 1 and 10. Enter cancel to quit.")
                 notes_open = False
                 while not notes_open:
-                    notes_open_input = input("notes_open_input-userinput@notes-prgm-" + promptver2)
+                    print("Which note would you like to open? Enter a number between 1 and 10 (for note 1, note 2, etc.). Enter cancel to cancel.")
+                    notes_open_input = input("notes_open_input-userinput@notes-prgm-" + promptver2).lower()
                     if notes_open_input == "1":
                         notes_n1 = open('assets\\notes\\note1.txt')
                         print("Note 1 output:")
@@ -424,67 +424,99 @@ while not done:
                     else:
                         print("Not a valid option.")
                         continue
-            elif ninput == "edit":
-                print("Which note would you like to edit? note1, note2, note3, note4, note5, note6, or note7? Or cancel?")
-                print("Note: When you edit a note, it just saves a new line to the text file.")
-                print("Note: Now, Notes actually WRITES to a real text file! So, all your lovely notes are saved.")
-                ninputedit = False
-
-                while not ninputedit:
-                    ninputedit2 = input("Which note would you like to edit?")
-                    if ninputedit2 == "note1":
-                        n1fn = "ptfiles\note1fn.txt"
-                        n1write = input("Edit Note 1")
-                        with open(n1fn, 'a') as out:
-                            out.write(n1write + '\n')
+            elif notes_start == "edit":
+                notes_edit = False
+                while not notes_edit:
+                    # This program has to break unification, for obvious reasons. A warning is provided, don't hate. Now you will hate since I put this comment here.
+                    print("Which note would you like to edit? Enter a number between 1 and 10 (for note 1, note 2, etc.). Enter cancel to cancel.")
+                    notes_edit_input = input("notes_edit_input-userinput@notes-prgm-" + promptver2).lower()
+                    if notes_edit_input == "1":
+                        notes_n1fn = "assets\\notes\\note1.txt"
+                        print("Edit Note 1 in the empty prompt below.")
+                        notes_n1write = input("")
+                        with open(notes_n1fn, 'a') as out:
+                            out.write(notes_n1write + '\n')
                             out.close()
                             break
                         break
-                    elif ninputedit2 == "note2":
-                        n2fn = "ptfiles\note2fn.txt"
-                        n2write = input("Edit Note 2")
-                        with open(n2fn, 'a') as out:
-                            out.write(n2write + '\n')
+                    elif notes_edit_input == "2":
+                        notes_n2fn = "assets\\notes\\note2.txt"
+                        print("Edit Note 2 in the empty prompt below.")
+                        notes_n2write = input("")
+                        with open(notes_n2fn, 'a') as out:
+                            out.write(notes_n2write + '\n')
                             out.close()
                             break
                         break
-                    elif ninputedit2 == "note3":
-                        n3fn = "ptfiles\note3fn.txt"
-                        n3write = input("Edit Note 3")
-                        with open(n3fn, 'a') as out:
-                            out.write(n3write + '\n')
+                    elif notes_edit_input == "3":
+                        notes_n3fn = "assets\\notes\\note3.txt"
+                        print("Edit Note 3 in the empty prompt below.")
+                        notes_n3write = input("")
+                        with open(notes_n3fn, 'a') as out:
+                            out.write(notes_n3write + '\n')
                             out.close()
                             break
                         break
-                    elif ninputedit2 == "note4":
-                        n4fn = "ptfiles\note4fn.txt"
-                        n4write = input("Edit Note 4")
-                        with open(n4fn, 'a') as out:
-                            out.write(n4write + '\n')
+                    elif notes_edit_input == "4":
+                        notes_n4fn = "assets\\notes\\note4.txt"
+                        print("Edit Note 4 in the empty prompt below.")
+                        notes_n4write = input("")
+                        with open(notes_n4fn, 'a') as out:
+                            out.write(notes_n4write + '\n')
                             out.close()
                             break
                         break
-                    elif ninputedit2 == "note5":
-                        n5fn = "ptfiles\note5fn.txt"
-                        n5write = input("Edit Note 5")
-                        with open(n5fn, 'a') as out:
-                            out.write(n5write + '\n')
+                    elif notes_edit_input == "5":
+                        notes_n5fn = "assets\\notes\\note5.txt"
+                        print("Edit Note 5 in the empty prompt below.")
+                        notes_n5write = input("")
+                        with open(notes_n5fn, 'a') as out:
+                            out.write(notes_n5write + '\n')
                             out.close()
                             break
                         break
-                    elif ninputedit2 == "note6":
-                        n5fn = "ptfiles\note6fn.txt"
-                        n5write = input("Edit Note 6")
-                        with open(n6fn, 'a') as out:
-                            out.write(n6write + '\n')
+                    elif notes_edit_input == "6":
+                        notes_n6fn = "assets\\notes\\note6.txt"
+                        print("Edit Note 6 in the empty prompt below.")
+                        notes_n6write = input("")
+                        with open(notes_n6fn, 'a') as out:
+                            out.write(notes_n6write + '\n')
                             out.close()
                             break
                         break
-                    elif ninputedit2 == "note7":
-                        n7fn = "ptfiles\note7fn.txt"
-                        n7write = input("Edit Note 7")
-                        with open(n5fn, 'a') as out:
-                            out.write(n7write + '\n')
+                    elif notes_edit_input == "7":
+                        notes_n7fn = "assets\\notes\\note7.txt"
+                        print("Edit Note 7 in the empty prompt below.")
+                        notes_n7write = input("")
+                        with open(notes_n7fn, 'a') as out:
+                            out.write(notes_n7write + '\n')
+                            out.close()
+                            break
+                        break
+                    elif notes_edit_input == "8":
+                        notes_n8fn = "assets\\notes\\note8.txt"
+                        print("Edit Note 8 in the empty prompt below.")
+                        notes_n8write = input("")
+                        with open(notes_n8fn, 'a') as out:
+                            out.write(notes_n8write + '\n')
+                            out.close()
+                            break
+                        break
+                    elif notes_edit_input == "9":
+                        notes_n9fn = "assets\\notes\\note9.txt"
+                        print("Edit Note 9 in the empty prompt below.")
+                        notes_n9write = input("")
+                        with open(notes_n9fn, 'a') as out:
+                            out.write(notes_n9write + '\n')
+                            out.close()
+                            break
+                        break
+                    elif notes_edit_input == "10":
+                        notes_n10fn = "assets\\notes\\note10.txt"
+                        print("Edit Note 10 in the empty prompt below.")
+                        notes_n10write = input("")
+                        with open(notes_n10fn, 'a') as out:
+                            out.write(notes_n10write + '\n')
                             out.close()
                             break
                         break
