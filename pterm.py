@@ -161,6 +161,8 @@ while not done:
         print(round(time.time() - entireload,4), "| Launching program: Restart (version " + restart_ver + ")")
         print("")
         print("Restarting PyTerm...")
+        #This line varies if it's a indev build/good build. Indevs will always be ipterm.py, real ones are always pterm.py.
+        #It's called: Not uploading a lot of python built-in stuff to GitHub!
         exec(open('ipterm.py').read())
     elif cmd == "ping":
         ping_ver = "0ms"
