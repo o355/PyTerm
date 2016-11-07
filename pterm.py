@@ -111,14 +111,14 @@ while not done:
     #start of the cmd loop
     cmd = input(username + promptver).lower()
     if cmd == "help":
-        print("Launching program - Help - v1.5")
+        print(round(time.time() - entireload,4), "| Launching program: Help (version 2.0)")
         print("")
         print("PyTerm Commands:")
-        print("help - Lists this command")
-        print("about - Lists information about this Python Terminal")
-        print("shutdown - Shuts down the terminal")
-        print("madlibs - Mad Libs")
-        print("setup - Sets up Python Terminal for you")
+        print("help - Lists this command.")
+        print("about - Lists information about this Python Terminal.")
+        print("shutdown - Shuts down the terminal.")
+        print("madlibs - A little fun mad libs.")
+        print("personalization - Sets up Python Terminal for you")
         print("notes - Launches the notes program")
         print("ascii - ASCII Art")
         print("farmstate - Prints out a poem about State Farm")
@@ -128,8 +128,21 @@ while not done:
         print("uptime - Best way to check your uptime of PyTerm.")
         cmd = ""
         continue
+    elif cmd == "alwayssave":
+        print(round(time.time() - entireload,4), "| Launching program: Always Save (version NUL)")
+        print("")
+        print("That's what happened to me.")
+        print("I was working on PyTerm, in IDLE for Python.")
+        print("Forced off my computer, thanks to Windows Updates.")
+        print("When I logged back in, PyTerm was about 50,000 NULs.")
+        print("So, now, everything gets saved to GitHub.")
+        print("I ask you to always save. In multiple locations.")
+        print("Please do.")
+        print("A PSA from o355.")
+        cmd = ""
+        continue
     elif cmd == "uptime":
-        print(round(time.time() - entireload,4), "| Launching program - Uptime (version 1.0)")
+        print(round(time.time() - entireload,4), "| Launching program: Uptime (version 1.0)")
         print("")
         entireload_int = int(time.time() - entireload)
         m, s = divmod(entireload_int, 60)
@@ -139,9 +152,9 @@ while not done:
         cmd = ""
         continue
     elif cmd == "ascii":
-        print("Launching program - Ascii - v1.0")
+        print(round(time.time() - entireload,4), "| Launching program: ASCII Art (version 1.0)")
         print("")
-        print("Same thing as startup")
+        print("RIP ASCII Art, you did us well.")
         print("|===========| |           |")
         print("|           |  |         |")
         print("|           |   |       |")
