@@ -1,10 +1,13 @@
 # PyTerm (Python Terminal) - Beta Branch
 Want a sneak peak at Version 2.0? Here's your chance.
 
-November 2016 Update: Beta 2 is around the corner, and it'll finish most of what I want in PyTerm. It's a HUGE beta, and taking lots of time to finish up. Betas 3 and on will probably have less cool stuff, but I'm working as hard as I can on PyTerm.
+The beta branch is where the somewhat stable builds of PyTerm come into play. While not updated as frequently, the beta builds provide a nice look into what's coming in Version 2.0.
 
-Another huge thing for PyTerm is that I'll start compiling PyTerm as an exe file after I finish all the betas! I'll have more details later.
+If you want a really close look into Version 2.0, the indev branch is for you. But for those who want to see what's going on with PyTerm, here's your shot. Beta 1 is the currently released version, with Version 2 coming out soon.
 
-Many betas are coming, and as milestones are met, I'll push more betas until the software is done. Full disclosure, things may be out of whack, or just straight up buggy, and unfinished.
+Here's the beta roadmap:
 
-The betas are supposed to give you a feel for what 2.0 will feel and look like, and not be a finished product. Proceed at your own risk.
+- Beta 2: Reworking all existing programs with cool unification and updates.
+- Beta 3: New programs!
+- Beta 4: Touching things up. A lot of things.
+- Beta 5: The final beta. That's it.
