@@ -105,8 +105,8 @@ restart_ver = "1.0"
 ping_ver = "0ms"
 alwayssave_ver = "NUL"
 uptime_ver = "1.0"
-ascii_ver = "1.0"
-time_ver = "1.0"
+ascii_ver = "1.0.1"
+time_ver = "1.0.1"
 timer_ver = "1.1.1"
 salesbuster_ver = "3.0-beta1"
 notes_ver = "4.0"
@@ -242,9 +242,10 @@ while not done:
         cmd = ""
         continue
     elif cmd == "ascii":
-        print(round(time.time() - entireload,4), "| Launching program: ASCII Art (version 1.0)")
+        print(round(time.time() - entireload,4), "| Launching program: ASCII Art (version " + ascii_ver + ")")
         print("")
-        print("RIP ASCII Art, you did us well.")
+        print("The original ASCII art from startup.")
+        print("You served us extremely well.")
         print("|===========| |           |")
         print("|           |  |         |")
         print("|           |   |       |")
@@ -276,27 +277,30 @@ while not done:
         print("   " + version + "           ")
         print("=============================")
     elif cmd == "time":
-        print("Launching program - Time - v1.0")
+        print(round(time.time() - entireload,4), "| Launching program: Current Time (version " + time_ver + ")")
         print("")
         print("Here is the current time:")
-        print("")
-        print("Date:", strftime("%A, %B %d"))
-        print("Year:", strftime("%Y"))
-        print("Time:", strftime("%I:%M:%S %p"))
+        print(strftime("%A, %B %d, %Y, %I:%M:%S %p"))
         cmd = ""
         continue
     elif cmd == "timer":
-        print("Launching program - Timer - v1.1.1")
+        print(round(time.time() - entireload,4), "| Launching program: Timer (version " + timer_ver + ")")
         print("")
         print("Welcome to Timer!")
-        print("In the box below, please type in the amount of seconds you want your timer to run for")
-        timersecs = input("Enter a number for the amount of seconds")
-        timersecs = float(timersecs)
-        print("Starting timer. This timer DOES NOT provide a countdown!")
-        time.sleep(timersecs)
-        print("Timer is up!")
-        print("Closing this program now!")
-        continue
+        print("Please input the amount of seconds you want the timer to run below. Didn't mean to open up timer? Just input 0.")
+        timer_secs = input("timer_secs-userinput@timer-prgm-" + promptver2)
+        timer_secs = float(timer_secs)
+        print("Starting timer. Timer will display how many seconds are left every 1 second.")
+        timer_loop = False
+        while not timer_loop:
+            if timer_secs > 0:
+                print(round(timer_secs, 1), "seconds remain.")
+                timer_secs = timer_secs - 1
+                time.sleep(1)
+                continue
+            else:
+                print("Beep boop beep! Timer is up.")
+                break
     elif cmd == "salesbuster":
         print(round(time.time() - entireload,4), "| Launching program - Sales Buster (version 3.0-beta1)")
         print("")
