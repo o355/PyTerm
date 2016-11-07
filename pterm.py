@@ -128,6 +128,36 @@ while not done:
         print("uptime - Best way to check your uptime of PyTerm.")
         cmd = ""
         continue
+    elif cmd == "ping":
+        print(round(time.time() - entireload,4), "| Launching program: Ping (version 0ms)")
+        from random import randint
+        print("")
+        ping_score = 0
+        ping_loop = False
+        while not ping_loop:
+            print("Do you ping or do you pong?")
+            ping_int = randint(0, 1)
+            ping_input = input("ping_input-userinput@ping-prgm-" + promptver2).lower()
+            if (ping_input == "ping" and ping_int == 0):
+                print("Wake me up. Wake me up inside. Can't wake up. Wake me up inside. Save me.")
+                print("Your score:", ping_score)
+                break
+            elif (ping_input == "ping" and ping_int) == 1:
+                print("Hurrah! Let's keep pinging.")
+                ping_score = ping_score + 1
+                continue
+            elif (ping_input == "pong" and ping_int) == 0:
+                print("Hurrah! Let's keep pinging.")
+                ping_score = ping_score +1
+                continue
+            elif (ping_input == "pong" and ping_int) == 1:
+                print("Wake me up. Wake me up inside. Can't wake up. Wake me up inside. Save me.")
+                print("Your score:", ping_score)
+                break
+            else:
+                print("Did you read the instructions?")
+                continue
+        continue
     elif cmd == "alwayssave":
         print(round(time.time() - entireload,4), "| Launching program: Always Save (version NUL)")
         print("")
