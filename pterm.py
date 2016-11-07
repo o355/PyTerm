@@ -1,5 +1,5 @@
-#Python Terminal - v2.0-beta1
-#THIS IS A BETA BUILD! BE WARNED.
+#Python Terminal - v2.0-indev
+#THIS IS AN INDEV BUILD. 50% OF WORKING!
 
 #LEAVE THIS PART IN FOR CREDITS, AND YOU ARE FREE TO DO WHATEVER UNDER THE LICENSE:
 #originally found on GitHub: github.com/o355/pyterm
@@ -7,7 +7,7 @@
 #(c) 2016 under the MIT license.
 
 #importing time - necessary for counting load time
-print("Python Terminal - Version 2.0 (beta 1)")
+print("Python Terminal - Version 2.0 (In Development)")
 print("Built on October 23, 2016")
 print("Starting up...")
 print("Beginning pre-load...")
@@ -67,15 +67,15 @@ note2 = ""
 print(round(time.time() - entireload,4), "| Defined 6 variables, skipped 3 (dev version).")
 print(round(time.time() - entireload,4), "| Defining 3 functions, 3 variables, and reading/closing 3 files...")
 
-greet = open('ptfiles\\greeting.txt')
+greet = open('assets\\essential\\greeting.txt')
 greeting = greet.read()
 greet.close()
 
-usernme = open('ptfiles\\username.txt')
+usernme = open('assets\\essential\\username.txt')
 username = usernme.read()
 usernme.close()
 
-nme = open('ptfiles\\name.txt')
+nme = open('assets\\essential\\name.txt')
 name = nme.read()
 nme.close()
 
@@ -87,8 +87,8 @@ note5 = ""
 note6 = ""
 note7 = ""
 cmd = ""
-promptver = "@pyterm-2.0-beta1:~$ "
-promptver2 = "pyterm-2.0-beta1:~$ "
+promptver = "@pyterm-2.0-indev:~$ "
+promptver2 = "pyterm-2.0-indev:~$ "
 print(round(time.time() - entireload,4), "| Defined 8 of 16 varibles...")
 place = ""
 drink = ""
