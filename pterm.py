@@ -99,6 +99,28 @@ action = ""
 tell = ""
 st = True
 print(round(time.time() - entireload,4), "| Defined 16 variables!")
+print(round(time.time() - entireload,4), "| Defining version variables...")
+help_ver = "2.0"
+restart_ver = "1.0"
+ping_ver = "0ms"
+alwayssave_ver = "NUL"
+uptime_ver = "1.0"
+ascii_ver = "1.0"
+time_ver = "1.0"
+timer_ver = "1.1.1"
+salesbuster_ver = "3.0-beta1"
+notes_ver = "4.0"
+coolthingz_ver = "1.3.3.7"
+poem_ver = "1.2"
+update_ver = "2.2"
+about_ver = "1.4"
+farmstate_ver = "1.0"
+setup_ver = "2.1"
+shutdown_ver = "1.1"
+madlibs_ver = "1.0"
+textadventure_ver = "1.0.1"
+cpubench_ver = "2.0"
+print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Startup finished! Welcome to PyTerm!")
 print("")
 print(greeting + " " + username + "!")
@@ -111,7 +133,8 @@ while not done:
     #start of the cmd loop
     cmd = input(username + promptver).lower()
     if cmd == "help":
-        print(round(time.time() - entireload,4), "| Launching program: Help (version 2.0)")
+        help_ver = "2.0"
+        print(round(time.time() - entireload,4), "| Launching program: Help (version " + help_ver + ")")
         print("")
         print("PyTerm Commands:")
         print("help - Lists this command.")
@@ -140,7 +163,8 @@ while not done:
         print("Restarting PyTerm...")
         exec(open('ipterm.py').read())
     elif cmd == "ping":
-        print(round(time.time() - entireload,4), "| Launching program: Ping (version 0ms)")
+        ping_ver = "0ms"
+        print(round(time.time() - entireload,4), "| Launching program: Ping (version " + ping_ver + ")")
         from random import randint
         print("")
         ping_score = 0
@@ -193,7 +217,8 @@ while not done:
                 continue
         continue
     elif cmd == "alwayssave":
-        print(round(time.time() - entireload,4), "| Launching program: Always Save (version NUL)")
+        alwayssave_ver = "NUL"
+        print(round(time.time() - entireload,4), "| Launching program: Always Save (version " + alwayssave_ver + ")")
         print("")
         print("That's what happened to me.")
         print("I was working on PyTerm, in IDLE for Python.")
@@ -206,7 +231,8 @@ while not done:
         cmd = ""
         continue
     elif cmd == "uptime":
-        print(round(time.time() - entireload,4), "| Launching program: Uptime (version 1.0)")
+        uptime_ver = "1.0"
+        print(round(time.time() - entireload,4), "| Launching program: Uptime (version " + uptime_ver + ")")
         print("")
         entireload_int = int(time.time() - entireload)
         m, s = divmod(entireload_int, 60)
