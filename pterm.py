@@ -116,6 +116,7 @@ while not done:
         print("PyTerm Commands:")
         print("help - Lists this command.")
         print("about - Lists information about this Python Terminal.")
+        print("restart - Restarts PyTerm. Legendary.")
         print("shutdown - Shuts down the terminal.")
         print("madlibs - A little fun mad libs.")
         print("personalization - Sets up Python Terminal for you")
@@ -126,8 +127,18 @@ while not done:
         print("textadventure - You venture into Shia's forest. It doesn't end well.")
         print("salesbuster - Launches you into a great game called Sales Buster.")
         print("uptime - Best way to check your uptime of PyTerm.")
+        print("--- Diagnostic Tools --- ")
+        print("varcheck - Checks all the variables in PyTerm. Quick note: It's A LOT of variables.")
+        print("vercheck - Lists all program versions that are included with PyTerm.")
+        print("ping - I'm pretty sure this tool helps you fix network issues. Not sure honestly.")
         cmd = ""
         continue
+    elif cmd == "restart":
+        restart_ver = "1.0"
+        print(round(time.time() - entireload,4), "| Launching program: Restart (version " + restart_ver + ")")
+        print("")
+        print("Restarting PyTerm...")
+        exec(open(".\\pterm.py").read())
     elif cmd == "ping":
         print(round(time.time() - entireload,4), "| Launching program: Ping (version 0ms)")
         from random import randint
