@@ -302,7 +302,7 @@ while not done:
                 print("Beep boop beep! Timer is up.")
                 break
     elif cmd == "salesbuster":
-        print(round(time.time() - entireload,4), "| Launching program - Sales Buster (version 3.0-beta1)")
+        print(round(time.time() - entireload,4), "| Launching program - Sales Buster (version " + salesbuster_ver + ")")
         print("")
         sb_depwarning = ""
         sb_depwarning_loop = False
@@ -327,14 +327,8 @@ while not done:
                 print("Invalid input! Valid inputs are: yes, no.")
                 continue
         continue
-    elif cmd == "notes":
-        print("Launching program - Notes - v4.0")
-        print("")
-        print("Notes has been redone now using a filesystem system. It's cool.")
-        print("Welcome to Notes!")
-        ndone = False
     elif cmd == "coolthingz":
-        print(round(time.time() - entireload,4), "| Launching program - Coolthingz (version 1.3.3.7)")
+        print(round(time.time() - entireload,4), "| Launching program - Coolthingz (version " + coolthingz_ver + ")")
         print("")
         print("Fun fact: I made the entire base for PyTerm (basically the initial games and commands, and the style for how extra commands/games would be added) in around a day, 4-5 hours. The instructor was VERY impressed.")
         print("Fun fact: I think my instructor got pissed at me for going ham on my project")
@@ -350,59 +344,81 @@ while not done:
         print("FYI: I don't have a Minecraft server anymore. I ask you NOT to spam my GitHub inbox with the question: What's the IP to ur MC server!!!!1???!!!")
         cmd = ""
         continue
+    elif cmd == "notes":
+        print(round(time.time() - entireload,4)), "| Launching program - Notes (version " + notes_ver + ")")
+        print("")
+        print("Notes has been redone now using a filesystem system. It's cool.")
+        print("Welcome to Notes!")
+        ndone = False
         while not ndone:
             print("Would you like to open, edit, clear, or exit?")
-            ninput = input("Enter an option.")
-            if ninput == "open":
-                print("Which note would you like to open? note1, note2, note3, note4, note5, note6, or note7? Or cancel?")
-                ninputopen = False
-
-
-                while not ninputopen:
-                    ninputopen2 = input("Which note would you like to open?")
-                    if ninputopen2 == "note1":
-                        n1 = open('ptfiles\note1fn.txt')
+            notes_start = input("notes_start-userinput@notes-prgm-" + promptver2)
+            if notes_start == "open":
+                print("Which note would you like to open? Enter a number between 1 and 10. Enter cancel to quit.")
+                notes_open = False
+                while not notes_open:
+                    notes_open_input = input("notes_open_input-userinput@notes-prgm-" + promptver2)
+                    if notes_open_input == "1":
+                        notes_n1 = open('assets\\notes\\note1.txt')
                         print("Note 1 output:")
-                        print(n1.read())
-                        n1.close()
+                        print(notes_n1.read())
+                        notes_n1.close()
                         break
-                    elif ninputopen2 == "note2":
-                        n2 = open('ptfiles\note2fn.txt')
+                    elif notes_open_input == "2":
+                        notes_n2 = open('assets\\notes\\note2.txt')
                         print("Note 2 output:")
-                        print(n2.read())
-                        n2.close()
+                        print(notes_n2.read())
+                        notes_n2.close()
                         break
-                    elif ninputopen2 == "note3":
-                        n3 = open('ptfiles\note3fn.txt')
+                    elif notes_open_input == "3":
+                        notes_n3 = open('assets\\notes\\note3.txt')
                         print("Note 3 output:")
-                        print(n3.read())
-                        n3.close()
+                        print(notes_n3.read())
+                        notes_n3.close()
                         break
-                    elif ninputopen2 == "note4":
-                        n4 = open('ptfiles\note4fn.txt')
+                    elif notes_open_input == "4":
+                        notes_n4 = open('assets\\notes\\note4.txt')
                         print("Note 4 output:")
-                        print(n4.read())
-                        n4.close()
+                        print(notes_n4.read())
+                        notes_n4.close()
                         break
-                    elif ninputopen2 == "note5":
-                        n5 = open('ptfiles\note5fn.txt')
+                    elif notes_open_input == "5":
+                        notes_n5 = open('assets\\notes\\note5.txt')
                         print("Note 5 output:")
-                        print(n5.read())
-                        n5.close()
+                        print(notes_n5.read())
+                        notes_n5.close()
                         break
-                    elif ninputopen2 == "note6":
-                        n6 = open('ptfiles\note6fn.txt')
+                    elif notes_open_input == "6":
+                        notes_n6 = open('assets\\notes\\note6.txt')
                         print("Note 6 output:")
-                        print(n6.read())
-                        n6.close()
+                        print(notes_n6.read())
+                        notes_n6.close()
                         break
-                    elif ninputopen2 == "note7":
-                        n7 = open('ptfiles\note7fn.txt')
+                    elif notes_open_input == "7":
+                        notes_n7 = open('assets\\notes\\note7.txt')
                         print("Note 7 output:")
-                        print(n7.read())
-                        n7.close()
+                        print(notes_n7.read())
+                        notes_n7.close()
                         break
-                    elif ninputopen2 == "cancel":
+                    elif notes_open_input == "8":
+                        notes_n8 = open('assets\\notes\\note8.txt')
+                        print("Note 8 output:")
+                        print(notes_n8.read())
+                        notes_n8.close()
+                        break
+                    elif notes_open_input == "9":
+                        notes_n9 = open('assets\\notes\\note9.txt')
+                        print("Note 9 output:")
+                        print(notes_n9.read())
+                        notes_n9.close()
+                        break
+                    elif notes_open_input == "10":
+                        notes_n10 = open('assets\\notes\\note10.txt')
+                        print("Note 10 output:")
+                        print(notes_n10.read())
+                        notes_n10.close()
+                        break
+                    elif notes_open_input == "cancel":
                         print("Aborted. Returning to program main menu.")
                         break
                     else:
