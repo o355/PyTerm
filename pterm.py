@@ -89,7 +89,7 @@ note7 = ""
 cmd = ""
 promptver = "@pyterm-2.0-indev:~$ "
 promptver2 = "pyterm-2.0-indev:~$ "
-print(round(time.time() - entireload,4), "| Defined 8 of 16 varibles...")
+print(round(time.time() - entireload,4), "| Defined 8 of 17 varibles...")
 place = ""
 drink = ""
 feeling = ""
@@ -98,7 +98,8 @@ instructor = ""
 action = ""
 tell = ""
 st = True
-print(round(time.time() - entireload,4), "| Defined 16 variables!")
+restart_prog = 'ipterm.py'
+print(round(time.time() - entireload,4), "| Defined 17 variables!")
 print(round(time.time() - entireload,4), "| Defining version variables...")
 help_ver = "2.0"
 restart_ver = "1.0"
@@ -529,37 +530,36 @@ while not done:
                         print("Not a valid option.")
                         continue
 
-            elif ninput == "clear":
+            elif notes_start == "clear":
                 print("Clearing notes permanently deletes any data within a note.")
                 print("Please be aware of this.")
-                print("Which note would you like to delete? note1, note2, note3, note4, note5, note6, or note7? Or cancel?")
-                ninputclear = False
-                while not ninputclear:
-                    ninputclear2 = input("Which note would you like to clear?")
-                    if ninputclear2 == "note1":
-                        fName = 'ptfiles\note1fn.txt'
-                        def deleteContent(fName):
-                            with open(fName, "w"):
+                print("Which note would you like to delete? Enter a number between 1 and 10 (1 for Note 1, etc.), or enter cancel to cancel.")
+                notes_clear = False
+                while not notes_clear:
+                    notes_clear_input = input("Which note would you like to clear?")
+                    if notes_clear_input == "1":
+                        notes_fName1 = 'assets\\notes\\note1.txt'
+                        def notes_deleteContent1(notes_fName1):
+                            with open(notes_fName1, "w"):
                                 pass
-                        deleteContent(fName)
-                        with open(fName, 'r') as fsystem:
-                            fsystem.close()
+                        notes_deleteContent1(notes_fName1)
+                        with open(notes_fName1, 'r') as notes_fsystem1:
+                            notes_fsystem1.close()
                             break
                         print("Note cleared.")
                         break
-                    elif ninputclear2 == "note2":
-                        print("Now clearing Note 2")
-                        fName = 'ptfiles\note2fn.txt'
-                        def deleteContent(fName):
-                            with open(fName, "w"):
+                    elif notes_clear_input == "2":
+                        notes_fName2 = 'assets\\notes\\note2.txt'
+                        def notes_deleteContent2(notes_fName2):
+                            with open(notes_fName2, "w"):
                                 pass
-                        deleteContent(fName)
-                        with open(fName, 'r') as fsystem:
-                            fsystem.close()
+                        notes_deleteContent2(notes_fName2)
+                        with open(notes_fName2, 'r') as notes_fsystem2:
+                            notes_fsystem2.close()
                             break
                         print("Note cleared.")
                         break
-                    elif ninputclear2 == "note3":
+                    elif notes_clear_input == "3":
                         fName = 'ptfiles\note3fn.txt'
                         def deleteContent(fName):
                             with open(fName, "w"):
@@ -570,7 +570,7 @@ while not done:
                             break
                         print("Note cleared.")
                         break
-                    elif ninputclear2 == "note4":
+                    elif notes_clear_input == "4":
                         fName = 'ptfiles\note4fn.txt'
                         def deleteContent(fName):
                             with open(fName, "w"):
@@ -581,7 +581,7 @@ while not done:
                             break
                         print("Note cleared.")
                         break
-                    elif ninputclear2 == "note5":
+                    elif notes_clear_input == "5":
                         fName = 'ptfiles\note5fn.txt'
                         def deleteContent(fName):
                             with open(fName, "w"):
@@ -592,7 +592,7 @@ while not done:
                             break
                         print("Note cleared.")
                         break
-                    elif ninputclear2 == "note6":
+                    elif notes_clear_input == "6":
                         fName = 'ptfiles\note6fn.txt'
                         def deleteContent(fName):
                             with open(fName, "w"):
@@ -603,7 +603,7 @@ while not done:
                             break
                         print("Note cleared.")
                         break
-                    elif ninputclear2 == "note7":
+                    elif notes_clear_input == "7":
                         fName = 'ptfiles\note7fn.txt'
                         def deleteContent(fName):
                             with open(fName, "w"):
@@ -614,7 +614,7 @@ while not done:
                             break
                         print("Note cleared.")
                         break
-                    elif ninputclear2 == "cancel":
+                    elif notes_clear_input == "cancel":
                         print("Aborted.")
                         break
                     else:
