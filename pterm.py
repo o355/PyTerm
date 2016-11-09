@@ -110,7 +110,7 @@ ascii_ver = "1.0.1"
 time_ver = "1.0.1"
 timer_ver = "1.1.1"
 salesbuster_ver = "3.0-beta1"
-notes_ver = "4.0"
+notes_ver = "5.0"
 coolthingz_ver = "1.3.3.7"
 poem_ver = "1.2"
 update_ver = "2.2"
@@ -540,12 +540,52 @@ while not done:
                     if notes_clear_input == "1":
                         notes_fName1 = "assets\\notes\\note1.txt"
                         open(notes_fName1, 'w').close()
-                        print("Note cleared.")
+                        print("Note 1 cleared.")
                         break
                     elif notes_clear_input == "2":
                         notes_fName2 = "assets\\notes\\note2.txt"
                         open(notes_fName2, 'w').close()
-                        print("Note cleared.")
+                        print("Note 2 cleared.")
+                        break
+                    elif notes_clear_input == "3":
+                        notes_fName3 = "assets\\notes\\note3.txt"
+                        open(notes_fName3, 'w').close()
+                        print("Note 3 cleared.")
+                        break
+                    elif notes_clear_input == "4":
+                        notes_fName4 = "assets\\notes\\note4.txt"
+                        open(notes_fName4, 'w').close()
+                        print("Note 4 cleared.")
+                        break
+                    elif notes_clear_input == "5":
+                        notes_fName5 = "assets\\notes\\note5.txt"
+                        open(notes_fName5, 'w').close()
+                        print("Note 5 cleared.")
+                        break
+                    elif notes_clear_input == "6":
+                        notes_fName6 = "assets\\notes\\note6.txt"
+                        open(notes_fName6, 'w').close()
+                        print("Note 6 cleared.")
+                        break
+                    elif notes_clear_input == "7":
+                        notes_fName7 = "assets\\notes\\note7.txt"
+                        open(notes_fName7, 'w').close()
+                        print("Note 7 cleared.")
+                        break
+                    elif notes_clear_input == "8":
+                        notes_fName8 = "assets\\notes\\note8.txt"
+                        open(notes_fName8, 'w').close()
+                        print("Note 8 cleared.")
+                        break
+                    elif notes_clear_input == "9":
+                        notes_fName9 = "assets\\notes\\note9.txt"
+                        open(notes_fName9, 'w').close()
+                        print("Note 9 cleared.")
+                        break
+                    elif notes_clear_input == "10":
+                        notes_fName10 = "assets\\notes\\note10.txt"
+                        open(notes_fName10, 'w').close()
+                        print("Note 10 cleared.")
                         break
                     elif notes_clear_input == "cancel":
                         print("Aborted.")
@@ -553,7 +593,7 @@ while not done:
                     else:
                         print("Not a valid option.")
                         continue
-            elif ninput == "exit":
+            elif notes_start == "exit":
                 print("Now exiting notes.")
                 break
     elif cmd == "poem":
