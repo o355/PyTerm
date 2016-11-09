@@ -108,7 +108,7 @@ coolthingz_ver = "1.3.3.7"
 poem_ver = "1.3"
 update_ver = "2.3"
 about_ver = "1.5"
-farmstate_ver = "1.0"
+farmstate_ver = "2.0"
 setup_ver = "2.1"
 shutdown_ver = "1.1"
 madlibs_ver = "1.0"
@@ -623,24 +623,12 @@ while not done:
         cmd = ""
         continue
     elif cmd == "farmstate":
-        print("Launching program - Farmstate - v1.0")
+        print("Launching program: Legacy Notice for Program: Farmstate (version " + farmstate_ver + ")")
         print("")
-        print_slow("STATEFARM")
-        print_slow("\nTHE BEST OF INSURANCE ON THE PLANET!")
-        print_slow("\nYOU CAN SAVE NOW 30% IN JUST 10 MINUTES AT STATEFARM!")
-        print_slow("\nUNLIKE THOSE OTHER GUYS WHO ONLY SAVE 15% IN 15 MINUTES.")
-        print_slow("\nSTATEFARM HAS BEEN TRUSTED BY THE INDUSTRY FOR ABOUT 70 YEARS")
-        print_slow("\nSTATEFARM HAS OVER ONE MILLION STATISFIED CUSTOMERS!")
-        print_slow("\nSO, IS IT TIME TO SWITCH TO STATEFARM? YOU BET IT IS!")
-        print_slow("\nWE'LL EVEN PIE STATE FARM IF YOU SWITCH TODAY.")
-        print_slow("\nWHICH STATE FARM YOU ASK?")
-        print_slow("\nTHE ONE AT VASSAR. YEA. YOU KNOW THAT STATEFARM")
-        print_slow("\nSWITCHING TODAY IS EASY.")
-        print_slow("\nSWITCH TODAY!")
-        print_slow("\nIN FACT, IF YOU SWITCH TO STATEFARM TODAY, WE'LL GIVE YOU A REALLY, REALLY GOOD COUPON!!!!!!!!!!!")
-        print_slow("\nGO GO GO GO GO SWITCH")
-        print_slow("This poem has been approved by the man himself, Statefarm, or Farmstate.")
-        print_slow("Thanks.")
+        print("The program Farmstate is unsupported.")
+        print("You can find the old code in the folder:")
+        print("legacycode\\farmstate.py")
+        print("We're sorry for any issues this may have caused.")
         continue
     elif cmd == "ls":
         print("later in time")
