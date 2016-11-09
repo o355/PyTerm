@@ -630,10 +630,6 @@ while not done:
         print("legacycode\\farmstate.py")
         print("We're sorry for any issues this may have caused.")
         continue
-    elif cmd == "ls":
-        print("later in time")
-        cmd = ""
-        continue
     elif cmd == "setup":
         print("Launching program - Setup - v2.1")
         print("")
