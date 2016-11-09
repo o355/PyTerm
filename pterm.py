@@ -52,19 +52,12 @@ def print_fast(str):
         sys.stdout.flush()
         time.sleep(0.035)
 print(round(time.time() - entireload,4), "| Defined functions: print_slow, print_fast!")
-print(round(time.time() - entireload,4), "| Defining 9 variables...")
+print(round(time.time() - entireload,4), "| Defining 4 variables...")
 done = False
-startname = "Anonymous"
-version = "2.0-beta1"
-ptermsize = "SKIPPED"
-lines = "SKIPPED"
-print(round(time.time() - entireload,4), "| Skipped loading variables: ptermsize, lines (dev version)")
-builddate = "Oct 21, 2016"
-print(round(time.time() - entireload,4), "| Skipped loading variables: builddate (dev version)")
 greeting2 = "Welcome to PyTerm,"
 note1 = ""
 note2 = ""
-print(round(time.time() - entireload,4), "| Defined 6 variables, skipped 3 (dev version).")
+print(round(time.time() - entireload,4), "| Defined 4 variables!")
 print(round(time.time() - entireload,4), "| Defining 3 functions, 3 variables, and reading/closing 3 files...")
 
 greet = open('assets\\essential\\greeting.txt')
@@ -122,6 +115,11 @@ madlibs_ver = "1.0"
 textadventure_ver = "1.0.1"
 cpubench_ver = "2.0"
 print(round(time.time() - entireload,4), "| Defined version variables!")
+print(round(time.time() - entireload,4), "| Defining version data variables...")
+version = "2.0-indev"
+build = "indev-build"
+build_date = "indev-build"
+lts_build = "no"
 print(round(time.time() - entireload,4), "| Startup finished! Welcome to PyTerm!")
 print("")
 print(greeting + " " + username + "!")
@@ -355,7 +353,7 @@ while not done:
         ndone = False
         while not ndone:
             print("Would you like to open, edit, clear, or exit?")
-            notes_start = input("notes_start-userinput@notes-prgm-" + promptver2)
+            notes_start = input("notes_start-userinput@notes-prgm-" + promptver2).lower()
             if notes_start == "open":
                 notes_open = False
                 while not notes_open:
@@ -597,29 +595,31 @@ while not done:
                 print("Now exiting notes.")
                 break
     elif cmd == "poem":
-        print("Launching program - Poem - v1.2")
+        print(round(time.time() - entireload,4), "| Launching program: Poem (version " + poem_ver + ")")
         print("")
-        poem_file = open('assets\\notes\\note3.txt')
-        print(notes_n3.read())
-        notes_n3.close()
+        poem_file = open('assets\\poem\\poem.txt')
+        print(poem_file.read())
+        poem_file.close()
         continue
     elif cmd == "update":
-        print("Launching program - Update - v2.2")
+        print(round(time.time() - entireload,4), "| Launching program: Update (version " + update_ver + ")")
         print("")
-        print("You have version " + version + ".")
+        print("You have version " + version + ", build " + build)
+        print("Built on " + build_date + "")
         print("Automated updates are disabled.")
-        print("Check online for the lastest updates.")
+        print("Check github.com/o355/pyterm for the latest updates.")
+        print("Compare your build numbers, versions, and build dates. The lower the build number, the older the version is.")
         cmd = ""
         continue
     elif cmd == "about":
-        print("Launching program - About - v1.4")
+        print(round(time.time() - entireload,4), "| Launching program: About PyTerm (version " + about_ver + ")")
         print("")
-        print("  -= PYTERM =-   ")
+        print("  -= PyTerm =-   ")
         print("Version " + version)
-        print("Coded in Python 3.2")
+        print("Coded in Python 3.2 and 3.5")
         print("Build date: " + builddate)
-        print("Size: " + ptermsize)
-        print("Lines of code: " + lines)
+        print("Build number: " + build)
+        print("LTS build? " + lts_build)
         cmd = ""
         continue
     elif cmd == "farmstate":
