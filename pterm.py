@@ -536,82 +536,15 @@ while not done:
                 print("Which note would you like to delete? Enter a number between 1 and 10 (1 for Note 1, etc.), or enter cancel to cancel.")
                 notes_clear = False
                 while not notes_clear:
-                    notes_clear_input = input("Which note would you like to clear?")
+                    notes_clear_input = input("notes_clear_input-userinput@notes-prgm-" + promptver2).lower()
                     if notes_clear_input == "1":
-                        notes_fName1 = 'assets\\notes\\note1.txt'
-                        def notes_deleteContent1(notes_fName1):
-                            with open(notes_fName1, "w"):
-                                pass
-                        notes_deleteContent1(notes_fName1)
-                        with open(notes_fName1, 'r') as notes_fsystem1:
-                            notes_fsystem1.close()
-                            break
+                        notes_fName1 = "assets\\notes\\note1.txt"
+                        open(notes_fName1, 'w').close()
                         print("Note cleared.")
                         break
                     elif notes_clear_input == "2":
-                        notes_fName2 = 'assets\\notes\\note2.txt'
-                        def notes_deleteContent2(notes_fName2):
-                            with open(notes_fName2, "w"):
-                                pass
-                        notes_deleteContent2(notes_fName2)
-                        with open(notes_fName2, 'r') as notes_fsystem2:
-                            notes_fsystem2.close()
-                            break
-                        print("Note cleared.")
-                        break
-                    elif notes_clear_input == "3":
-                        fName = 'ptfiles\note3fn.txt'
-                        def deleteContent(fName):
-                            with open(fName, "w"):
-                                pass
-                        deleteContent(fName)
-                        with open(fName, 'r') as fsystem:
-                            fsystem.close()
-                            break
-                        print("Note cleared.")
-                        break
-                    elif notes_clear_input == "4":
-                        fName = 'ptfiles\note4fn.txt'
-                        def deleteContent(fName):
-                            with open(fName, "w"):
-                                pass
-                        deleteContent(fName)
-                        with open(fName, 'r') as fsystem:
-                            fsystem.close()
-                            break
-                        print("Note cleared.")
-                        break
-                    elif notes_clear_input == "5":
-                        fName = 'ptfiles\note5fn.txt'
-                        def deleteContent(fName):
-                            with open(fName, "w"):
-                                pass
-                        deleteContent(fName)
-                        with open(fName, 'r') as fsystem:
-                            fsystem.close()
-                            break
-                        print("Note cleared.")
-                        break
-                    elif notes_clear_input == "6":
-                        fName = 'ptfiles\note6fn.txt'
-                        def deleteContent(fName):
-                            with open(fName, "w"):
-                                pass
-                        deleteContent(fName)
-                        with open(fName, 'r') as fsystem:
-                            fsystem.close()
-                            break
-                        print("Note cleared.")
-                        break
-                    elif notes_clear_input == "7":
-                        fName = 'ptfiles\note7fn.txt'
-                        def deleteContent(fName):
-                            with open(fName, "w"):
-                                pass
-                        deleteContent(fName)
-                        with open(fName, 'r') as fsystem:
-                            fsystem.close()
-                            break
+                        notes_fName2 = "assets\\notes\\note2.txt"
+                        open(notes_fName2, 'w').close()
                         print("Note cleared.")
                         break
                     elif notes_clear_input == "cancel":
@@ -626,12 +559,9 @@ while not done:
     elif cmd == "poem":
         print("Launching program - Poem - v1.2")
         print("")
-        poemload = time.time()
-        print("Loading poem...")
-        import this
-        print("End of poem. Please note, typing in poem again will NOT load the poem.")
-        print("This is due to some sort of glitch within Python's nice little poem.")
-        print("It took", time.time() - poemload, "seconds to load your poem.")
+        poem_file = open('assets\\notes\\note3.txt')
+        print(notes_n3.read())
+        notes_n3.close()
         continue
     elif cmd == "update":
         print("Launching program - Update - v2.2")
