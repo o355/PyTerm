@@ -1,5 +1,5 @@
-#Python Terminal - v2.0-indev
-#THIS IS AN INDEV BUILD. 50% OF WORKING!
+#Python Terminal - v2.0-beta2
+#THIS IS A BETA BUILD. THIS SHOULD WORK, BUT MAYBE NOT.
 
 #LEAVE THIS PART IN FOR CREDITS, AND YOU ARE FREE TO DO WHATEVER UNDER THE LICENSE:
 #originally found on GitHub: github.com/o355/pyterm
@@ -7,8 +7,8 @@
 #(c) 2016 under the MIT license.
 
 #importing time - necessary for counting load time
-print("Python Terminal - Version 2.0 (In Development)")
-print("Built on October 23, 2016")
+print("Python Terminal - Version 2.0 (Beta 2)")
+print("Built on November 15, 2016")
 print("Starting up...")
 print("Beginning pre-load...")
 print("Pre-Load | Importing time...")
@@ -80,8 +80,8 @@ note5 = ""
 note6 = ""
 note7 = ""
 cmd = ""
-promptver = "@pyterm-2.0-indev:~$ "
-promptver2 = "pyterm-2.0-indev:~$ "
+promptver = "@pyterm-2.0-beta2:~$ "
+promptver2 = "pyterm-2.0-beta2:~$ "
 print(round(time.time() - entireload,4), "| Defined 8 of 17 varibles...")
 place = ""
 drink = ""
@@ -91,7 +91,7 @@ instructor = ""
 action = ""
 tell = ""
 st = True
-restart_prog = 'ipterm.py'
+restart_prog = 'pterm.py'
 print(round(time.time() - entireload,4), "| Defined 17 variables!")
 print(round(time.time() - entireload,4), "| Defining version variables...")
 help_ver = "2.0"
@@ -116,8 +116,8 @@ textadventure_ver = "1.0.2"
 cpubench_ver = "2.2"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
-version = "2.0-indev"
-build = "indev-build"
+version = "2.0-beta2"
+build = "1800"
 build_date = "indev-build"
 lts_build = "no"
 print(round(time.time() - entireload,4), "| Startup finished! Welcome to PyTerm!")
