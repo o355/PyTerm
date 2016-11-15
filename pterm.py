@@ -112,8 +112,8 @@ farmstate_ver = "2.0"
 setup_ver = "2.1"
 shutdown_ver = "1.1"
 madlibs_ver = "1.0"
-textadventure_ver = "1.0.1"
-cpubench_ver = "2.0"
+textadventure_ver = "1.0.2"
+cpubench_ver = "2.2"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
 version = "2.0-indev"
@@ -303,30 +303,13 @@ while not done:
                 print("Beep boop beep! Timer is up.")
                 break
     elif cmd == "salesbuster":
-        print(round(time.time() - entireload,4), "| Launching program - Sales Buster (version " + salesbuster_ver + ")")
+        print("Launching program: Legacy Notice for Program: Sales Buster (version " + salesbuster_ver + ")")
         print("")
-        sb_depwarning = ""
-        sb_depwarning_loop = False
-        print("DEPENDENCIES WARNING:")
-        print("Sales Buster needs these dependencies to work properly:")
-        print("PyGame")
-        print("Please ensure you have these dependencies installed to start the game!")
-        print("Would you like to start the game? Yes or No.")
-        while not sb_depwarning_loop:
-            sb_depwarning = input("sb_depwarning-userinput@salesbuster-prgm-" + promptver2).lower()
-            if sb_depwarning == "yes":
-                print("Sales Buster only works once per startup. If you want to play it again, restart PyTerm.")
-                print("Sales Buster launches in a separate window. View Sales Buster in that separate window!")
-                sb_depwarning = ""
-                import salesbuster
-                break
-            elif sb_depwarning == "no":
-                print("Exiting out of Sales Buster.")
-                sb_depwarning = ""
-                break
-            else:
-                print("Invalid input! Valid inputs are: yes, no.")
-                continue
+        print("The program Sales Buster is unsupported.")
+        print("You can find the old code in the folder:")
+        print("legacycode\\salesbuster\\")
+        print("Sales Buster was unsupported due to the lack of remaining knowledge on PyGame.")
+        print("We're sorry for any issues this may have caused.")
         continue
     elif cmd == "coolthingz":
         print(round(time.time() - entireload,4), "| Launching program - Coolthingz (version " + coolthingz_ver + ")")
@@ -627,7 +610,7 @@ while not done:
         print("")
         print("The program Farmstate is unsupported.")
         print("You can find the old code in the folder:")
-        print("legacycode\\farmstate.py")
+        print("legacycode\\farmstate")
         print("We're sorry for any issues this may have caused.")
         continue
     elif cmd == "setup":
