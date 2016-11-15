@@ -11,3 +11,6 @@ Here's the beta roadmap:
 - Beta 3: New programs!
 - Beta 4: Touching things up. A lot of things.
 - Beta 5: The final beta. That's it.
+
+
+Beta 2 is almost ready for release.
