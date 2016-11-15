@@ -643,17 +643,12 @@ while not done:
         cmd = ""
         sys.exit()
     elif cmd == "madlibs":
-        print("Launching program - Mad Libs - v1.0")
+        print("Launching program: Mad Libs (version " + madlibs_ver + ")")
         print("")
         print("Starting Mad Libs.")
         print("Loading Mad Libs")
         print_slow("\nWelcome to Mad Libs!")
         print_slow("\nGame starting up.")
-
-        #delcaring vars
-
-
-        #asking user for vars
         print("")
         print_slow("\nPlease type in a name")
         name = input("")
@@ -671,8 +666,6 @@ while not done:
         action = input("")
         print_slow("\nPlease enter something you would tell another person")
         tell = input("")
-
-        #Compile
         print_slow("\nYour Mad Libs is finished. We're now making your Mad Libs.")
         print_slow("\nYou were with Xan. You were walking with Xan. Xan says to you: Hey, " + name + ", want to go somewhere? You say: Sure! Let's go to " + place + "! Xan says, Maybe while we are there, we should get a drink of " + drink + ". You said: That sounds " + feeling + "!")
         print_slow("\nAbout " + num1 + " hours later...")
@@ -684,7 +677,9 @@ while not done:
     elif cmd == "textadventure":
         print("")
         textadventure = False
-        print("Launching program - Text Adventure - v1.0.1")
+        #Unification breaks here (as all the vars are prefixed with ta_ and not textadventure_.
+        #Like I'm going through 40 variables to fix that? no.
+        print("Launching program: Text Adventure (version " + textadventure_ver + ")")
         print("")
         print_slow("\nWelcome to the adventures of a person walking through a forest, that being you. How cool.")
         print_slow("\nTo exit, at any text prompt, type exit. Exiting will stop PyTerm entirely.")
