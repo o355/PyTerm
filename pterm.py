@@ -176,15 +176,15 @@ while not done:
             ping_int = randint(0, 3)
             ping_input = input("ping_input-userinput@ping-prgm-" + promptver2).lower()
             if (ping_input == "ping" and ping_int == 0):
-                print("Wake me up. Wake me up inside. Can't wake up. Wake me up inside. Save me.")
+                print("Your ball went missing.")
                 print("Your score:", ping_score)
                 break
             elif (ping_input == "ping" and ping_int == 1):
-                print("Hurrah! Let's keep pinging.")
+                print("You pinged too hard.")
                 ping_score = ping_score + 1
                 continue
             elif (ping_input == "ping" and ping_int == 2):
-                print("Wake me up. Wake me up inside. Can't wake up. Wake me up inside. Save me.")
+                print("The song Bring Me to Life plays in the background...")
                 print("Your score:", ping_score)
                 break
             elif (ping_input == "ping" and ping_int == 3):
@@ -196,7 +196,7 @@ while not done:
                 ping_score = ping_score + 1
                 continue
             elif (ping_input == "pong" and ping_int == 1):
-                print("Wake me up. Wake me up inside. Can't wake up. Wake me up inside. Save me.")
+                print("Error 500.")
                 print("Your score:", ping_score)
                 break
             elif (ping_input == "pong" and ping_int == 2):
@@ -204,7 +204,7 @@ while not done:
                 ping_score = ping_score + 1
                 continue
             elif (ping_input == "pong" and ping_int == 3):
-                print("Wake me up. Wake me up inside. Can't wake up. Wake me up inside. Save me.")
+                print("Creative message for why you lost goes here.")
                 print("Your score:", ping_score)
                 break
             elif ping_mistakes == 10:
