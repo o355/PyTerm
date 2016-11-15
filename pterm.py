@@ -633,21 +633,15 @@ while not done:
     elif cmd == "setup":
         print("Launching program - Setup - v2.1")
         print("")
-        print("Welcome to setup for PyTerm")
-        print("Let's make the PyTerm the best it can be for you.")
-        startname = input("Enter your name")
-        print("Great! Let's choose a greeting on the default screen of PyTerm")
-        greeting = input("Enter a greeting")
-        print("Cool! PyTerm is now customized.")
-        print("Now exiting.")
-        cmd = ""
+        print("Setup will be overhauled soon, to write to files.")
+        print("So that happened.")
         continue
     elif cmd == "shutdown":
         print("Launching program - Shutdown - v1.1")
         print("")
         print("Shutting down...")
         cmd = ""
-        break
+        sys.exit()
     elif cmd == "madlibs":
         print("Launching program - Mad Libs - v1.0")
         print("")
