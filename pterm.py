@@ -102,13 +102,13 @@ uptime_ver = "1.0"
 ascii_ver = "1.0.1"
 time_ver = "1.0.1"
 timer_ver = "1.1.1"
-salesbuster_ver = "3.0-beta1"
+salesbuster_ver = "3.1"
 notes_ver = "5.0"
 coolthingz_ver = "1.3.3.7"
 poem_ver = "1.3"
 update_ver = "2.3"
-about_ver = "1.5"
-farmstate_ver = "2.0"
+about_ver = "1.6"
+farmstate_ver = "2.0.1"
 setup_ver = "2.1"
 shutdown_ver = "1.1"
 madlibs_ver = "1.0"
@@ -132,7 +132,6 @@ while not done:
     #start of the cmd loop
     cmd = input(username + promptver).lower()
     if cmd == "help":
-        help_ver = "2.0"
         print(round(time.time() - entireload,4), "| Launching program: Help (version " + help_ver + ")")
         print("")
         print("PyTerm Commands:")
@@ -141,7 +140,7 @@ while not done:
         print("restart - Restarts PyTerm. Legendary.")
         print("shutdown - Shuts down the terminal.")
         print("madlibs - A little fun mad libs.")
-        print("personalization - Sets up Python Terminal for you")
+        print("(BROKEN UNTIL BETA 4) setup - Sets up Python Terminal for you")
         print("notes - Launches the notes program")
         print("ascii - ASCII Art")
         print("farmstate - Prints out a poem about State Farm")
@@ -149,9 +148,13 @@ while not done:
         print("textadventure - You venture into Shia's forest. It doesn't end well.")
         print("salesbuster - Launches you into a great game called Sales Buster.")
         print("uptime - Best way to check your uptime of PyTerm.")
+        print("(COMING IN BETA 4) securenotes - Notes, but somewhat more secure.")
+        print("(COMING IN BETA 4) lock - Locks PyTerm.")
+        print("(COMING IN BETA 5) reset - Resets PyTerm.")
+        print("(COMING IN BETA 5) whattypeofbuildisthisbuildofpyterm - ")
         print("--- Diagnostic Tools --- ")
-        print("varcheck - Checks all the variables in PyTerm. Quick note: It's A LOT of variables.")
-        print("vercheck - Lists all program versions that are included with PyTerm.")
+        print("(COMING IN BETA 3) varcheck - Checks all the variables in PyTerm. Quick note: It's A LOT of variables.")
+        print("(COMING IN BETA 3) vercheck - Lists all program versions that are included with PyTerm.")
         print("ping - I'm pretty sure this tool helps you fix network issues. Not sure honestly.")
         cmd = ""
         continue
