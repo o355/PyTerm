@@ -631,13 +631,13 @@ while not done:
         print("We're sorry for any issues this may have caused.")
         continue
     elif cmd == "setup":
-        print("Launching program - Setup - v2.1")
+        print("Launching program: Setup PyTerm (version " + setup_ver + ")")
         print("")
         print("Setup will be overhauled soon, to write to files.")
         print("So that happened.")
         continue
     elif cmd == "shutdown":
-        print("Launching program - Shutdown - v1.1")
+        print("Launching program: Shutdown PyTerm (version " + shutdown_ver + ")")
         print("")
         print("Shutting down...")
         cmd = ""
