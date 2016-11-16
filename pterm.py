@@ -8,7 +8,7 @@
 
 #importing time - necessary for counting load time
 print("Python Terminal - Version 2.0 (Beta 2)")
-print("Built on November 15, 2016")
+print("Built on November 16, 2016")
 print("Starting up...")
 print("Beginning pre-load...")
 print("Pre-Load | Importing time...")
@@ -117,8 +117,8 @@ cpubench_ver = "2.2"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
 version = "2.0-beta2"
-build = "1800"
-build_date = "indev-build"
+build = "1801"
+build_date = "Nov. 16, 2016"
 lts_build = "no"
 print(round(time.time() - entireload,4), "| Startup finished! Welcome to PyTerm!")
 print("")
@@ -159,7 +159,6 @@ while not done:
         cmd = ""
         continue
     elif cmd == "restart":
-        restart_ver = "1.0"
         print(round(time.time() - entireload,4), "| Launching program: Restart (version " + restart_ver + ")")
         print("")
         print("Restarting PyTerm...")
