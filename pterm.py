@@ -114,6 +114,7 @@ shutdown_ver = "1.1"
 madlibs_ver = "1.0"
 textadventure_ver = "1.0.2"
 cpubench_ver = "2.2"
+varcheck_ver = "1.0"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
 version = "2.0-indev"
@@ -158,6 +159,8 @@ while not done:
         print("ping - I'm pretty sure this tool helps you fix network issues. Not sure honestly.")
         cmd = ""
         continue
+    elif cmd == "varcheck":
+        
     elif cmd == "restart":
         restart_ver = "1.0"
         print(round(time.time() - entireload,4), "| Launching program: Restart (version " + restart_ver + ")")
