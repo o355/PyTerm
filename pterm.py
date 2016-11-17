@@ -160,7 +160,10 @@ while not done:
         cmd = ""
         continue
     elif cmd == "varcheck":
-        
+        print(round(time.time() - entireload,4), "| Launching program: Variable Check (version " + varcheck_ver + ")")
+        print("")
+        cmd = ""
+        print("Printing every pyterm variable...")
     elif cmd == "restart":
         restart_ver = "1.0"
         print(round(time.time() - entireload,4), "| Launching program: Restart (version " + restart_ver + ")")
