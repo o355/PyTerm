@@ -12,6 +12,7 @@ print("Starting up...")
 print("Beginning pre-load...")
 print("Pre-Load | Importing time...")
 import time
+import pygame
 print("Pre-Load | Imported time!")
 print("Pre-Load | Starting clock for load time/uptime...")
 entireload = time.time()
@@ -881,37 +882,33 @@ while not done:
         print("PyGame")
         print("Please ensure you have these dependencies installed to start the program!")
         print("Would you like to start the program? Yes or No.")
-        while not cpubench_depwarning_loop:
-            cpubench_depwarning = input("cpubench_depwarning-userinput@cpubench-prgm-" + promptver2).lower()
-            if cpubench_depwarning == "yes":
-                cpubench_depwarning = ""
-                print("Welcome to CPU Bench!")
-                print("This program uses PyGame going on/off to test your CPU!")
-                print("This program performs 200 cycles of PyGame. This test can take upwards of a few minutes.")
-                print("Starting in 7 seconds...")
-                time.sleep(7)
-                cputesttime = time.time()
+        cpubench_depwarning = input("cpubench_depwarning-userinput@cpubench-prgm-" + promptver2).lower()
+        if cpubench_depwarning == "yes":
+            import pygame
+            print("Welcome to CPU Bench!")
+            print("This program uses PyGame going on/off to test your CPU!")
+            print("This program performs 200 cycles of PyGame. This test can take upwards of a few minutes.")
+            cputesttimeintotal = time.time()
+            for x in range(1, testcount):
+                cputesttimeper = time.time()
+                pygame.init()
+                pygame.quit()
+                print(round(time.time() - cputesttimeper,3), "second run time, test", x, "of 200 done.")
 
-                for x in range(1, testcount):
-
-
-                    cputesttimeind = time.time()
-                    pygame.init()
-                    pygame.quit()
-                    print("Test", x , "of 200 completed! (",time.time() - cputesttimeind,"s.)")
-
-                print("Test 200 of 200 completed!")
-                print("All tests completed!")
-                print("BASELINE - 135 seconds on an AMD A10-7300 Radeon R6")
-                print("It took", time.time() - cputesttime, "seconds to run the test.")
-                break
-            elif cpubench_depwarning == "no":
-                print("Exiting out of CPU Bench")
-                cpubench_depwarning = ""
-                break
-            else:
-                print("Invalid input! Valid inputs are: yes, no.")
-                continue
+            print("Test 200 of 200 completed!")
+            print("All tests completed!")
+            print("BASELINE - 135 seconds on an AMD A10-7300 Radeon R6")
+            print("It took", time.time() - cputesttime, "seconds to run the test.")
+            break
+        elif cpubench_depwarning == "no":
+            print("Exiting out of CPU Bench")
+            cpubench_depwarning = ""
+            break
+        else:
+            print("Invalid input! Valid inputs are: yes, no.")
+            continue
+            
+            
         
     else:
         print("Not a valid command. Type in help to list all commands.")
