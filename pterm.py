@@ -6,7 +6,6 @@
 #fully coded and designed by o355.
 #(c) 2016 under the MIT license.
 
-#importing time - necessary for counting load time
 print("Python Terminal - Version 2.0 (In Development)")
 print("Built on October 23, 2016")
 print("Starting up...")
@@ -15,14 +14,11 @@ print("Pre-Load | Importing time...")
 import time
 print("Pre-Load | Imported time!")
 print("Pre-Load | Starting clock for load time/uptime...")
-#begins load timer for the entire terminal
 entireload = time.time()
 print(round(time.time() - entireload,4), "| Pre-load complete, clock for load time/uptime loaded!")
 print(round(time.time() - entireload,4), "| Now converting variable entireload from a float into an int through variable entireload_int...")
 entireload_int = int(time.time() - entireload)
 print(round(time.time() - entireload,4), "| Operation completed. Output from type(entireload_int):", type(entireload_int))
-#Entire load sequence
-
 print(round(time.time() - entireload,4), "| Importing sys...")
 import sys
 print(round(time.time() - entireload,4), "| Imported sys!")
@@ -128,9 +124,7 @@ print("You are running PyTerm version " + version)
 print("This is a beta build, and will be unfinished and unstable.")
 print("The current date is", strftime("%A, %B %d, %Y. The time is %I:%M %p"))
 print("Enter a command in the prompt below. Type help for help.")
-#entire cmd loop
 while not done:
-    #start of the cmd loop
     cmd = input(username + promptver).lower()
     if cmd == "help":
         print(round(time.time() - entireload,4), "| Launching program: Help (version " + help_ver + ")")
@@ -342,8 +336,8 @@ while not done:
         print("")
         print("Notes has been redone now using a filesystem system. It's cool.")
         print("Welcome to Notes!")
-        ndone = False
-        while not ndone:
+        notes_done = False
+        while not notes_done:
             print("Would you like to open, edit, clear, or exit?")
             notes_start = input("notes_start-userinput@notes-prgm-" + promptver2).lower()
             if notes_start == "open":
