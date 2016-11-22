@@ -873,9 +873,10 @@ while not done:
     elif cmd == "cpubench":
         print("Launching program: CPU Bench (version " + cpubench_ver + ")")
         print("")
-        cputest = 1
-        testcount = 40
-        cpubench_shorttestcount = 1
+        cpubench_veryshorttestcount = 50
+        cpubench_shorttestcount = 200
+        cpubench_normaltestcount = 500
+        cpubench_longtestcount = 1000
         cpubench_depwarning = ""
         cpubench_depwarning_loop = False
         print("DEPENDENCIES WARNING:")
@@ -889,42 +890,67 @@ while not done:
             print("Welcome to CPU Bench 3!")
             print("This program uses PyGame going on/off to test your CPU!")
             print("This program can perform different test lengths. Please select the length of the benchmark you would like to perform.")
-            print("Very short = 50 rounds; Short = 200 rounds; Normal = 500 rounds; Long = 1000 rounds")
+            print("Very Short = 50 rounds; Short = 200 rounds; Normal = 500 rounds; Long = 1000 rounds")
             print("Which test would you like to perform?")
             cpubench_benchselect = input("cpubench_benchselect-userinput@cpubench-prgm-" + promptver2).lower()
             if cpubench_benchselect == "very short":
                 import pygame
                 print("Your very short benchmark will start in 2 seconds.")
                 time.sleep(2)
-                cputesttimefull = time.time()
-                print("Starting test.")
-                for x in range(1, cpubench_shorttestcount):
-                    cputesttimeper = time.time()
+                cpubench_timefull = time.time()
+                print("Starting benchmark.")
+                for x in range(1, cpubench_veryshorttestcount):
+                    cpubench_timeper = time.time()
                     pygame.init()
                     pygame.quit()
-                    print(round(time.time() - cputesttimeper,3), "second run time, test", x, "of 50 done.")
-                print("50 tests completed, in", round(time.time() - cputesttimefull,3), "seconds.")
-                print("Baseline: ?? on an Intel Core i7 4615U")
+                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 50 done.")
+                print("50 tests completed in", round(time.time() - cpubench_timefull,3), "seconds.")
+                print("Baseline: 29 seconds on an Intel Core i7 4650U")
                 continue
             if cpubench_benchselect == "short":
                 import pygame
-                
-            print("Test starting in 3 seconds...")
-            time.sleep(1)
-            print("Test starting in 2 seconds...")
-            time.sleep(1)
-            print("Test starting in 1 second...")
-            time.sleep(1)
-            print("Test starting...")
-            cputesttimeintotal = time.time()
-            for x in range(1, testcount):
-                cputesttimeper = time.time()
-                pygame.init()
-                pygame.quit()
-                print(round(time.time() - cputesttimeper,3), "second run time, test", x, "of 200 done.")
-
-            
-            continue
+                print("Your short benchmark will start in 2 seconds.")
+                time.sleep(2)
+                cpubench_timefull = time.time()
+                print("Starting benchmark.")
+                for x in range(1, cpubench_shorttestcount):
+                    cpubench_timeper = time.time()
+                    pygame.init()
+                    pygame.quit()
+                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 200 done.")
+                print("200 tests completed in", round(time.time() - cpubench_timefull,3), "seconds.")
+                print("Baseline: 122 seconds on an Intel Core i7 4650U")
+                continue
+            if cpubench_benchselect == "normal":
+                import pygame
+                print("Your normal benchmark will start in 2 seconds.")
+                time.sleep(2)
+                cpubench_timefull = time.time()
+                print("Starting benchmark.")
+                for x in range(1, cpubench_normaltestcount):
+                    cpubench_timeper = time.time()
+                    pygame.init()
+                    pygame.quit()
+                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 500 done.")
+                print("500 tests completed in", round(time.time() - cpubench_timefull,3), "seconds.")
+                print("Baseline: ?? on an Intel Core i7 4650U")
+                continue
+            if cpubench_benchselect == "long":
+                import pygame
+                print("Your normal benchmark will start in 2 seconds.")
+                time.sleep(2)
+                print("Starting benchmark.")
+                for x in range(1, cpubench_longtestcount):
+                    cpubench_timeper = time.time()
+                    pygame.init()
+                    pygame.quit()
+                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 1000 done.")
+                print("1000 tests completed in", round(time.time() - cpubench_timefull,3), "seconds.")
+                print("Baseline: ?? on an Intel Core i7 4650U")
+                continue
+            else:
+                print("Invalid input.")
+                print("This program will be exited out of, due to the loop structure.")
         elif cpubench_depwarning == "no":
             print("Exiting out of CPU Bench.")
             cpubench_depwarning = ""
