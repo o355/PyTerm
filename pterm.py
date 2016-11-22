@@ -875,6 +875,7 @@ while not done:
         print("")
         cputest = 1
         testcount = 40
+        cpubench_shorttestcount = 50
         cpubench_depwarning = ""
         cpubench_depwarning_loop = False
         print("DEPENDENCIES WARNING:")
@@ -890,19 +891,31 @@ while not done:
             print("This program can perform different test lengths. Please select the length of the benchmark you would like to perform.")
             print("Very short = 50 rounds; Short = 200 rounds; Normal = 500 rounds; Long = 1000 rounds")
             print("Which test would you like to perform?")
-            cpubench_benchloop = False
-            while not cpubench_benchloop:
-                cpubench_benchselect = input("cpubench_benchselect-userinput@cpubench-prgm-" + promptver2).lower()
-                if cpubench_benchselect == "very short":
-                    print("Your very short test will start in 2 seconds.")
-                    time.sleep(2)
-                    print("Starting test.")
-                    for x in range(1, shorttestcount):
-                        cputesttimeper = time.time()
-                        pygame.init()
-                        pygame.quit()
-                        print(round(time.time() - cputesttimeper,3), "second run time, test", x, "of 50 done.")
-                    print("50 tests completed, in", round(time.time()
+            cpubench_benchselect = input("cpubench_benchselect-userinput@cpubench-prgm-" + promptver2).lower()
+            if cpubench_benchselect == "very short":
+                import pygame
+                print("Your very short test will start in 2 seconds.")
+                time.sleep(2)
+                cputesttimefull = time.time()
+                print("Starting test.")
+                for x in range(1, cpubench_shorttestcount):
+                    cputesttimeper = time.time()
+                    pygame.init()
+                    pygame.quit()
+                    print(round(time.time() - cputesttimeper,3), "second run time, test", x, "of 50 done.")
+                print("50 tests completed, in", round(time.time() - cputesttimefull,3), "seconds.")
+                print("Baseline: ?? on an Intel Core i7 4615U")
+                print("Would you like me to save your results to a file?")
+                cpubench_vssave = input("cpubench_vssave-userinput@cpubench-prgm-" + promptver2).lower()
+                if cpubench_vssave == "yes":
+                    print("Coming soon.")
+                    continue
+                if cpubench_vssave == "no":
+                    print("Exiting...")
+                    raise cpubench_break
+                else:
+                    print("Bad input.")
+                    continue
             print("Test starting in 3 seconds...")
             time.sleep(1)
             print("Test starting in 2 seconds...")
@@ -923,9 +936,9 @@ while not done:
             print("Exiting out of CPU Bench.")
             cpubench_depwarning = ""
             continue
+        
         else:
             print("Invalid input! Valid inputs are: yes, no.")
-            continue
             
             
         
