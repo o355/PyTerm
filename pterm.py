@@ -875,7 +875,7 @@ while not done:
         print("")
         cputest = 1
         testcount = 40
-        cpubench_shorttestcount = 50
+        cpubench_shorttestcount = 1
         cpubench_depwarning = ""
         cpubench_depwarning_loop = False
         print("DEPENDENCIES WARNING:")
@@ -912,7 +912,7 @@ while not done:
                     continue
                 if cpubench_vssave == "no":
                     print("Exiting...")
-                    raise cpubench_break
+                    continue
                 else:
                     print("Bad input.")
                     continue
