@@ -885,10 +885,24 @@ while not done:
         cpubench_depwarning = input("cpubench_depwarning-userinput@cpubench-prgm-" + promptver2).lower()
         if cpubench_depwarning == "yes":
             import pygame
-            print("Welcome to CPU Bench!")
+            print("Welcome to CPU Bench 3!")
             print("This program uses PyGame going on/off to test your CPU!")
-            print("This program performs 200 cycles of PyGame. This test can take upwards of a few minutes.")
-            #Having a loop here makes NO SENSE.
+            print("This program can perform different test lengths. Please select the length of the benchmark you would like to perform.")
+            print("Very short = 50 rounds; Short = 200 rounds; Normal = 500 rounds; Long = 1000 rounds")
+            print("Which test would you like to perform?")
+            cpubench_benchloop = False
+            while not cpubench_benchloop:
+                cpubench_benchselect = input("cpubench_benchselect-userinput@cpubench-prgm-" + promptver2).lower()
+                if cpubench_benchselect == "very short":
+                    print("Your very short test will start in 2 seconds.")
+                    time.sleep(2)
+                    print("Starting test.")
+                    for x in range(1, shorttestcount):
+                        cputesttimeper = time.time()
+                        pygame.init()
+                        pygame.quit()
+                        print(round(time.time() - cputesttimeper,3), "second run time, test", x, "of 50 done.")
+                    print("50 tests completed, in", round(time.time()
             print("Test starting in 3 seconds...")
             time.sleep(1)
             print("Test starting in 2 seconds...")
@@ -903,10 +917,7 @@ while not done:
                 pygame.quit()
                 print(round(time.time() - cputesttimeper,3), "second run time, test", x, "of 200 done.")
 
-            print("Test 200 of 200 completed!")
-            print("All tests completed!")
-            print("BASELINE - 135 seconds on an AMD A10-7300 Radeon R6")
-            print("It took", round(time.time() - cputesttimeintotal,3), "seconds to run the test.")
+            
             continue
         elif cpubench_depwarning == "no":
             print("Exiting out of CPU Bench.")
