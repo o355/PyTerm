@@ -151,6 +151,7 @@ while not done:
         print("--- Diagnostic Tools --- ")
         print("(COMING IN BETA 3) varcheck - Checks all the variables in PyTerm. Quick note: It's A LOT of variables.")
         print("(COMING IN BETA 3) vercheck - Lists all program versions that are included with PyTerm.")
+        print("(COMING IN BETA 3) sysinfo - Prints system information.")
         print("ping - I'm pretty sure this tool helps you fix network issues. Not sure honestly.")
         cmd = ""
         continue
@@ -879,6 +880,7 @@ while not done:
         cpubench_longtestcount = 1000
         cpubench_depwarning = ""
         cpubench_depwarning_loop = False
+        cpubench_perdone = 0
         print("DEPENDENCIES WARNING:")
         print("CPU Bench needs these dependencies to work properly:")
         print("PyGame")
@@ -903,8 +905,10 @@ while not done:
                     cpubench_timeper = time.time()
                     pygame.init()
                     pygame.quit()
-                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 50 done.")
+                    cpubench_perdone = cpubench_perdone + 2
+                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 50 done. (" + str(cpubench_perdone) + "% done)")
                 print("50 tests completed in", round(time.time() - cpubench_timefull,3), "seconds.")
+                #More baselines are coming soon, Pentium E5800, Core i7 3615QM to be exact.
                 print("Baseline: 29 seconds on an Intel Core i7 4650U")
                 continue
             if cpubench_benchselect == "short":
@@ -917,7 +921,8 @@ while not done:
                     cpubench_timeper = time.time()
                     pygame.init()
                     pygame.quit()
-                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 200 done.")
+                    cpubench_perdone = cpubench_perdone + 0.5
+                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 200 done. (" + str(cpubench_perdone) + "% done)")
                 print("200 tests completed in", round(time.time() - cpubench_timefull,3), "seconds.")
                 print("Baseline: 122 seconds on an Intel Core i7 4650U")
                 continue
@@ -944,7 +949,9 @@ while not done:
                     cpubench_timeper = time.time()
                     pygame.init()
                     pygame.quit()
-                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 1000 done.")
+                    cpubench_perdone = cpubench_perdone + 0.1
+                    cpubench_perdone = round(cpubench_perdone,2)
+                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 1000 done. (" + str(cpubench_perdone) + "% done)")
                 print("1000 tests completed in", round(time.time() - cpubench_timefull,3), "seconds.")
                 print("Baseline: ?? on an Intel Core i7 4650U")
                 continue
