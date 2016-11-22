@@ -110,7 +110,7 @@ setup_ver = "2.1"
 shutdown_ver = "1.1"
 madlibs_ver = "1.0"
 textadventure_ver = "1.0.2"
-cpubench_ver = "2.2"
+cpubench_ver = "3.0-unfinished"
 varcheck_ver = "1.0"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
@@ -874,7 +874,7 @@ while not done:
         print("Launching program: CPU Bench (version " + cpubench_ver + ")")
         print("")
         cputest = 1
-        testcount = 200
+        testcount = 40
         cpubench_depwarning = ""
         cpubench_depwarning_loop = False
         print("DEPENDENCIES WARNING:")
@@ -888,6 +888,14 @@ while not done:
             print("Welcome to CPU Bench!")
             print("This program uses PyGame going on/off to test your CPU!")
             print("This program performs 200 cycles of PyGame. This test can take upwards of a few minutes.")
+            #Having a loop here makes NO SENSE.
+            print("Test starting in 3 seconds...")
+            time.sleep(1)
+            print("Test starting in 2 seconds...")
+            time.sleep(1)
+            print("Test starting in 1 second...")
+            time.sleep(1)
+            print("Test starting...")
             cputesttimeintotal = time.time()
             for x in range(1, testcount):
                 cputesttimeper = time.time()
@@ -898,12 +906,12 @@ while not done:
             print("Test 200 of 200 completed!")
             print("All tests completed!")
             print("BASELINE - 135 seconds on an AMD A10-7300 Radeon R6")
-            print("It took", time.time() - cputesttime, "seconds to run the test.")
-            break
+            print("It took", round(time.time() - cputesttimeintotal,3), "seconds to run the test.")
+            continue
         elif cpubench_depwarning == "no":
-            print("Exiting out of CPU Bench")
+            print("Exiting out of CPU Bench.")
             cpubench_depwarning = ""
-            break
+            continue
         else:
             print("Invalid input! Valid inputs are: yes, no.")
             continue
