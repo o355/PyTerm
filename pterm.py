@@ -330,6 +330,7 @@ while not done:
         print("Fun fact: PyTerm was made (and still is made) with only a basic knowledge of how Python works, and Stack Overflow. I kid you not.")
         print("Fun fact: Originally, PyTerm was going to be named Gaming Terminal, in which you would launch games from the terminal. PyTerm has 3 games, but obviously got many other functions.")
         print("I ended up wanting to spruce up the terminal by adding some Linux-like commands, since I had a decent basic knowledge of Linux then (after my MC server switched to a VPS earlier in late April).")
+        print("Fun fact: One PyTerm got corrupted. I lost a lot of progress. 8 hours, to be exact. PyTerm was 50,000 NUL NUL NULs. Such, the indev branch was created.")
         print("FYI: I don't have a Minecraft server anymore. I ask you NOT to spam my GitHub inbox with the question: What's the IP to ur MC server!!!!1???!!!")
         cmd = ""
         continue
