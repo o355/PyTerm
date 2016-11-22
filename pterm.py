@@ -936,7 +936,9 @@ while not done:
                     cpubench_timeper = time.time()
                     pygame.init()
                     pygame.quit()
-                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 500 done.")
+                    cpubench_perdone = cpubench_perdone + 0.2
+                    cpubench_perdone = round(cpubench_perdone,2)
+                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 500 done. (" + str(cpubench_perdone) + "% done)")
                 print("500 tests completed in", round(time.time() - cpubench_timefull,3), "seconds.")
                 print("Baseline: 307 seconds on an Intel Core i7 4650U")
                 continue
