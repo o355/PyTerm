@@ -933,7 +933,7 @@ while not done:
                     pygame.quit()
                     print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 500 done.")
                 print("500 tests completed in", round(time.time() - cpubench_timefull,3), "seconds.")
-                print("Baseline: ?? on an Intel Core i7 4650U")
+                print("Baseline: 307 seconds on an Intel Core i7 4650U")
                 continue
             if cpubench_benchselect == "long":
                 import pygame
