@@ -894,7 +894,7 @@ while not done:
             cpubench_benchselect = input("cpubench_benchselect-userinput@cpubench-prgm-" + promptver2).lower()
             if cpubench_benchselect == "very short":
                 import pygame
-                print("Your very short test will start in 2 seconds.")
+                print("Your very short benchmark will start in 2 seconds.")
                 time.sleep(2)
                 cputesttimefull = time.time()
                 print("Starting test.")
@@ -905,17 +905,10 @@ while not done:
                     print(round(time.time() - cputesttimeper,3), "second run time, test", x, "of 50 done.")
                 print("50 tests completed, in", round(time.time() - cputesttimefull,3), "seconds.")
                 print("Baseline: ?? on an Intel Core i7 4615U")
-                print("Would you like me to save your results to a file?")
-                cpubench_vssave = input("cpubench_vssave-userinput@cpubench-prgm-" + promptver2).lower()
-                if cpubench_vssave == "yes":
-                    print("Coming soon.")
-                    continue
-                if cpubench_vssave == "no":
-                    print("Exiting...")
-                    continue
-                else:
-                    print("Bad input.")
-                    continue
+                continue
+            if cpubench_benchselect == "short":
+                import pygame
+                
             print("Test starting in 3 seconds...")
             time.sleep(1)
             print("Test starting in 2 seconds...")
