@@ -891,7 +891,7 @@ while not done:
                         if (cpubench_num % i) == 0:
                             break
                     else:
-                        print("Now benchmarking... Elapsed time:", round(time.time() - cpubench_totaltime,4), "seconds.", end='\r')
+                        print("Now benchmarking... Elapsed time:", round(time.time() - cpubench_totaltime,4), "seconds. Prime found:", cpubench_num, end='\r')
             print("")
             print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
             print("Baselines:")
@@ -900,7 +900,7 @@ while not done:
             print("?? on an Intel Pentium E5800")
             print("?? on an Intel Pentium 4")
             continue
-        if cpubench_benchselect == "short":
+        elif cpubench_benchselect == "short":
             cpubench_start = 0
             cpubench_end = 50000
             cpubench_totaltime = time.time()
@@ -911,7 +911,47 @@ while not done:
                         if (cpubench_num % i) == 0:
                             break
                     else:
-                        print("Now benchmarking... Elapsed time:", round(time.time() - cpubench_totaltime,4), "seconds.", end='\r')
+                        print("Now benchmarking... Elapsed time:", round(time.time() - cpubench_totaltime,4), "seconds. Prime found:", cpubench_num, end='\r')
+            print("")
+            print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
+            print("Baselines:")
+            print("?? on an Intel Core i7 4650U")
+            print("?? on an Intel Core i7 3615QM")
+            print("?? on an Intel Pentium E5800")
+            print("?? on an Intel Pentium 4")
+            continue
+        elif cpubench_benchselect == "normal":
+            cpubench_start = 0
+            cpubench_end = 200000
+            cpubench_totaltime = time.time()
+            print("Now starting...")
+            for cpubench_num in range(cpubench_start,cpubench_end + 1):
+                if cpubench_num > 1:
+                    for i in range(2,cpubench_num):
+                        if (cpubench_num % i) == 0:
+                            break
+                    else:
+                        print("Now benchmarking... Elapsed time:", round(time.time() - cpubench_totaltime,4), "seconds. Prime found:", cpubench_num, end='\r')
+            print("")
+            print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
+            print("Baselines:")
+            print("?? on an Intel Core i7 4650U")
+            print("?? on an Intel Core i7 3615QM")
+            print("?? on an Intel Pentium E5800")
+            print("?? on an Intel Pentium 4")
+            continue
+        elif cpubench_benchselect == "long":
+            cpubench_start = 0
+            cpubench_end = 500000
+            cpubench_totaltime = time.time()
+            print("Now starting...")
+            for cpubench_num in range(cpubench_start,cpubench_end + 1):
+                if cpubench_num > 1:
+                    for i in range(2,cpubench_num):
+                        if (cpubench_num % i) == 0:
+                            break
+                    else:
+                        print("Now benchmarking... Elapsed time:", round(time.time() - cpubench_totaltime,4), "seconds. Prime found:", cpubench_num, end='\r')
             print("")
             print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
             print("Baselines:")
@@ -921,7 +961,7 @@ while not done:
             print("?? on an Intel Pentium 4")
             continue
         else:
-            print("Invalid input! Valid inputs are: yes, no.")
+            print("Not a valid option. Valid options are: very short, short, normal, long")
             
             
         
