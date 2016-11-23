@@ -875,97 +875,25 @@ while not done:
     elif cmd == "cpubench":
         print("Launching program: CPU Bench (version " + cpubench_ver + ")")
         print("")
-        cpubench_veryshorttestcount = 50
-        cpubench_shorttestcount = 200
-        cpubench_normaltestcount = 500
-        cpubench_longtestcount = 1000
-        cpubench_depwarning = ""
-        cpubench_depwarning_loop = False
-        cpubench_perdone = 0
-        print("DEPENDENCIES WARNING:")
-        print("CPU Bench needs these dependencies to work properly:")
-        print("PyGame")
-        print("Please ensure you have these dependencies installed to start the program!")
-        print("Would you like to start the program? Yes or No.")
-        cpubench_depwarning = input("cpubench_depwarning-userinput@cpubench-prgm-" + promptver2).lower()
-        if cpubench_depwarning == "yes":
-            import pygame
-            print("Welcome to PyTerm's CPU Bench!")
-            print("This program uses PyGame going on/off to test your CPU!")
-            print("This program can perform different test lengths. Please select the length of the benchmark you would like to perform.")
-            print("Very Short = 50 rounds; Short = 200 rounds; Normal = 500 rounds; Long = 1000 rounds")
-            print("Which test would you like to perform?")
-            cpubench_benchselect = input("cpubench_benchselect-userinput@cpubench-prgm-" + promptver2).lower()
-            if cpubench_benchselect == "very short":
-                import pygame
-                print("Your very short benchmark will start in 2 seconds.")
-                time.sleep(2)
-                cpubench_timefull = time.time()
-                print("Starting benchmark.")
-                for x in range(1, cpubench_veryshorttestcount):
-                    cpubench_timeper = time.time()
-                    pygame.init()
-                    pygame.quit()
-                    cpubench_perdone = cpubench_perdone + 2
-                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 50 done. (" + str(cpubench_perdone) + "% done)")
-                print("50 tests completed in", round(time.time() - cpubench_timefull,3), "seconds.")
-                #More baselines are coming soon, Pentium E5800, Core i7 3615QM to be exact.
-                print("Baseline: 29 seconds on an Intel Core i7 4650U")
-                continue
-            if cpubench_benchselect == "short":
-                import pygame
-                print("Your short benchmark will start in 2 seconds.")
-                time.sleep(2)
-                cpubench_timefull = time.time()
-                print("Starting benchmark.")
-                for x in range(1, cpubench_shorttestcount):
-                    cpubench_timeper = time.time()
-                    pygame.init()
-                    pygame.quit()
-                    cpubench_perdone = cpubench_perdone + 0.5
-                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 200 done. (" + str(cpubench_perdone) + "% done)")
-                print("200 tests completed in", round(time.time() - cpubench_timefull,3), "seconds.")
-                print("Baseline: 122 seconds on an Intel Core i7 4650U")
-                continue
-            if cpubench_benchselect == "normal":
-                import pygame
-                print("Your normal benchmark will start in 2 seconds.")
-                time.sleep(2)
-                cpubench_timefull = time.time()
-                print("Starting benchmark.")
-                for x in range(1, cpubench_normaltestcount):
-                    cpubench_timeper = time.time()
-                    pygame.init()
-                    pygame.quit()
-                    cpubench_perdone = cpubench_perdone + 0.2
-                    cpubench_perdone = round(cpubench_perdone,2)
-                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 500 done. (" + str(cpubench_perdone) + "% done)")
-                print("500 tests completed in", round(time.time() - cpubench_timefull,3), "seconds.")
-                print("Baseline: 307 seconds on an Intel Core i7 4650U")
-                continue
-            if cpubench_benchselect == "long":
-                import pygame
-                print("Your normal benchmark will start in 2 seconds.")
-                time.sleep(2)
-                print("Starting benchmark.")
-                for x in range(1, cpubench_longtestcount):
-                    cpubench_timeper = time.time()
-                    pygame.init()
-                    pygame.quit()
-                    cpubench_perdone = cpubench_perdone + 0.1
-                    cpubench_perdone = round(cpubench_perdone,2)
-                    print(round(time.time() - cpubench_timeper,3), "second run time, test", x, "of 1000 done. (" + str(cpubench_perdone) + "% done)")
-                print("1000 tests completed in", round(time.time() - cpubench_timefull,3), "seconds.")
-                print("Baseline: ?? on an Intel Core i7 4650U")
-                continue
-            else:
-                print("Invalid input.")
-                print("This program will be exited out of, due to the loop structure.")
-        elif cpubench_depwarning == "no":
-            print("Exiting out of CPU Bench.")
-            cpubench_depwarning = ""
+        print("Welcome to CPU Bench.")
+        print("This test is comprised of your computer finding prime numbers.")
+        print("We can run a very short, short, normal, or long test (finding 0-10000, 50000, 200000, and 500000)")
+        print("Which test would you like to run?")
+        cpubench_benchselect = input("cpubench_benchselect-userinput@cpubench-prgm-" + promptver2).lower()
+        if cpubench_benchselect == "very short":
+            cpubench_start = 0
+            cpubench_end = 10000
+            cpubench_totaltime = time.time()
+            print("Now starting...")
+            for cpubench_num in range(cpubench_start,cpubench_end + 1):
+                if cpubench_num > 1:
+                    for i in range(2,cpubench_num):
+                        if (cpubench_num % i) == 0:
+                            break
+                    else:
+                        print("Found a prime number! Elapsed time (in total):", round(time.time() - cpubench_totaltime,4), "seconds.")
+            print("Prime numbers between 0-10000 have been found. It took", round(time.time() - cpubench_totaltime,4), "seconds to find them.")
             continue
-        
         else:
             print("Invalid input! Valid inputs are: yes, no.")
             
