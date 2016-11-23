@@ -149,7 +149,7 @@ while not done:
         print("(COMING IN BETA 5) reset - Resets PyTerm.")
         print("(COMING IN BETA 5) whattypeofbuildisthisbuildofpyterm - ")
         print("--- Diagnostic Tools --- ")
-        print("(COMING IN BETA 3) varcheck - Checks all the variables in PyTerm. Quick note: It's A LOT of variables.")
+        print("cpubench - Benchmarks your CPU. Not in the best way, honestly.")
         print("(COMING IN BETA 3) vercheck - Lists all program versions that are included with PyTerm.")
         print("(COMING IN BETA 3) sysinfo - Prints system information.")
         print("ping - I'm pretty sure this tool helps you fix network issues. Not sure honestly.")
@@ -233,7 +233,7 @@ while not done:
         print("So, now, everything gets saved to GitHub.")
         print("I ask you to always save. In multiple locations.")
         print("Please do.")
-        print("A PSA from o355.")
+        print("A PSA from me.")
         cmd = ""
         continue
     elif cmd == "uptime":
@@ -890,7 +890,7 @@ while not done:
         cpubench_depwarning = input("cpubench_depwarning-userinput@cpubench-prgm-" + promptver2).lower()
         if cpubench_depwarning == "yes":
             import pygame
-            print("Welcome to CPU Bench 3!")
+            print("Welcome to PyTerm's CPU Bench!")
             print("This program uses PyGame going on/off to test your CPU!")
             print("This program can perform different test lengths. Please select the length of the benchmark you would like to perform.")
             print("Very Short = 50 rounds; Short = 200 rounds; Normal = 500 rounds; Long = 1000 rounds")
