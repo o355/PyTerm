@@ -114,6 +114,7 @@ textadventure_ver = "1.0.2"
 cpubench_ver = "4.0"
 varcheck_ver = "1.0"
 sysinfo_ver = "1.0"
+diagnosticsong_ver = "1.0"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
 version = "2.0-indev"
@@ -152,10 +153,58 @@ while not done:
         print("(COMING IN BETA 5) whattypeofbuildisthisbuildofpyterm - ")
         print("--- Diagnostic Tools --- ")
         print("cpubench - Benchmarks your CPU, now highly improved!")
+        print("diagnosticsong - A very diagnostic song.")
         print("(COMING IN BETA 3) vercheck - Lists all program versions that are included with PyTerm.")
         print("(COMING IN BETA 3) sysinfo - Prints system information.")
         print("ping - I'm pretty sure this tool helps you fix network issues. Not sure honestly.")
         cmd = ""
+        continue
+    elif cmd == "diagnosticsong":
+        print(round(time.time() - entireload,4), "| Launching program: Diagnostic Song (version " + diagnosticsong_ver + ")")
+        print("")
+        cmd = ""
+        print("This program downloads a .wav file (that's completely harmless) from my website (owenthe.ninja), and we recommend you lower your computer volume.")
+        print("(so when the song plays, you get the best experience)")
+        print("If you want to really see what's going on, check the code (GitHub, local file). And you'll see nothing much, honestly.")
+        print("If you'd like to quit, do Control+C in the Python window.")
+        print("Starting in 5 seconds.")
+        time.sleep(5)
+        print("Doing stuff. Please wait!")
+        diagnosticsong_filecheck = os.path.isfile('assets//diagnosticsong//song.wav')
+        def diagnosticsong_songplay():
+            print("Importing necessary libraries...")
+            import pyaudio
+            import wave
+            print("Now playing the song...")
+            chunk = 1024
+            f = wave.open(r"assets//diagnosticsong//song.wav","rb")
+            p = pyaudio.PyAudio()
+            stream = p.open(format = p.get_format_from_width(f.getsampwidth()),
+                                        channels = f.getnchannels(),
+                                        rate = f.getframerate(),
+                                        output = True)
+            data = f.readframes(chunk)
+            while len(data) > 0:
+                stream.write(data)
+                data = f.readframes(chunk)
+                            
+            stream.stop_stream()
+            stream.close()
+            p.terminate()
+            print("Hope the joke was a little funny at best ;)")
+            print("Terminating now, keep the file assets//diagnosticsong//song.wav so you don't have to download the song again!")
+            print("Returning to PyTerm.")
+        if diagnosticsong_filecheck == False:
+            import urllib.request
+            import shutil
+            print("Downloading the song...")
+            with urllib.request.urlopen('http://owenthe.ninja/ptermstuff/song.wav') as response, open('assets//diagnosticsong//song.wav', 'wb') as out_file:
+                shutil.copyfileobj(response, out_file)
+            diagnosticsong_songplay()
+            continue
+        elif diagnosticsong_filecheck == True:
+            diagnosticsong_songplay()
+            continue
         continue
     elif cmd == "sysinfo":
         print(round(time.time() - entireload,4), "| Launching program: System Information (version " + sysinfo_ver + ")")
@@ -282,34 +331,7 @@ while not done:
                 ping_revive = input("ping_revive-userinput@ping-prgm-" + promptver2).lower()
                 if (ping_revive == "yes" and ping_revivals < 5.2):
                     print("I'll play this ad while I fetch your ball!")
-                    ping_adcheck = os.path.isfile('assets//ping//hibillymayshere.wav')
-                    def ping_adplay():
-                        import pyaudio
-                        import wave
-                        chunk = 1024
-                        f = wave.open(r"assets//ping//hibillymayshere.wav","rb")
-                        p = pyaudio.PyAudio()
-                        stream = p.open(format = p.get_format_from_width(f.getsampwidth()),
-                                                  channels = f.getnchannels(),
-                                                  rate = f.getframerate(),
-                                                  output = True)
-                        data = f.readframes(chunk)
-                        while data != '':
-                            stream.write(data)
-                            data = f.readframes(chunk)
-                            
-                        stream.stop_stream()
-                        stream.close()
-                        terminate()
-                    if ping_adcheck == False:
-                        import urllib.request
-                        import shutil
-                        print("Downloading the advertisement...")
-                        with urllib.request.urlopen('http://owenthe.ninja/ptermstuff/hibillymayshere.wav') as response, open('assets//ping//hibillymayshere.wav', 'wb') as out_file:
-                            shutil.copyfileobj(response, out_file)
-                        ping_adplay()
-                    elif ping_adcheck == True:
-                        ping_adplay()
+                    
 
                     ping_revivals = ping_revivals + 1
                     continue
