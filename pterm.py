@@ -32,8 +32,9 @@ print(round(time.time() - entireload,4), "| Imported os!")
 print(round(time.time() - entireload,4), "| Importing strftime from time...")
 from time import strftime
 print(round(time.time() - entireload,4), "| Imported strftime from time!")
-print(round(time.time() - entireload,4), "| Importing tkinter...")
-import tkinter
+print(round(time.time() - entireload,4), "| Importing platform...")
+import platform
+print(round(time.time() - entireload,4), "| Imported platform!")
 print(round(time.time() - entireload,4), "| Defining variable username...")
 username = "user"
 print(round(time.time() - entireload,4), "| Defined variable username to: user!")
@@ -110,8 +111,9 @@ setup_ver = "2.1"
 shutdown_ver = "1.1"
 madlibs_ver = "1.0"
 textadventure_ver = "1.0.2"
-cpubench_ver = "3.0-unfinished"
+cpubench_ver = "4.0"
 varcheck_ver = "1.0"
+sysinfo_ver = "1.0"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
 version = "2.0-indev"
@@ -149,14 +151,46 @@ while not done:
         print("(COMING IN BETA 5) reset - Resets PyTerm.")
         print("(COMING IN BETA 5) whattypeofbuildisthisbuildofpyterm - ")
         print("--- Diagnostic Tools --- ")
-        print("cpubench - Benchmarks your CPU. Not in the best way, honestly.")
+        print("cpubench - Benchmarks your CPU, now highly improved!")
         print("(COMING IN BETA 3) vercheck - Lists all program versions that are included with PyTerm.")
         print("(COMING IN BETA 3) sysinfo - Prints system information.")
         print("ping - I'm pretty sure this tool helps you fix network issues. Not sure honestly.")
         cmd = ""
         continue
-    elif cmd == "varcheck":
-        print(round(time.time() - entireload,4), "| Launching program: Variable Check (version " + varcheck_ver + ")")
+    elif cmd == "sysinfo":
+        print(round(time.time() - entireload,4), "| Launching program: System Information (version " + sysinfo_ver + ")")
+        print("")
+        cmd = ""
+        print("Predefining a few variables, this shouldn't take long.")
+        sysinfo_system = platform.system()
+        sysinfo_release = platform.release()
+        sysinfo_version = platform.version()
+        print("System information:")
+        print("Machine type: " + platform.machine())
+        print("Computer name: " + platform.node())
+        print("Processor name: " + platform.processor())
+        print("OS information: " + sysinfo_system + " " + sysinfo_release + " (version " + sysinfo_version + ")")
+        print("OS specific information:")
+        #Only tested on win32/debian (aka linux).
+        if sys.platform.startswith('linux'):
+            print(str(platform.linux_distribution(full_distrubiton_name=1)))
+            print("Key: Distribution Name, Version, ID (codename) of the version")
+            continue
+        elif sys.platform.startswith('win32'):
+            print(str(platform.win32_ver()))
+            print("Key: Release, Version, Service Pack, OS type (multi/single procesor) and Debugging Code check")
+            continue
+        elif sys.platform.startswith('darwin'):
+            print(str(platform.mac_ver()))
+            print("Key: Release, Version, Dev Stage, Non Release Version, Machine")
+            continue
+        else:
+            print("Can't get detailed information for your operating system.")
+            print("But that's pretty rad you're using an uncommon OS ;)")
+            continue
+        continue
+    elif cmd == "vercheck":
+        print(round(time.time() - entireload,4), "| Launching program: Variable Check (version " + vercheck_ver + ")")
         print("")
         cmd = ""
         print("Printing every pyterm variable...")
@@ -175,43 +209,142 @@ while not done:
         print("")
         ping_score = 0
         ping_mistakes = 0
+        ping_alltimemistakes = 0
+        ping_revivals = 0
         ping_loop = False
         while not ping_loop:
             print("Do you ping or do you pong?")
             ping_int = randint(0, 3)
+            ping_int = 1
             ping_input = input("ping_input-userinput@ping-prgm-" + promptver2).lower()
             if (ping_input == "ping" and ping_int == 0):
-                print("Your ball went missing.")
-                print("Your score:", ping_score)
-                break
+                print("Hurrah! Let's keep pinging.")
+                ping_score = ping_score + 1
+                ping_mistakes = 0
+                print("Your score right now: " + ping_score)
+                continue
             elif (ping_input == "ping" and ping_int == 1):
-                print("You pinged too hard.")
-                print("Your score:", ping_score)
+                print("Hurrah! Let's keep pinging.")
+                ping_score = ping_score + 1
+                ping_mistakes = 0
+                print("Your score right now: " + ping_score)
                 break
             elif (ping_input == "ping" and ping_int == 2):
                 print("The song Bring Me to Life plays in the background...")
-                print("Your score:", ping_score)
-                break
+                print("Would you like me to go get your ball? Yes or no?")
+                ping_revive = input("ping_revive-userinput@ping-prgm-" + promptver2).lower()
+                if (ping_revive == "yes" and ping_revivals < 5.2):
+                    print("I'll play this ad while I fetch your ball!")
+                    print("Tired of your fingers getting sore while you code?")
+                    time.sleep(1)
+                    print("Try using a mechanical keyboard! Especially the Cherry MX Blue ones!")
+                    time.sleep(3)
+                    print("The sound of that keyboard will make you fall asleep!")
+                    time.sleep(2)
+                    print('"I use my mechanical keyboard when coding and I never get sore. Great buy." said one of our satisfied customers!')
+                    time.sleep(3)
+                    print("What are you waiting for? Go get your mechanical keyboard now! For only $19.99!")
+                    time.sleep(2)
+                    print("Call 1-800-555-5555 to order now, representatives are waiting")
+                    time.sleep(2)
+                    print("This deal is only available by calling within the next 10 minutes")
+                    time.sleep(2)
+                    print("Call now!")
+                    print("I'm back, sorry about that. Let's keep going.")
+                    ping_revivals = ping_revivals + 1
+                    continue
+                elif (ping_revive == "yes" and ping_revivals > 5.2):
+                    print("I'm not allowed to get your ball more than 5 times. Sorry!")
+                    print("Final score: " + ping_score)
+                    break
+                elif (ping_revive == "no"):
+                    print("Okay.")
+                    print("Final score: " + ping_score)
+                    break
+                else:
+                    print("I'll assume you tried to say no. Game over!")
+                    print("Final score: " + ping_score)
             elif (ping_input == "ping" and ping_int == 3):
                 print("Hurrah! Let's keep pinging.")
                 ping_score = ping_score + 1
+                ping_mistakes = 0
+                print("Your score right now: " + ping_score)
                 continue
             elif (ping_input == "pong" and ping_int == 0):
                 print("Hurrah! Let's keep ponging.")
                 ping_score = ping_score + 1
+                ping_mistakes = 0
+                print("Your score right now: " + ping_score)
                 continue
             elif (ping_input == "pong" and ping_int == 1):
                 print("Error 500.")
-                print("Your score:", ping_score)
-                break
+                print("Would you like me to go get your ball? Yes or no?")
+                ping_revive = input("ping_revive-userinput@ping-prgm-" + promptver2).lower()
+                if (ping_revive == "yes" and ping_revivals < 5.2):
+                    print("I'll play this ad while I fetch your ball!")
+                    ping_adcheck = os.path.isfile('assets//ping//hibillymayshere.wav')
+                    def ping_adplay():
+                        import pyaudio
+                        import wave
+                        chunk = 1024
+                        f = wave.open(r"assets//ping//hibillymayshere.wav","rb")
+                        p = pyaudio.PyAudio()
+                        stream = p.open(format = p.get_format_from_width(f.getsampwidth()),
+                                                  channels = f.getnchannels(),
+                                                  rate = f.getframerate(),
+                                                  output = True)
+                        data = f.readframes(chunk)
+                        while data != '':
+                            stream.write(data)
+                            data = f.readframes(chunk)
+                            
+                        stream.stop_stream()
+                        stream.close()
+                        terminate()
+                    if ping_adcheck == False:
+                        import urllib.request
+                        import shutil
+                        print("Downloading the advertisement...")
+                        with urllib.request.urlopen('http://owenthe.ninja/ptermstuff/hibillymayshere.wav') as response, open('assets//ping//hibillymayshere.wav', 'wb') as out_file:
+                            shutil.copyfileobj(response, out_file)
+                        ping_adplay()
+                    elif ping_adcheck == True:
+                        ping_adplay()
+
+                    ping_revivals = ping_revivals + 1
+                    continue
+                elif (ping_revive == "yes" and ping_revivals > 5.2):
+                    print("I'm not allowed to get your ball more than 5 times. Sorry!")
+                    print("Final score: " + ping_score)
+                    break
+                elif (ping_revive == "no"):
+                    print("Okay.")
+                    print("Final score: " + ping_score)
+                    break
+                else:
+                    print("I'll assume you tried to say no. Game over!")
+                    print("Final score: " + ping_score)
             elif (ping_input == "pong" and ping_int == 2):
                 print("Hurrah! Let's keep ponging.")
                 ping_score = ping_score + 1
+                ping_mistakes = 0
+                print("Your score right now: " + ping_score)
                 continue
             elif (ping_input == "pong" and ping_int == 3):
-                print("Creative message for why you lost goes here.")
-                print("Your score:", ping_score)
-                break
+                print("Hurrah! Let's keep ponging.")
+                ping_score = ping_score + 1
+                ping_mistakes = 0
+                print("Your score right now: " + ping_score)
+                continue
+            elif ping_input == "stats":
+                print("Mistakes are made.")
+                print("Current mistakes: " + ping_mistakes)
+                print("All time mistakes (during this game): " + ping_alltimemistakes)
+            elif ping_mistakes == 5:
+                print("Let me see if I can find the manual for this program...")
+                time.sleep(5)
+                print("Couldn't find it. Honestly this program is so simple...")
+                continue
             elif ping_mistakes == 10:
                 print("Stop making so many mistakes.")
                 print("")
