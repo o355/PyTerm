@@ -186,8 +186,8 @@ while not done:
                 break
             elif (ping_input == "ping" and ping_int == 1):
                 print("You pinged too hard.")
-                ping_score = ping_score + 1
-                continue
+                print("Your score:", ping_score)
+                break
             elif (ping_input == "ping" and ping_int == 2):
                 print("The song Bring Me to Life plays in the background...")
                 print("Your score:", ping_score)
@@ -319,9 +319,10 @@ while not done:
     elif cmd == "coolthingz":
         print(round(time.time() - entireload,4), "| Launching program - Coolthingz (version " + coolthingz_ver + ")")
         print("")
+        print("Fun fact: PyTerm (What was first known to be Gaming Terminal) was founded at a tech camp.")
         print("Fun fact: I made the entire base for PyTerm (basically the initial games and commands, and the style for how extra commands/games would be added) in around a day, 4-5 hours. The instructor was VERY impressed.")
         print("Fun fact: I think my instructor got pissed at me for going ham on my project")
-        print("Fun fact: Python has been the only language I've gone after, and for one reason: It's simple. REALLY simple. $750 well paid.")
+        print("Fun fact: Python has been the only language I've gone after, and for one reason: It's simple. REALLY simple. 3 figures well paid.")
         print("Fun fact: I took a Unity and Java class later. Java is complex, and I don't know if I forgot Unity")
         print("Fun fact: Out of the 3 weeks that I scheduled for tech camp, I thought Python would be the most boring, I didn't look forward to it. Well look where it got me...")
         print("Fun fact: On the last day of camp (family presentations day), a Tornado Warning was issued during family presentations, and the power went out at the college were it was at.")
@@ -329,9 +330,11 @@ while not done:
         print("Fun fact: During that tornado warning, my good friend was going to his car in the worst of it, and his umbrella flew away. He said visibility was about 10 feet.")
         print("Fun fact: PyTerm was made (and still is made) with only a basic knowledge of how Python works, and Stack Overflow. I kid you not.")
         print("Fun fact: Originally, PyTerm was going to be named Gaming Terminal, in which you would launch games from the terminal. PyTerm has 3 games, but obviously got many other functions.")
-        print("I ended up wanting to spruce up the terminal by adding some Linux-like commands, since I had a decent basic knowledge of Linux then (after my MC server switched to a VPS earlier in late April).")
-        print("Fun fact: One PyTerm got corrupted. I lost a lot of progress. 8 hours, to be exact. PyTerm was 50,000 NUL NUL NULs. Such, the indev branch was created.")
+        print("I ended up wanting to spruce up the terminal by adding some Linux-like commands, since I had a decent basic knowledge of Linux then (after my MC server switched to a VPS in late April 2016).")
+        print("Fun fact: Once, the master indev build of PyTerm got corrupted. I lost a lot of progress. 8 hours, to be exact. PyTerm was 50,000 NUL NUL NULs. Such, the indev branch was created.")
         print("FYI: I don't have a Minecraft server anymore. I ask you NOT to spam my GitHub inbox with the question: What's the IP to ur MC server!!!!1???!!!")
+        print("Fun fact: The old ASCII text was made in Notepad, and then I copy & pasted the print("" suffix and "") to the ASCII text afterwards.")
+        prin
         cmd = ""
         continue
     elif cmd == "notes":
@@ -895,9 +898,9 @@ while not done:
             print("")
             print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
             print("Baselines:")
-            print("?? on an Intel Core i7 4650U")
-            print("?? on an Intel Core i7 3615QM")
-            print("?? on an Intel Pentium E5800")
+            print("1.6416 seconds on an Intel Core i7 4650U")
+            print("1.1354 seconds on an Intel Core i7 3615QM")
+            print("1.2441 seconds on an Intel Pentium E5800")
             print("?? on an Intel Pentium 4")
             continue
         elif cpubench_benchselect == "short":
@@ -915,9 +918,9 @@ while not done:
             print("")
             print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
             print("Baselines:")
-            print("?? on an Intel Core i7 4650U")
-            print("?? on an Intel Core i7 3615QM")
-            print("?? on an Intel Pentium E5800")
+            print("30.5881 seconds on an Intel Core i7 4650U")
+            print("22.1646 seconds on an Intel Core i7 3615QM")
+            print("24.9308 seconds on an Intel Pentium E5800")
             print("?? on an Intel Pentium 4")
             continue
         elif cpubench_benchselect == "normal":
@@ -936,8 +939,8 @@ while not done:
             print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
             print("Baselines:")
             print("?? on an Intel Core i7 4650U")
-            print("?? on an Intel Core i7 3615QM")
-            print("?? on an Intel Pentium E5800")
+            print("306.5036 seconds on an Intel Core i7 3615QM")
+            print("343.3961 seconds on an Intel Pentium E5800")
             print("?? on an Intel Pentium 4")
             continue
         elif cpubench_benchselect == "long":
@@ -955,9 +958,9 @@ while not done:
             print("")
             print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
             print("Baselines:")
-            print("?? on an Intel Core i7 4650U")
-            print("?? on an Intel Core i7 3615QM")
-            print("?? on an Intel Pentium E5800")
+            print("1764.9318 seconds on an Intel Core i7 4650U")
+            print("1773.7427 seconds on an Intel Core i7 3615QM")
+            print("1936.0202 seconds on an Intel Pentium E5800")
             print("?? on an Intel Pentium 4")
             continue
         else:
