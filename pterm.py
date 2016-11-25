@@ -115,6 +115,7 @@ cpubench_ver = "4.0"
 varcheck_ver = "1.0"
 sysinfo_ver = "1.0"
 diagnosticsong_ver = "1.0"
+clock_ver = "1.0"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
 version = "2.0-indev"
@@ -443,6 +444,19 @@ while not done:
         print("Here is the current time:")
         print(strftime("%A, %B %d, %Y, %I:%M:%S %p"))
         cmd = ""
+        continue
+    elif cmd == "clock":
+        print(round(time.time() - entireload,4), "| Launching program: Clock (version " + clock_ver + ")")
+        print("")
+        cmd = ""
+        print("Here is a lovely clock. Press Enter to head back to PyTerm.")
+        import msvcrt
+        while True:
+            print(strftime("%A, %B %d, %Y, %I:%M:%S %p"), end="\r")
+            if msvcrt.kbhit():
+                if ord(msvcrt.getch()) == 13:
+                    print("")
+                    break
         continue
     elif cmd == "timer":
         print(round(time.time() - entireload,4), "| Launching program: Timer (version " + timer_ver + ")")
