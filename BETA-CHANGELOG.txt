@@ -16,7 +16,7 @@
 
 2.0 beta 2:
 - Removed a few startup variables
-- Files now get stored in \assets
+- Files now get stored in \assets (vs. ptfiles)
 - Adds version/build variables in the loader
 - Adds the ping program
 - Adds the restart program
