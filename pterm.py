@@ -89,7 +89,7 @@ instructor = ""
 action = ""
 tell = ""
 st = True
-restart_prog = 'ipterm.py'
+restart_prog = 'pterm.py'
 print(round(time.time() - entireload,4), "| Defined 17 variables!")
 print(round(time.time() - entireload,4), "| Defining version variables...")
 help_ver = "2.0"
@@ -249,8 +249,6 @@ while not done:
         print(round(time.time() - entireload,4), "| Launching program: Restart (version " + restart_ver + ")")
         print("")
         print("Restarting PyTerm...")
-        #This line varies if it's a indev build/good build. Indevs will always be ipterm.py, real ones are always pterm.py.
-        #It's called: Not uploading a lot of python built-in stuff to GitHub! (IM ABOUT TO FIX PATHS NOW SO THIS IS GREAT.)
         exec(open(restart_prog).read())
     elif cmd == "ping":
         ping_ver = "0ms"
