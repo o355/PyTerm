@@ -254,129 +254,110 @@ while not done:
         exec(open(restart_prog).read())
     elif cmd == "ping":
         ping_ver = "0ms"
-        print(round(time.time() - entireload,4), "| Launching program: Ping (version " + ping_ver + ")")
-        from random import randint
-        print("")
-        ping_score = 0
-        ping_mistakes = 0
-        ping_alltimemistakes = 0
-        ping_revivals = 0
-        ping_loop = False
-        while not ping_loop:
-            print("Do you ping or do you pong?")
-            ping_int = randint(0, 3)
-            ping_int = 1
-            ping_input = input("ping_input-userinput@ping-prgm-" + promptver2).lower()
-            if (ping_input == "ping" and ping_int == 0):
-                print("Hurrah! Let's keep pinging.")
-                ping_score = ping_score + 1
-                ping_mistakes = 0
-                print("Your score right now: " + ping_score)
-                continue
-            elif (ping_input == "ping" and ping_int == 1):
-                print("Hurrah! Let's keep pinging.")
-                ping_score = ping_score + 1
-                ping_mistakes = 0
-                print("Your score right now: " + ping_score)
-                break
-            elif (ping_input == "ping" and ping_int == 2):
-                print("The song Bring Me to Life plays in the background...")
-                print("Would you like me to go get your ball? Yes or no?")
-                ping_revive = input("ping_revive-userinput@ping-prgm-" + promptver2).lower()
-                if (ping_revive == "yes" and ping_revivals < 5.2):
-                    print("I'll play this ad while I fetch your ball!")
-                    print("Tired of your fingers getting sore while you code?")
-                    time.sleep(1)
-                    print("Try using a mechanical keyboard! Especially the Cherry MX Blue ones!")
-                    time.sleep(3)
-                    print("The sound of that keyboard will make you fall asleep!")
-                    time.sleep(2)
-                    print('"I use my mechanical keyboard when coding and I never get sore. Great buy." said one of our satisfied customers!')
-                    time.sleep(3)
-                    print("What are you waiting for? Go get your mechanical keyboard now! For only $19.99!")
-                    time.sleep(2)
-                    print("Call 1-800-555-5555 to order now, representatives are waiting")
-                    time.sleep(2)
-                    print("This deal is only available by calling within the next 10 minutes")
-                    time.sleep(2)
-                    print("Call now!")
-                    print("I'm back, sorry about that. Let's keep going.")
-                    ping_revivals = ping_revivals + 1
-                    continue
-                elif (ping_revive == "yes" and ping_revivals > 5.2):
-                    print("I'm not allowed to get your ball more than 5 times. Sorry!")
-                    print("Final score: " + ping_score)
-                    break
-                elif (ping_revive == "no"):
-                    print("Okay.")
-                    print("Final score: " + ping_score)
-                    break
-                else:
-                    print("I'll assume you tried to say no. Game over!")
-                    print("Final score: " + ping_score)
-            elif (ping_input == "ping" and ping_int == 3):
-                print("Hurrah! Let's keep pinging.")
-                ping_score = ping_score + 1
-                ping_mistakes = 0
-                print("Your score right now: " + ping_score)
-                continue
-            elif (ping_input == "pong" and ping_int == 0):
-                print("Hurrah! Let's keep ponging.")
-                ping_score = ping_score + 1
-                ping_mistakes = 0
-                print("Your score right now: " + ping_score)
-                continue
-            elif (ping_input == "pong" and ping_int == 1):
-                print("Error 500.")
-                print("Would you like me to go get your ball? Yes or no?")
-                ping_revive = input("ping_revive-userinput@ping-prgm-" + promptver2).lower()
-                if (ping_revive == "yes" and ping_revivals < 5.2):
-                    print("I'll play this ad while I fetch your ball!")
-                    
 
-                    ping_revivals = ping_revivals + 1
-                    continue
-                elif (ping_revive == "yes" and ping_revivals > 5.2):
-                    print("I'm not allowed to get your ball more than 5 times. Sorry!")
-                    print("Final score: " + ping_score)
-                    break
-                elif (ping_revive == "no"):
-                    print("Okay.")
-                    print("Final score: " + ping_score)
-                    break
-                else:
-                    print("I'll assume you tried to say no. Game over!")
-                    print("Final score: " + ping_score)
-            elif (ping_input == "pong" and ping_int == 2):
-                print("Hurrah! Let's keep ponging.")
-                ping_score = ping_score + 1
-                ping_mistakes = 0
-                print("Your score right now: " + ping_score)
-                continue
-            elif (ping_input == "pong" and ping_int == 3):
-                print("Hurrah! Let's keep ponging.")
-                ping_score = ping_score + 1
-                ping_mistakes = 0
-                print("Your score right now: " + ping_score)
-                continue
-            elif ping_input == "stats":
-                print("Mistakes are made.")
-                print("Current mistakes: " + ping_mistakes)
-                print("All time mistakes (during this game): " + ping_alltimemistakes)
-            elif ping_mistakes == 5:
-                print("Let me see if I can find the manual for this program...")
-                time.sleep(5)
-                print("Couldn't find it. Honestly this program is so simple...")
-                continue
-            elif ping_mistakes == 10:
-                print("Stop making so many mistakes.")
-                print("")
+        print(round(time.time() - entireload,4), "| Launching program: Ping (version " + ping_ver + ")")
+
+        from random import randint
+
+        print("")
+
+        ping_score = 0
+
+        ping_mistakes = 0
+
+        ping_loop = False
+
+        while not ping_loop:
+
+            print("Do you ping or do you pong?")
+
+            ping_int = randint(0, 3)
+
+            ping_input = input("ping_input-userinput@ping-prgm-" + promptver2).lower()
+
+            if (ping_input == "ping" and ping_int == 0):
+
+                print("Your ball went missing.")
+
+                print("Your score:", ping_score)
+
                 break
-            else:
-                print("Did you read the instructions?")
-                ping_mistakes = ping_mistakes + 1
-                print("")
+
+            elif (ping_input == "ping" and ping_int == 1):
+
+                print("You pinged too hard.")
+
+                ping_score = ping_score + 1
+
                 continue
+
+            elif (ping_input == "ping" and ping_int == 2):
+
+                print("The song Bring Me to Life plays in the background...")
+
+                print("Your score:", ping_score)
+
+                break
+
+            elif (ping_input == "ping" and ping_int == 3):
+
+                print("Hurrah! Let's keep pinging.")
+
+                ping_score = ping_score + 1
+
+                continue
+
+            elif (ping_input == "pong" and ping_int == 0):
+
+                print("Hurrah! Let's keep ponging.")
+
+                ping_score = ping_score + 1
+
+                continue
+
+            elif (ping_input == "pong" and ping_int == 1):
+
+                print("Error 500.")
+
+                print("Your score:", ping_score)
+
+                break
+
+            elif (ping_input == "pong" and ping_int == 2):
+
+                print("Hurrah! Let's keep ponging.")
+
+                ping_score = ping_score + 1
+
+                continue
+
+            elif (ping_input == "pong" and ping_int == 3):
+
+                print("Creative message for why you lost goes here.")
+
+                print("Your score:", ping_score)
+
+                break
+
+            elif ping_mistakes == 10:
+
+                print("Stop making so many mistakes.")
+
+                print("")
+
+                break
+
+            else:
+
+                print("Did you read the instructions?")
+
+                ping_mistakes = ping_mistakes + 1
+
+                print("")
+
+                continue
+
+        continue
         continue
     elif cmd == "alwayssave":
         alwayssave_ver = "NUL"
