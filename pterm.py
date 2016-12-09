@@ -250,114 +250,61 @@ while not done:
         print("")
         print("Restarting PyTerm...")
         #This line varies if it's a indev build/good build. Indevs will always be ipterm.py, real ones are always pterm.py.
-        #It's called: Not uploading a lot of python built-in stuff to GitHub!
+        #It's called: Not uploading a lot of python built-in stuff to GitHub! (IM ABOUT TO FIX PATHS NOW SO THIS IS GREAT.)
         exec(open(restart_prog).read())
     elif cmd == "ping":
         ping_ver = "0ms"
-
         print(round(time.time() - entireload,4), "| Launching program: Ping (version " + ping_ver + ")")
-
         from random import randint
-
         print("")
-
         ping_score = 0
-
         ping_mistakes = 0
-
         ping_loop = False
-
         while not ping_loop:
-
             print("Do you ping or do you pong?")
-
             ping_int = randint(0, 3)
-
             ping_input = input("ping_input-userinput@ping-prgm-" + promptver2).lower()
-
             if (ping_input == "ping" and ping_int == 0):
-
                 print("Your ball went missing.")
-
                 print("Your score:", ping_score)
-
                 break
-
             elif (ping_input == "ping" and ping_int == 1):
-
-                print("You pinged too hard.")
-
-                ping_score = ping_score + 1
-
-                continue
-
-            elif (ping_input == "ping" and ping_int == 2):
-
-                print("The song Bring Me to Life plays in the background...")
-
-                print("Your score:", ping_score)
-
-                break
-
-            elif (ping_input == "ping" and ping_int == 3):
-
                 print("Hurrah! Let's keep pinging.")
-
                 ping_score = ping_score + 1
-
                 continue
-
+            elif (ping_input == "ping" and ping_int == 2):
+                print("The song Bring Me to Life plays in the background...")
+                print("Your score:", ping_score)
+                break
+            elif (ping_input == "ping" and ping_int == 3):
+                print("Hurrah! Let's keep pinging.")
+                ping_score = ping_score + 1
+                continue
             elif (ping_input == "pong" and ping_int == 0):
-
                 print("Hurrah! Let's keep ponging.")
-
                 ping_score = ping_score + 1
-
                 continue
-
             elif (ping_input == "pong" and ping_int == 1):
-
                 print("Error 500.")
-
                 print("Your score:", ping_score)
-
                 break
-
             elif (ping_input == "pong" and ping_int == 2):
-
                 print("Hurrah! Let's keep ponging.")
-
                 ping_score = ping_score + 1
-
                 continue
-
             elif (ping_input == "pong" and ping_int == 3):
-
                 print("Creative message for why you lost goes here.")
-
                 print("Your score:", ping_score)
-
                 break
-
             elif ping_mistakes == 10:
-
                 print("Stop making so many mistakes.")
-
                 print("")
-
                 break
-
             else:
-
                 print("Did you read the instructions?")
-
                 ping_mistakes = ping_mistakes + 1
-
                 print("")
-
                 continue
-
-        continue
         continue
     elif cmd == "alwayssave":
         alwayssave_ver = "NUL"
