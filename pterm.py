@@ -69,6 +69,8 @@ if sys.platform.startswith('win32'):
             pyaudioinstall = True
         except ImportError:
             print("pyaduio is NOT installed. It's okay.")
+            pyaudioinstall = False
+            
             
     else:
         print("")
