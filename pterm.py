@@ -1,13 +1,48 @@
 #Python Terminal - v2.0-indev
-#THIS IS AN INDEV BUILD. 50% OF WORKING!
+#THIS IS AN INDEV BUILD. EXPECT BROKEN AND UNTESTED STUFF.
 
 #LEAVE THIS PART IN FOR CREDITS, AND YOU ARE FREE TO DO WHATEVER UNDER THE LICENSE:
 #originally found on GitHub: github.com/o355/pyterm
 #fully coded and designed by o355.
 #(c) 2016 under the MIT license.
 
+#This part is for checking essential components of PyTerm. It gets 100% handled.
+import sys, time, msvcrt
+from select import select
+timeout = 3
+timeoutt = time.time()
+keycheck = None
+print("Press any key to check for essential componenets of PyTerm.")
+print("Otherwise, please wait 3 seconds to boot PyTerm.")
+#Windows has to use a different keycheck method vs. Linux :(
+if sys.platform.startswith('win32'):
+    while True:
+        if msvcrt.kbhit():
+            keycheck = msvcrt.getch()
+            break
+        elif time.time() - timeoutt > timeout:
+            break
+    if keycheck:
+        print("")
+        print("Beginning check.")
+    else:
+        print("")
+        print("Now booting PyTerm.")
+        print("")
+else:
+    rlist, wlist, xlist = select([sys.stdin], [], [], timeout)
+    if rlist:
+        print("")
+        print("Beginning check.")
+    else:
+        print("")
+        print("Now booting PyTerm.")
+        print("")
+    
+
+#Beyond here is just importing stuff for the functions of PyTerm.
 print("Python Terminal - Version 2.0 (In Development)")
-print("Built on October 23, 2016")
+print("Built on INDEV VERSION")
 print("Starting up...")
 print("Beginning pre-load...")
 print("Pre-Load | Importing time...")
@@ -259,9 +294,8 @@ while not done:
         ping_mistakes = 0
         ping_loop = False
         while not ping_loop:
-            print("Do you ping or do you pong?")
             ping_int = randint(0, 3)
-            ping_input = input("ping_input-userinput@ping-prgm-" + promptver2).lower()
+            ping_input = input("Do you ping, or do you pong? ").lower()
             if (ping_input == "ping" and ping_int == 0):
                 print("Your ball went missing.")
                 print("Your score:", ping_score)
