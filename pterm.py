@@ -1,3 +1,4 @@
+exeversion = False
 #Python Terminal - v2.0-indev
 #THIS IS AN INDEV BUILD. EXPECT BROKEN AND UNTESTED STUFF.
 
@@ -15,6 +16,7 @@ keycheck = None
 print("Press any key to check for essential componenets of PyTerm.")
 print("Otherwise, please wait 3 seconds to boot PyTerm.")
 #Windows has to use a different keycheck method vs. Linux :(
+#Linux > Windows on servers
 if sys.platform.startswith('win32'):
     while True:
         if msvcrt.kbhit():
@@ -65,6 +67,8 @@ if sys.platform.startswith('win32'):
             import pyaudio
             print("pyaudio is installed! How cool?")
             pyaudioinstall = True
+        except ImportError:
+            print("pyaduio is NOT installed. It's okay.")
             
     else:
         print("")
@@ -450,6 +454,7 @@ while not done:
         print(round(time.time() - entireload,4), "| Launching program: Clock (version " + clock_ver + ")")
         print("")
         cmd = ""
+        #I have to add a keycheck for Linux. Expect that soon.
         print("Here is a lovely clock. Press Enter to head back to PyTerm.")
         import msvcrt
         while True:
