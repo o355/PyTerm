@@ -25,6 +25,29 @@ if sys.platform.startswith('win32'):
     if keycheck:
         print("")
         print("Beginning check.")
+        print("Sys, Time, and MSVCRT all work, all part of this program.")
+        print("Checking for gmtime.")
+        try:
+            from time import gmtime
+            print("gmtime is installed!")
+            gmtimeinstall = True
+        except ImportError:
+            print("gmtime is NOT installed.")
+            gmtimeinstall = False
+        print("Checking for strftime.")
+        try:
+            from time import strftime
+            print("strftime is installed!")
+            strftimeinstall = True
+        except ImportError:
+            print("strftime is NOT installed.")
+            strftimeinstall = False
+        print("Checking for os.")
+        try:
+            import os
+            print("os is installed!")
+            osinstall = True
+            
     else:
         print("")
         print("Now booting PyTerm.")
