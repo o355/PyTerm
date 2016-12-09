@@ -26,6 +26,7 @@ if sys.platform.startswith('win32'):
         print("")
         print("Beginning check.")
         print("Sys, Time, and MSVCRT all work, all part of this program.")
+        print("If you use the pre-packaged version of PyTerm, the check should be 100% successful.")
         print("Checking for gmtime.")
         try:
             from time import gmtime
@@ -47,6 +48,23 @@ if sys.platform.startswith('win32'):
             import os
             print("os is installed!")
             osinstall = True
+        except ImportError:
+            print("os is NOT installed.")
+            osinstall = False
+        print("Checking for platform.")
+        try:
+            import platform
+            print("platform is installed!")
+            platforminstall = True
+        except ImportError:
+            print("platform is NOT installed.")
+            platforminstall = True
+        print("Now checking for non-essential features.")
+        print("Checking for pyaudio.")
+        try:
+            import pyaudio
+            print("pyaudio is installed! How cool?")
+            pyaudioinstall = True
             
     else:
         print("")
