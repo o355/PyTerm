@@ -70,6 +70,7 @@ if sys.platform.startswith('win32'):
         except ImportError:
             print("pyaduio is NOT installed. It's okay.")
             pyaudioinstall = False
+        
             
             
             
@@ -204,7 +205,10 @@ print(round(time.time() - entireload,4), "| Defining version data variables...")
 version = "2.0-indev"
 build = "indev-build"
 build_date = "indev-build"
-lts_build = "no"
+lts_build = False
+stable_build = False
+beta_build = False
+dev_build = True
 print(round(time.time() - entireload,4), "| Startup finished! Welcome to PyTerm!")
 print("")
 print(greeting + " " + username + "!")
@@ -457,15 +461,18 @@ while not done:
         print(round(time.time() - entireload,4), "| Launching program: Clock (version " + clock_ver + ")")
         print("")
         cmd = ""
-        #I have to add a keycheck for Linux. Expect that soon.
-        print("Here is a lovely clock. Press Enter to head back to PyTerm.")
-        import msvcrt
-        while True:
-            print(strftime("%A, %B %d, %Y, %I:%M:%S %p"), end="\r")
-            if msvcrt.kbhit():
-                if ord(msvcrt.getch()) == 13:
-                    print("")
-                    break
+        if sys.platform.startswith('win32'):
+            print("Here is a lovely clock. Press Enter to head back to PyTerm.")
+            import msvcrt
+            while True:
+                print(strftime("%A, %B %d, %Y, %I:%M:%S %p"), end="\r")
+                if msvcrt.kbhit():
+                    if ord(msvcrt.getch()) == 13:
+                        print("")
+                        break
+        else:
+            print("Support for Linux coming soon.")
+            continue
         continue
     elif cmd == "timer":
         print(round(time.time() - entireload,4), "| Launching program: Timer (version " + timer_ver + ")")
