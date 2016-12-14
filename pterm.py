@@ -15,8 +15,12 @@ print("Built on INDEV VERSION")
 print("Starting up...")
 print("Beginning pre-load...")
 print("Pre-Load | Importing time...")
-import time
-import pygame
+#We now handle importing with a try/handle.
+try:
+    import time
+except ImportError:
+    print("You don't have time! Please install time to run PyTerm.")
+    sys.exit()
 print("Pre-Load | Imported time!")
 print("Pre-Load | Starting clock for load time/uptime...")
 entireload = time.time()
