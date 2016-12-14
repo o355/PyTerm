@@ -1,4 +1,5 @@
 exeversion = False
+# ;)
 #Python Terminal - v2.0-indev
 #THIS IS AN INDEV BUILD. EXPECT BROKEN AND UNTESTED STUFF.
 
@@ -8,87 +9,6 @@ exeversion = False
 #(c) 2016 under the MIT license.
 
 #This part is for checking essential components of PyTerm. It gets 100% handled.
-import sys, time, msvcrt
-from select import select
-timeout = 3
-timeoutt = time.time()
-keycheck = None
-print("Press any key to check for essential componenets of PyTerm.")
-print("Otherwise, please wait 3 seconds to boot PyTerm.")
-#Windows has to use a different keycheck method vs. Linux :(
-#Linux > Windows on servers
-if sys.platform.startswith('win32'):
-    while True:
-        if msvcrt.kbhit():
-            keycheck = msvcrt.getch()
-            break
-        elif time.time() - timeoutt > timeout:
-            break
-    if keycheck:
-        print("")
-        print("Beginning check.")
-        print("Sys, Time, and MSVCRT all work, all part of this program.")
-        print("If you use the pre-packaged version of PyTerm, the check should be 100% successful.")
-        print("Checking for gmtime.")
-        try:
-            from time import gmtime
-            print("gmtime is installed!")
-            gmtimeinstall = True
-        except ImportError:
-            print("gmtime is NOT installed.")
-            gmtimeinstall = False
-        print("Checking for strftime.")
-        try:
-            from time import strftime
-            print("strftime is installed!")
-            strftimeinstall = True
-        except ImportError:
-            print("strftime is NOT installed.")
-            strftimeinstall = False
-        print("Checking for os.")
-        try:
-            import os
-            print("os is installed!")
-            osinstall = True
-        except ImportError:
-            print("os is NOT installed.")
-            osinstall = False
-        print("Checking for platform.")
-        try:
-            import platform
-            print("platform is installed!")
-            platforminstall = True
-        except ImportError:
-            print("platform is NOT installed.")
-            platforminstall = True
-        print("Now checking for non-essential features.")
-        print("Checking for pyaudio.")
-        try:
-            import pyaudio
-            print("pyaudio is installed! How cool?")
-            pyaudioinstall = True
-        except ImportError:
-            print("pyaduio is NOT installed. It's okay.")
-            pyaudioinstall = False
-        
-            
-            
-            
-    else:
-        print("")
-        print("Now booting PyTerm.")
-        print("")
-else:
-    rlist, wlist, xlist = select([sys.stdin], [], [], timeout)
-    if rlist:
-        print("")
-        print("Beginning check.")
-    else:
-        print("")
-        print("Now booting PyTerm.")
-        print("")
-    
-
 #Beyond here is just importing stuff for the functions of PyTerm.
 print("Python Terminal - Version 2.0 (In Development)")
 print("Built on INDEV VERSION")
@@ -478,16 +398,16 @@ while not done:
         print(round(time.time() - entireload,4), "| Launching program: Timer (version " + timer_ver + ")")
         print("")
         print("Welcome to Timer!")
-        print("Please input the amount of seconds you want the timer to run below. Didn't mean to open up timer? Just input 0.")
+        print("Please input the amount of seconds (up to 1 decimal place) you want the timer to run below. Didn't mean to open up timer? Just input 0.")
         timer_secs = input("timer_secs-userinput@timer-prgm-" + promptver2)
         timer_secs = float(timer_secs)
-        print("Starting timer. Timer will display how many seconds are left every 1 second.")
+        print("Starting timer. Timer will display how many seconds are left every 0.1 seconds.")
         timer_loop = False
         while not timer_loop:
             if timer_secs > 0:
-                print(round(timer_secs, 1), "seconds remain.")
-                timer_secs = timer_secs - 1
-                time.sleep(1)
+                print(round(timer_secs, 2), "seconds remain.", end="\r")
+                timer_secs = timer_secs - 0.1
+                time.sleep(0.1)
                 continue
             else:
                 print("Beep boop beep! Timer is up.")
