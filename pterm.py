@@ -132,7 +132,7 @@ notes_ver = "5.0"
 coolthingz_ver = "1.3.3.7"
 poem_ver = "1.3"
 update_ver = "2.3"
-about_ver = "1.6"
+about_ver = "1.7"
 farmstate_ver = "2.0.1-legacy"
 setup_ver = "2.1"
 shutdown_ver = "1.1"
@@ -289,6 +289,12 @@ while not done:
         print("Notes: version " + notes_ver)
         print("Cool Thingz: version " + coolthingz_ver)
         print("Poem: version " + poem_ver)
+        print("Update: version " + update_ver)
+        print("About: version " + about_ver)
+        print("Farm State: version " + farmstate_ver)
+        print("Setup: version " + setup_ver)
+        print("Shut Down: version " + shutdown_ver)
+        print("Mad Libs: version " + madlibs_ver)
     elif cmd == "restart":
         restart_ver = "1.0"
         print(round(time.time() - entireload,4), "| Launching program: Restart (version " + restart_ver + ")")
