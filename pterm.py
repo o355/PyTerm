@@ -127,13 +127,13 @@ uptime_ver = "1.0"
 ascii_ver = "1.0.1"
 time_ver = "1.0.1"
 timer_ver = "1.1.1"
-salesbuster_ver = "3.1"
+salesbuster_ver = "3.1-legacy"
 notes_ver = "5.0"
 coolthingz_ver = "1.3.3.7"
 poem_ver = "1.3"
 update_ver = "2.3"
 about_ver = "1.6"
-farmstate_ver = "2.0.1"
+farmstate_ver = "2.0.1-legacy"
 setup_ver = "2.1"
 shutdown_ver = "1.1"
 madlibs_ver = "1.0"
@@ -283,7 +283,12 @@ while not done:
         print("Always Save: version " + alwayssave_ver)
         print("Uptime: version " + uptime_ver)
         print("ASCII: version " + ascii_ver)
-        print("Time: version 
+        print("Time: version " + time_ver)
+        print("Timer: version " + timer_ver)
+        print("Sales Buster: version " + salesbuster_ver)
+        print("Notes: version " + notes_ver)
+        print("Cool Thingz: version " + coolthingz_ver)
+        print("Poem: version " + poem_ver)
     elif cmd == "restart":
         restart_ver = "1.0"
         print(round(time.time() - entireload,4), "| Launching program: Restart (version " + restart_ver + ")")
