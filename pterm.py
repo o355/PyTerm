@@ -20,7 +20,8 @@ try:
     import time
 except ImportError:
     print("You don't have time! Please install time to run PyTerm.")
-    sys.exit()
+    #Breaks before sys gets imported.
+    break
 print("Pre-Load | Imported time!")
 print("Pre-Load | Starting clock for load time/uptime...")
 entireload = time.time()
@@ -29,13 +30,25 @@ print(round(time.time() - entireload,4), "| Now converting variable entireload f
 entireload_int = int(time.time() - entireload)
 print(round(time.time() - entireload,4), "| Operation completed. Output from type(entireload_int):", type(entireload_int))
 print(round(time.time() - entireload,4), "| Importing sys...")
-import sys
+try:
+    import sys
+except ImportError:
+    print("You don't have sys! Please install sys to run PyTerm.")
+    break
 print(round(time.time() - entireload,4), "| Imported sys!")
 print(round(time.time() - entireload,4), "| Importing gmtime from time...")
-from time import gmtime
+try:
+    from time import gmtime
+except ImportError:
+    print("You don't have gmtime! Please install gmtime to run PyTerm.")
+    sys.exit()
 print(round(time.time() - entireload,4), "| Imported gmtime from time!")
 print(round(time.time() - entireload,4), "| Importing os...")
-import os
+try:
+    import os
+except ImportError:
+    print("You don't have os! Please install os to run PyTerm.")
+    sys.exit()
 print(round(time.time() - entireload,4), "| Imported os!")
 print(round(time.time() - entireload,4), "| Importing strftime from time...")
 from time import strftime
