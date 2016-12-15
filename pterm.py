@@ -456,21 +456,11 @@ while not done:
         print(round(time.time() - entireload,4), "| Launching program: Clock (version " + clock_ver + ")")
         print("")
         cmd = ""
-        if sys.platform.startswith('win32'):
-            print("Here is a lovely clock. Press Enter to head back to PyTerm.")
-            try:
-                import msvcrt
-            except ImportError:
-                print("msvcrt isn't installed. Install it to view this pretty clock!")
-                continue
+        print("Here's a lovely clock! Press Control + C to quit.")
+        try:
             while True:
                 print(strftime("%A, %B %d, %Y, %I:%M:%S %p"), end="\r")
-                if msvcrt.kbhit():
-                    if ord(msvcrt.getch()) == 13:
-                        print("")
-                        break
-        else:
-            print("Support for Linux coming soon.")
+        except KeyboardInterrupt:
             continue
         continue
     elif cmd == "timer":
