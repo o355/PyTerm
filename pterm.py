@@ -461,6 +461,7 @@ while not done:
             while True:
                 print(strftime("%A, %B %d, %Y, %I:%M:%S %p"), end="\r")
         except KeyboardInterrupt:
+            print("")
             continue
         continue
     elif cmd == "timer":
