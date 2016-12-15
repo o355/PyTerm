@@ -276,7 +276,14 @@ while not done:
         print(round(time.time() - entireload,4), "| Launching program: Veriable Check (version " + vercheck_ver + ")")
         print("")
         cmd = ""
-        print("Printing every pyterm variable...")
+        print("Printing versions for all PyTerm programs...")
+        print("Help: version " + help_ver)
+        print("Restart: version " + restart_ver)
+        print("Ping: version " + ping_ver)
+        print("Always Save: version " + alwayssave_ver)
+        print("Uptime: version " + uptime_ver)
+        print("ASCII: version " + ascii_ver)
+        print("Time: version 
     elif cmd == "restart":
         restart_ver = "1.0"
         print(round(time.time() - entireload,4), "| Launching program: Restart (version " + restart_ver + ")")
@@ -399,6 +406,7 @@ while not done:
     elif cmd == "time":
         print(round(time.time() - entireload,4), "| Launching program: Current Time (version " + time_ver + ")")
         print("")
+        print("Time will be unsupported in Beta 3.")
         print("Here is the current time:")
         print(strftime("%A, %B %d, %Y, %I:%M:%S %p"))
         cmd = ""
