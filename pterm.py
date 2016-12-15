@@ -148,6 +148,7 @@ print(round(time.time() - entireload,4), "| Defining version data variables...")
 version = "2.0-indev"
 aboutversion = "2.0 In Dev"
 build = "no"
+buildnumber = "no"
 builddate = "no"
 buildtype = "indev build"
 lts_build = False
