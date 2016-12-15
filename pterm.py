@@ -141,7 +141,7 @@ cpubench_ver = "4.0"
 vercheck_ver = "1.0"
 sysinfo_ver = "1.0"
 diagnosticsong_ver = "1.0"
-clock_ver = "1.0"
+clock_ver = "2.0"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
 version = "2.0-indev"
