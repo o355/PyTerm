@@ -148,8 +148,9 @@ clock_ver = "1.0"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
 version = "2.0-indev"
-build = "indev-build"
-build_date = "indev-build"
+build = "no"
+builddate = "no"
+buildtype = "indev build"
 lts_build = False
 stable_build = False
 beta_build = False
@@ -736,12 +737,12 @@ while not done:
     elif cmd == "about":
         print(round(time.time() - entireload,4), "| Launching program: About PyTerm (version " + about_ver + ")")
         print("")
-        print("  -= PyTerm =-   ")
+        print("Python Terminal (PyTerm)")
         print("Version " + version)
         print("Coded in Python 3.2 and 3.5")
         print("Build date: " + builddate)
-        print("Build number: " + build)
-        print("LTS build? " + lts_build)
+        print("Build number: " + buildnumber)
+        print("Build type: " + buildtype)
         cmd = ""
         continue
     elif cmd == "farmstate":
