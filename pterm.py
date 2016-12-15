@@ -139,7 +139,7 @@ shutdown_ver = "1.1"
 madlibs_ver = "1.0"
 textadventure_ver = "1.0.2"
 cpubench_ver = "4.0"
-varcheck_ver = "1.0"
+vercheck_ver = "1.0"
 sysinfo_ver = "1.0"
 diagnosticsong_ver = "1.0"
 clock_ver = "1.0"
@@ -273,7 +273,7 @@ while not done:
             continue
         continue
     elif cmd == "vercheck":
-        print(round(time.time() - entireload,4), "| Launching program: Variable Check (version " + vercheck_ver + ")")
+        print(round(time.time() - entireload,4), "| Launching program: Veriable Check (version " + vercheck_ver + ")")
         print("")
         cmd = ""
         print("Printing every pyterm variable...")
