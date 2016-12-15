@@ -51,15 +51,20 @@ except ImportError:
     sys.exit()
 print(round(time.time() - entireload,4), "| Imported os!")
 print(round(time.time() - entireload,4), "| Importing strftime from time...")
-from time import strftime
+try:
+    from time import strftime
+except ImportError:
+    print("You don't have strftime! Please install strftime to run PyTerm.")
+    sys.exit()
 print(round(time.time() - entireload,4), "| Imported strftime from time!")
 print(round(time.time() - entireload,4), "| Importing platform...")
-import platform
+try:
+    import platform
+except ImportError:
+    print("You don't have platform! Please install strftime to run PyTerm.")
+    sys.exit()
 print(round(time.time() - entireload,4), "| Imported platform!")
-print(round(time.time() - entireload,4), "| Defining variable username...")
-username = "user"
-print(round(time.time() - entireload,4), "| Defined variable username to: user!")
-print(round(time.time() - entireload,4), "| Defining functions: print_slow, print_fast...")
+print(round(time.time() - entireload,4), "| Defining functions...")
 def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
@@ -70,6 +75,9 @@ def print_fast(str):
         sys.stdout.write(letter)
         sys.stdout.flush()
         time.sleep(0.035)
+
+def pterm_restart():
+    exec(open(restart_prog).read())
 print(round(time.time() - entireload,4), "| Defined functions: print_slow, print_fast!")
 print(round(time.time() - entireload,4), "| Defining 4 variables...")
 done = False
