@@ -131,7 +131,6 @@ salesbuster_ver = "3.1-legacy"
 notes_ver = "5.0"
 coolthingz_ver = "1.3.3.7"
 poem_ver = "1.3"
-update_ver = "2.3"
 about_ver = "1.7"
 farmstate_ver = "2.0.1-legacy"
 setup_ver = "2.1"
@@ -289,7 +288,6 @@ while not done:
         print("Notes: version " + notes_ver)
         print("Cool Thingz: version " + coolthingz_ver)
         print("Poem: version " + poem_ver)
-        print("Update: version " + update_ver)
         print("About: version " + about_ver)
         print("Farm State: version " + farmstate_ver)
         print("Setup: version " + setup_ver)
@@ -750,16 +748,6 @@ while not done:
         poem_file = open('assets\\poem\\poem.txt')
         print(poem_file.read())
         poem_file.close()
-        continue
-    elif cmd == "update":
-        print(round(time.time() - entireload,4), "| Launching program: Update (version " + update_ver + ")")
-        print("")
-        print("You have version " + version + ", build " + build)
-        print("Built on " + build_date + "")
-        print("Automated updates are disabled.")
-        print("Check github.com/o355/pyterm for the latest updates.")
-        print("Compare your build numbers, versions, and build dates. The lower the build number, the older the version is.")
-        cmd = ""
         continue
     elif cmd == "about":
         print(round(time.time() - entireload,4), "| Launching program: About PyTerm (version " + about_ver + ")")
