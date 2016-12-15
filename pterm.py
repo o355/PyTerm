@@ -19,8 +19,8 @@ print("Pre-Load | Importing time...")
 #Before we import sys we have to raise the error, instead of sys.exit().
 try:
     import time
-raise ImportError:
-    print("You don't have time! Please install time to run PyTerm.")
+except ImportError:
+    raise ImportError("You don't have time! Please install time to run PyTerm.")
 print("Pre-Load | Imported time!")
 print("Pre-Load | Starting clock for load time/uptime...")
 entireload = time.time()
@@ -31,8 +31,8 @@ print(round(time.time() - entireload,4), "| Operation completed. Output from typ
 print(round(time.time() - entireload,4), "| Importing sys...")
 try:
     import sys
-raise ImportError:
-    print("You don't have sys! Please install sys to run PyTerm.")
+except ImportError:
+    raise ImportError("You don't have sys! Please install sys to run PyTerm.")
 print(round(time.time() - entireload,4), "| Imported sys!")
 print(round(time.time() - entireload,4), "| Importing gmtime from time...")
 try:
