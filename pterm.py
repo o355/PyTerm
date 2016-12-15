@@ -148,6 +148,7 @@ clock_ver = "1.0"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
 version = "2.0-indev"
+aboutversion = "2.0 In Dev"
 build = "no"
 builddate = "no"
 buildtype = "indev build"
@@ -738,7 +739,7 @@ while not done:
         print(round(time.time() - entireload,4), "| Launching program: About PyTerm (version " + about_ver + ")")
         print("")
         print("Python Terminal (PyTerm)")
-        print("Version " + version)
+        print("Version " + aboutversion)
         print("Coded in Python 3.2 and 3.5")
         print("Build date: " + builddate)
         print("Build number: " + buildnumber)
