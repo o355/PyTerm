@@ -207,8 +207,16 @@ while not done:
         diagnosticsong_filecheck = os.path.isfile('assets//diagnosticsong//song.wav')
         def diagnosticsong_songplay():
             print("Importing necessary libraries...")
-            import pyaudio
-            import wave
+            try:
+                import pyaudio
+            except ImportError:
+                print("Yikes! pyaudio isn't installed. Please install it to run this program!")
+                continue
+            try:
+                import wave
+            except ImportError:
+                print("Yikes! wave isn't installed. Please install it to run this program!")
+                continue
             print("Now playing the song...")
             chunk = 1024
             f = wave.open(r"assets//diagnosticsong//song.wav","rb")
@@ -229,8 +237,17 @@ while not done:
             print("Terminating now, keep the file assets//diagnosticsong//song.wav so you don't have to download the song again!")
             print("Returning to PyTerm.")
         if diagnosticsong_filecheck == False:
-            import urllib.request
-            import shutil
+            print("Importing necessary libraries...")
+            try:
+                import urllib.request
+            except ImportError:
+                print("Yikes! urllib.request isn't installed. Please install it to run this program!")
+                continue
+            try:
+                import shutil
+            except ImportError:
+                print("Yikes! shutil isn't installed. Please install it to run this program!")
+                continue
             print("Downloading the song...")
             with urllib.request.urlopen('http://owenthe.ninja/ptermstuff/song.wav') as response, open('assets//diagnosticsong//song.wav', 'wb') as out_file:
                 shutil.copyfileobj(response, out_file)
