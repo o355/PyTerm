@@ -328,7 +328,11 @@ while not done:
     elif cmd == "ping":
         ping_ver = "0ms"
         print(round(time.time() - entireload,4), "| Launching program: Ping (version " + ping_ver + ")")
-        from random import randint
+        try:
+            from random import randint
+        except ImportError:
+            print("Sorry! randint isn't installed. Please install randint to run this program!")
+            continue
         print("")
         ping_score = 0
         ping_mistakes = 0
@@ -452,7 +456,11 @@ while not done:
         cmd = ""
         if sys.platform.startswith('win32'):
             print("Here is a lovely clock. Press Enter to head back to PyTerm.")
-            import msvcrt
+            try:
+                import msvcrt
+            except ImportError:
+                print("msvcrt isn't installed. Install it to view this pretty clock!")
+                continue
             while True:
                 print(strftime("%A, %B %d, %Y, %I:%M:%S %p"), end="\r")
                 if msvcrt.kbhit():
