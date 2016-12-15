@@ -188,8 +188,8 @@ while not done:
         print("--- Diagnostic Tools --- ")
         print("cpubench - Benchmarks your CPU, now highly improved!")
         print("diagnosticsong - A very diagnostic song.")
-        print("(COMING IN BETA 3) vercheck - Lists all program versions that are included with PyTerm.")
-        print("(COMING IN BETA 3) sysinfo - Prints system information.")
+        print("vercheck - Lists all program versions that are included with PyTerm.")
+        print("sysinfo - Prints system information.")
         print("ping - I'm pretty sure this tool helps you fix network issues. Not sure honestly.")
         cmd = ""
         continue
@@ -295,6 +295,14 @@ while not done:
         print("Setup: version " + setup_ver)
         print("Shut Down: version " + shutdown_ver)
         print("Mad Libs: version " + madlibs_ver)
+        print("Text Adventure: version " + textadventure_ver)
+        print("CPU Bench: version " + cpubench_ver)
+        print("Version Check: version " + vercheck_ver)
+        print("System Information: version " + sysinfo_ver)
+        print("Diagnostic Song: version " + diagnosticsong_ver)
+        print("Clock: version " + clock_ver)
+        print("Done!")
+        continue
     elif cmd == "restart":
         restart_ver = "1.0"
         print(round(time.time() - entireload,4), "| Launching program: Restart (version " + restart_ver + ")")
