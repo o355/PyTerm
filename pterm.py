@@ -211,12 +211,14 @@ while not done:
                 import pyaudio
             except ImportError:
                 print("Yikes! pyaudio isn't installed. Please install it to run this program!")
-                continue
+                print("Restarting PyTerm...")
+                pterm_restart()
             try:
                 import wave
             except ImportError:
                 print("Yikes! wave isn't installed. Please install it to run this program!")
-                continue
+                print("Restarting PyTerm...")
+                pterm_restart()
             print("Now playing the song...")
             chunk = 1024
             f = wave.open(r"assets//diagnosticsong//song.wav","rb")
