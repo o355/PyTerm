@@ -125,6 +125,7 @@ ping_ver = "0ms"
 alwayssave_ver = "NUL"
 uptime_ver = "1.0"
 ascii_ver = "1.0.1"
+time_ver = "1.3-legacy"
 timer_ver = "1.1.1"
 salesbuster_ver = "3.1-legacy"
 notes_ver = "5.0"
@@ -372,6 +373,16 @@ while not done:
         print("|    /     ---------------  |")
         print("   " + version + "           ")
         print("=============================")
+        continue
+    elif cmd == "time":
+        print(round(time.time() - entireload,4), "| Launching program: Time (version " + time_ver + ")")
+        print("")
+        cmd = ""
+        print("The program Time is unsupported.")
+        print("You can find the old code in the folder:")
+        print("legacycode//time//")
+        print("Time was unsupported as it was merged with Clock.")
+        print("We're sorry for any issues this may have caused.")
         continue
     elif cmd == "clock":
         print(round(time.time() - entireload,4), "| Launching program: Clock (version " + clock_ver + ")")
