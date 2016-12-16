@@ -125,7 +125,6 @@ ping_ver = "0ms"
 alwayssave_ver = "NUL"
 uptime_ver = "1.0"
 ascii_ver = "1.0.1"
-time_ver = "1.0.1"
 timer_ver = "1.1.1"
 salesbuster_ver = "3.1-legacy"
 notes_ver = "5.0"
@@ -373,13 +372,6 @@ while not done:
         print("|    /     ---------------  |")
         print("   " + version + "           ")
         print("=============================")
-    elif cmd == "time":
-        print(round(time.time() - entireload,4), "| Launching program: Current Time (version " + time_ver + ")")
-        print("")
-        print("Time will be unsupported in Beta 3.")
-        print("Here is the current time:")
-        print(strftime("%A, %B %d, %Y, %I:%M:%S %p"))
-        cmd = ""
         continue
     elif cmd == "clock":
         print(round(time.time() - entireload,4), "| Launching program: Clock (version " + clock_ver + ")")
