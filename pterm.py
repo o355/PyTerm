@@ -36,7 +36,8 @@ except ImportError:
 print(round(time.time() - entireload,4), "| Imported sys!")
 print(round(time.time() - entireload,4), "| Checking Python version...")
 if sys.version_info[0] < 3.5:
-    raise "You must be using Python 3.5 or greater to run PyTerm."
+    print("You must be using Python 3.5 or greater to run PyTerm.")
+    sys.exit()
 print(round(time.time() - entireload,4), "| Running Python 3.5 or greater!")
 print(round(time.time() - entireload,4), "| Importing gmtime from time...")
 try:
