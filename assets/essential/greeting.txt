@@ -1,1 +1,1 @@
-Welcome t PyTerm,
+Welcome to PyTerm,
