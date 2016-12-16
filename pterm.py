@@ -124,7 +124,7 @@ st = True
 restart_prog = 'pterm.py'
 print(round(time.time() - entireload,4), "| Defined 17 variables!")
 print(round(time.time() - entireload,4), "| Defining version variables...")
-help_ver = "2.0"
+help_ver = "3.0"
 restart_ver = "1.0"
 ping_ver = "0ms"
 alwayssave_ver = "NUL"
@@ -132,6 +132,7 @@ uptime_ver = "1.0"
 ascii_ver = "1.0.1"
 time_ver = "1.3-legacy"
 timer_ver = "1.1.1"
+stopwatch_ver = "1.0"
 salesbuster_ver = "3.1-legacy"
 notes_ver = "5.0"
 coolthingz_ver = "1.3.3.7"
@@ -179,8 +180,22 @@ while not done:
         print("uptime | See your glorious amount of uptime for PyTerm.")
         print("ascii | ASCII image.")
         print("clock | Tick, tock. Goes the clock.")
+        print("timer | It's a timer.")
+        print("stopwatch | It's a stopwatch.")
+        print("notes | Taking notes in a terminal is fun!")
+        print("poem | Poem.")
+        print("about | About PyTerm.")
+        print("setup | Setup PyTerm for you. (broken until Beta 6)")
+        print("shutdown | *Windows XP Shutdown Sound Plays*")
+        print("madlibs | Because libs are pretty mad!")
+        print("textadventure | Adventure with text.")
+        print("cpubench | Benchmark your CPU. It's better than the old one.")
+        print("oldcpubench | pygame.init(), pygame.quit()")
+        print("oldprograms | Run some old programs, with a 99% chance of crash.")
         print("--- Diagnostic Programs ---")
         print("ping | A simple ping application to fix internet issues. ;)")
+        print("vercheck | Checking versions has never been so much fun.")
+        print("sysinfo | Checking system information has never been so much fun.")
         cmd = ""
         continue
     elif cmd == "diagnosticsong":
