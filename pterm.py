@@ -1082,7 +1082,7 @@ while not done:
             print("1392.7389 seconds (23 mins, 12.7389 secs) on an Intel Core i5 6500")
             print("1773.7427 seconds (29 mins, 33.7427 secs) on an Intel Core i7 3615QM")
             print("1936.0202 seconds (30 mins, 16.0202 secs) on an Intel Pentium E5800")
-            print("?? on an Intel Pentium 4")
+            print("7558.1717 seconds (2 hrs, 5 mins, 58.1717 secs) on an Intel Pentium 4")
             continue
         else:
             print("Not a valid option. Valid options are: very short, short, normal, long")
