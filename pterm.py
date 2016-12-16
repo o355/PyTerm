@@ -546,7 +546,7 @@ while not done:
                         print("Edit Note 1 in the empty prompt below.")
                         notes_n1write = input("")
                         with open(notes_n1fn, 'a') as out:
-                            out.write(notes_n1write + '/n')
+                            out.write(notes_n1write + '\n')
                             out.close()
                             break
                         break
@@ -555,7 +555,7 @@ while not done:
                         print("Edit Note 2 in the empty prompt below.")
                         notes_n2write = input("")
                         with open(notes_n2fn, 'a') as out:
-                            out.write(notes_n2write + '/n')
+                            out.write(notes_n2write + '\n')
                             out.close()
                             break
                         break
@@ -564,7 +564,7 @@ while not done:
                         print("Edit Note 3 in the empty prompt below.")
                         notes_n3write = input("")
                         with open(notes_n3fn, 'a') as out:
-                            out.write(notes_n3write + '/n')
+                            out.write(notes_n3write + '\n')
                             out.close()
                             break
                         break
@@ -573,7 +573,7 @@ while not done:
                         print("Edit Note 4 in the empty prompt below.")
                         notes_n4write = input("")
                         with open(notes_n4fn, 'a') as out:
-                            out.write(notes_n4write + '/n')
+                            out.write(notes_n4write + '\n')
                             out.close()
                             break
                         break
@@ -582,7 +582,7 @@ while not done:
                         print("Edit Note 5 in the empty prompt below.")
                         notes_n5write = input("")
                         with open(notes_n5fn, 'a') as out:
-                            out.write(notes_n5write + '/n')
+                            out.write(notes_n5write + '\n')
                             out.close()
                             break
                         break
@@ -591,7 +591,7 @@ while not done:
                         print("Edit Note 6 in the empty prompt below.")
                         notes_n6write = input("")
                         with open(notes_n6fn, 'a') as out:
-                            out.write(notes_n6write + '/n')
+                            out.write(notes_n6write + '\n')
                             out.close()
                             break
                         break
@@ -600,7 +600,7 @@ while not done:
                         print("Edit Note 7 in the empty prompt below.")
                         notes_n7write = input("")
                         with open(notes_n7fn, 'a') as out:
-                            out.write(notes_n7write + '/n')
+                            out.write(notes_n7write + '\n')
                             out.close()
                             break
                         break
@@ -609,7 +609,7 @@ while not done:
                         print("Edit Note 8 in the empty prompt below.")
                         notes_n8write = input("")
                         with open(notes_n8fn, 'a') as out:
-                            out.write(notes_n8write + '/n')
+                            out.write(notes_n8write + '\n')
                             out.close()
                             break
                         break
@@ -618,7 +618,7 @@ while not done:
                         print("Edit Note 9 in the empty prompt below.")
                         notes_n9write = input("")
                         with open(notes_n9fn, 'a') as out:
-                            out.write(notes_n9write + '/n')
+                            out.write(notes_n9write + '\n')
                             out.close()
                             break
                         break
@@ -627,7 +627,7 @@ while not done:
                         print("Edit Note 10 in the empty prompt below.")
                         notes_n10write = input("")
                         with open(notes_n10fn, 'a') as out:
-                            out.write(notes_n10write + '/n')
+                            out.write(notes_n10write + '\n')
                             out.close()
                             break
                         break
