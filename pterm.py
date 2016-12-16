@@ -143,7 +143,7 @@ diagnosticsong_ver = "1.1-legacy"
 clock_ver = "2.0"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
-version = "2.0-indev"note
+version = "2.0-indev"
 aboutversion = "2.0 In Dev"
 build = "no"
 buildnumber = "no"
