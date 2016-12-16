@@ -1052,7 +1052,7 @@ while not done:
             print("235.0407 seconds (3 mins, 55.0407 secs)on an Intel Core i5 6500")
             print("306.5036 seconds (5 mins, 6.5036 secs) on an Intel Core i7 3615QM")
             print("343.3961 seconds (5 mins, 43.3961 secs) on an Intel Pentium E5800")
-            print("?? on an Intel Pentium 4")
+            print("1305.7635 seconds (21 mins, 45.7635 secs) on an Intel Pentium 4")
             continue
         elif cpubench_benchselect == "long":
             cpubench_start = 0
