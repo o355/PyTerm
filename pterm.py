@@ -1007,9 +1007,10 @@ while not done:
             print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
             print("Baselines:")
             print("1.6416 seconds on an Intel Core i7 4650U")
+            print("0.8637 seconds on an Intel Core i5 6500")
             print("1.1354 seconds on an Intel Core i7 3615QM")
             print("1.2441 seconds on an Intel Pentium E5800")
-            print("?? on an Intel Pentium 4")
+            print("3.9104 seconds on an Intel Pentium 4")
             continue
         elif cpubench_benchselect == "short":
             cpubench_start = 0
@@ -1027,9 +1028,10 @@ while not done:
             print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
             print("Baselines:")
             print("30.5881 seconds on an Intel Core i7 4650U")
+            print("16.9732 seconds on an Intel Core i5 6500")
             print("22.1646 seconds on an Intel Core i7 3615QM")
             print("24.9308 seconds on an Intel Pentium E5800")
-            print("?? on an Intel Pentium 4")
+            print("82.9629 seconds (1 min, 22.9629 secs) on an Intel Pentium 4")
             continue
         elif cpubench_benchselect == "normal":
             cpubench_start = 0
@@ -1047,8 +1049,9 @@ while not done:
             print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
             print("Baselines:")
             print("?? on an Intel Core i7 4650U")
-            print("306.5036 seconds on an Intel Core i7 3615QM")
-            print("343.3961 seconds on an Intel Pentium E5800")
+            print("235.0407 seconds (3 mins, 55.0407 secs)on an Intel Core i5 6500")
+            print("306.5036 seconds (5 mins, 6.5036 secs) on an Intel Core i7 3615QM")
+            print("343.3961 seconds (5 mins, 43.3961 secs) on an Intel Pentium E5800")
             print("?? on an Intel Pentium 4")
             continue
         elif cpubench_benchselect == "long":
@@ -1066,9 +1069,10 @@ while not done:
             print("")
             print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
             print("Baselines:")
-            print("1764.9318 seconds on an Intel Core i7 4650U")
-            print("1773.7427 seconds on an Intel Core i7 3615QM")
-            print("1936.0202 seconds on an Intel Pentium E5800")
+            print("1764.9318 seconds (29 mins, 24.9318 secs) on an Intel Core i7 4650U")
+            print("?? on an Intel Core i5 6500")
+            print("1773.7427 seconds (29 mins, 33.7427 secs) on an Intel Core i7 3615QM")
+            print("1936.0202 seconds (30 mins, 16.0202 secs) on an Intel Pentium E5800")
             print("?? on an Intel Pentium 4")
             continue
         else:
