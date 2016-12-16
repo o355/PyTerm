@@ -144,7 +144,7 @@ diagnosticsong_ver = "1.1-legacy"
 clock_ver = "2.0"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
-version = "2.0-indev"
+version = "2.0-indev"note
 aboutversion = "2.0 In Dev"
 build = "no"
 buildnumber = "no"
@@ -167,29 +167,15 @@ while not done:
         print(round(time.time() - entireload,4), "| Launching program: Help (version " + help_ver + ")")
         print("")
         print("PyTerm Commands:")
-        print("help - Lists this command.")
-        print("about - Lists information about this Python Terminal.")
-        print("restart - Restarts PyTerm. Legendary.")
-        print("shutdown - Shuts down the terminal.")
-        print("madlibs - A little fun mad libs.")
-        print("(BROKEN UNTIL BETA 4) setup - Sets up Python Terminal for you")
-        print("notes - Launches the notes program")
-        print("ascii - ASCII Art")
-        print("farmstate - Prints out a poem about State Farm")
-        print("poem - Prints out a Python poem")
-        print("textadventure - You venture into Shia's forest. It doesn't end well.")
-        print("salesbuster - Launches you into a great game called Sales Buster.")
-        print("uptime - Best way to check your uptime of PyTerm.")
-        print("(COMING IN BETA 5) securenotes - Notes, but somewhat more secure.")
-        print("(COMING IN BETA 5) lock - Locks PyTerm.")
-        print("(COMING IN BETA 6) reset - Resets PyTerm.")
-        print("(COMING IN BETA 6) oldprograms - Old programs!")
-        print("(COMING IN BETA 7) whattypeofbuildisthisbuildofpyterm - ")
-        print("--- Diagnostic Tools --- ")
-        print("cpubench - Benchmarks your CPU, now highly improved!")
-        print("vercheck - Lists all program versions that are included with PyTerm.")
-        print("sysinfo - Prints system information.")
-        print("ping - I'm pretty sure this tool helps you fix network issues. Not sure honestly.")
+        print("--- Normal Programs ---")
+        print("help | Lists this command.")
+        print("restart | Restarts PyTerm.")
+        print("alwayssave | What's up with the weird programs?")
+        print("uptime | See your glorious amount of uptime for PyTerm.")
+        print("ascii | ASCII image.")
+        print("clock | Tick, tock. Goes the clock.")
+        print("--- Diagnostic Programs ---")
+        print("ping | A simple ping application to fix internet issues. ;)")
         cmd = ""
         continue
     elif cmd == "diagnosticsong":
