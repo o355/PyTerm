@@ -140,7 +140,7 @@ textadventure_ver = "1.0.2"
 cpubench_ver = "4.0"
 vercheck_ver = "1.0"
 sysinfo_ver = "1.0"
-diagnosticsong_ver = "1.0"
+diagnosticsong_ver = "1.1-legacy"
 clock_ver = "2.0"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
@@ -187,7 +187,6 @@ while not done:
         print("(COMING IN BETA 7) whattypeofbuildisthisbuildofpyterm - ")
         print("--- Diagnostic Tools --- ")
         print("cpubench - Benchmarks your CPU, now highly improved!")
-        print("diagnosticsong - A very diagnostic song.")
         print("vercheck - Lists all program versions that are included with PyTerm.")
         print("sysinfo - Prints system information.")
         print("ping - I'm pretty sure this tool helps you fix network issues. Not sure honestly.")
@@ -197,67 +196,11 @@ while not done:
         print(round(time.time() - entireload,4), "| Launching program: Diagnostic Song (version " + diagnosticsong_ver + ")")
         print("")
         cmd = ""
-        print("This program downloads a .wav file (that's completely harmless) from my website (owenthe.ninja), and we recommend you lower your computer volume.")
-        print("(so when the song plays, you get the best experience)")
-        print("If you want to really see what's going on, check the code (GitHub, local file). And you'll see nothing much, honestly.")
-        print("If you'd like to quit, do Control+C in the Python window.")
-        print("Starting in 5 seconds.")
-        time.sleep(5)
-        print("Doing stuff. Please wait!")
-        diagnosticsong_filecheck = os.path.isfile('assets//diagnosticsong//song.wav')
-        def diagnosticsong_songplay():
-            print("Importing necessary libraries...")
-            try:
-                import pyaudio
-            except ImportError:
-                print("Yikes! pyaudio isn't installed. Please install it to run this program!")
-                print("Restarting PyTerm...")
-                pterm_restart()
-            try:
-                import wave
-            except ImportError:
-                print("Yikes! wave isn't installed. Please install it to run this program!")
-                print("Restarting PyTerm...")
-                pterm_restart()
-            print("Now playing the song...")
-            chunk = 1024
-            f = wave.open(r"assets//diagnosticsong//song.wav","rb")
-            p = pyaudio.PyAudio()
-            stream = p.open(format = p.get_format_from_width(f.getsampwidth()),
-                                        channels = f.getnchannels(),
-                                        rate = f.getframerate(),
-                                        output = True)
-            data = f.readframes(chunk)
-            while len(data) > 0:
-                stream.write(data)
-                data = f.readframes(chunk)
-                            
-            stream.stop_stream()
-            stream.close()
-            p.terminate()
-            print("Hope the joke was a little funny at best ;)")
-            print("Terminating now, keep the file assets//diagnosticsong//song.wav so you don't have to download the song again!")
-            print("Returning to PyTerm.")
-        if diagnosticsong_filecheck == False:
-            print("Importing necessary libraries...")
-            try:
-                import urllib.request
-            except ImportError:
-                print("Yikes! urllib.request isn't installed. Please install it to run this program!")
-                continue
-            try:
-                import shutil
-            except ImportError:
-                print("Yikes! shutil isn't installed. Please install it to run this program!")
-                continue
-            print("Downloading the song...")
-            with urllib.request.urlopen('http://owenthe.ninja/ptermstuff/song.wav') as response, open('assets//diagnosticsong//song.wav', 'wb') as out_file:
-                shutil.copyfileobj(response, out_file)
-            diagnosticsong_songplay()
-            continue
-        elif diagnosticsong_filecheck == True:
-            diagnosticsong_songplay()
-            continue
+        print("The program Diagnostic Song is unsupported.")
+        print("You can find the old code in the folder:")
+        print("legacycode\\diagnosticsong\\")
+        print("Diagnostic Song was unsupported due to the fact that the program was mainly a joke, and was never meant to stay.")
+        print("We're sorry for any issues this may have caused.")
         continue
     elif cmd == "sysinfo":
         print(round(time.time() - entireload,4), "| Launching program: System Information (version " + sysinfo_ver + ")")
