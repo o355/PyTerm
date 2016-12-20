@@ -147,7 +147,8 @@ cpubench_ver = "4.0"
 vercheck_ver = "1.0"
 sysinfo_ver = "1.0"
 diagnosticsong_ver = "1.1-legacy"
-clock_ver = "2.0"
+clock_ver = "2.0.1"
+stopwatch_ver = "1.0"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
 version = "2.0-indev"
@@ -268,6 +269,7 @@ while not done:
         print("System Information: version " + sysinfo_ver)
         print("Diagnostic Song: version " + diagnosticsong_ver)
         print("Clock: version " + clock_ver)
+        print("Stopwatch: version " + stopwatch_ver)
         print("Done!")
         continue
     elif cmd == "restart":
@@ -413,7 +415,23 @@ while not done:
             while True:
                 print(strftime("%A, %B %d, %Y, %I:%M:%S %p"), end="\r")
         except KeyboardInterrupt:
+            print("Quitting clock...")
             print("")
+            continue
+        continue
+    elif cmd == "stopwatch":
+        print(round(time.time() - entireload,4), "| Launching program: Stopwatch (version " + stopwatch_ver + ")")
+        print("")
+        stopwatch_time = 0
+        print("Starting the stopwatch. Press Control + C to quit.")
+        try:
+            while True:
+                print("%.2f" % round(stopwatch_time,2), "seconds.", end="\r")
+                stopwatch_time = stopwatch_time + 0.010
+                time.sleep(0.010)
+        except KeyboardInterrupt:
+            print("Quitting stopwatch...")
+            print("Final stopwatch time:", "%.2f" % round(stopwatch_time,2), "seconds.")
             continue
         continue
     elif cmd == "timer":
@@ -421,7 +439,7 @@ while not done:
         print("")
         print("Welcome to Timer!")
         print("Please input the amount of seconds (up to 1 decimal place) you want the timer to run below. Didn't mean to open up timer? Just input 0.")
-        timer_secs = input("timer_secs-userinput@timer-prgm-" + promptver2)
+        timer_secs = input("Input: ")
         timer_secs = float(timer_secs)
         print("Starting timer. Timer will display how many seconds are left every 0.1 seconds.")
         timer_loop = False
