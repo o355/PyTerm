@@ -12,9 +12,7 @@ exeversion = False
 #Beyond here is just importing stuff for the functions of PyTerm.
 
 print("Python Terminal - Version 2.0 (In Development)")
-print("Built on INDEV VERSION")
-print("Starting up...")
-print("Beginning load.")
+print("Now starting up.")
 print("[>          ] | 0%, 0.00 seconds elapsed", end="\r")
 #We now handle importing with a try/handle.
 #Before we import sys we have to raise the error, instead of sys.exit().
