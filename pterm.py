@@ -10,64 +10,54 @@ exeversion = False
 
 #This part is for checking essential components of PyTerm. It gets 100% handled.
 #Beyond here is just importing stuff for the functions of PyTerm.
+
 print("Python Terminal - Version 2.0 (In Development)")
 print("Built on INDEV VERSION")
 print("Starting up...")
-print("Beginning pre-load...")
-print("Pre-Load | Importing time...")
+print("Beginning load.")
+print("[>          ] | 0%, 0.00 seconds elapsed", end="\r")
 #We now handle importing with a try/handle.
 #Before we import sys we have to raise the error, instead of sys.exit().
 try:
     import time
 except ImportError:
-    raise ImportError("You don't have time! Please install time to run PyTerm.")
-print("Pre-Load | Imported time!")
-print("Pre-Load | Starting clock for load time/uptime...")
+    raise ImportError("You don't have time! Please install time to run PyTerm!")
+print("[>          ] | 2%, 0.00 seconds elapsed", end="\r")
 entireload = time.time()
-print(round(time.time() - entireload,4), "| Pre-load complete, clock for load time/uptime loaded!")
-print(round(time.time() - entireload,4), "| Now converting variable entireload from a float into an int through variable entireload_int...")
-entireload_int = int(time.time() - entireload)
-print(round(time.time() - entireload,4), "| Operation completed. Output from type(entireload_int):", type(entireload_int))
-print(round(time.time() - entireload,4), "| Importing sys...")
+print("[=>         ] | 7%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 try:
     import sys
 except ImportError:
     raise ImportError("You don't have sys! Please install sys to run PyTerm.")
-print(round(time.time() - entireload,4), "| Imported sys!")
-print(round(time.time() - entireload,4), "| Checking Python version...")
+print("[==>        ] | 15%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 if sys.version_info[0] >= 3.5:
-    print("You must be using Python 3.5 or greater to run PyTerm.")
+    print(" ERROR | Install Python 3.5 or greater to run PyTerm!")
     sys.exit()
-print(round(time.time() - entireload,4), "| Running Python 3.5 or greater!")
-print(round(time.time() - entireload,4), "| Importing gmtime from time...")
+print("[==>        ] | 21%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 try:
     from time import gmtime
 except ImportError:
-    print("You don't have gmtime! Please install gmtime to run PyTerm.")
+    print(" ERROR | Install gmtime to run PyTerm!")
     sys.exit()
-print(round(time.time() - entireload,4), "| Imported gmtime from time!")
-print(round(time.time() - entireload,4), "| Importing os...")
+print("[===>       ] | 27%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 try:
     import os
 except ImportError:
-    print("You don't have os! Please install os to run PyTerm.")
+    print(" ERROR | Install os to run PyTerm!")
     sys.exit()
-print(round(time.time() - entireload,4), "| Imported os!")
-print(round(time.time() - entireload,4), "| Importing strftime from time...")
+print("[===>       ] | 34%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 try:
     from time import strftime
 except ImportError:
-    print("You don't have strftime! Please install strftime to run PyTerm.")
+    print(" ERROR | Install strftime to run PyTerm!")
     sys.exit()
-print(round(time.time() - entireload,4), "| Imported strftime from time!")
-print(round(time.time() - entireload,4), "| Importing platform...")
+print("[====>      ] | 42%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 try:
     import platform
 except ImportError:
-    print("You don't have platform! Please install strftime to run PyTerm.")
+    print(" ERROR | Install platform to run PyTerm!")
     sys.exit()
-print(round(time.time() - entireload,4), "| Imported platform!")
-print(round(time.time() - entireload,4), "| Defining functions...")
+print("[=====>     ] | 49%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
@@ -81,14 +71,13 @@ def print_fast(str):
 
 def pterm_restart():
     exec(open(restart_prog).read())
-print(round(time.time() - entireload,4), "| Defined functions: print_slow, print_fast!")
-print(round(time.time() - entireload,4), "| Defining 4 variables...")
+time.sleep(0.2)
+print("[=====>     ] | 52%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 done = False
 greeting2 = "Welcome to PyTerm,"
 note1 = ""
 note2 = ""
-print(round(time.time() - entireload,4), "| Defined 4 variables!")
-print(round(time.time() - entireload,4), "| Defining 3 functions, 3 variables, and reading/closing 3 files...")
+print("[======>    ] | 58%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 
 greet = open('assets//essential//greeting.txt')
 greeting = greet.read()
@@ -101,9 +90,7 @@ usernme.close()
 nme = open('assets//essential//name.txt')
 name = nme.read()
 nme.close()
-
-print(round(time.time() - entireload,4), "| Defined 2 functions, 2 variables, and read/closed 2 files!")
-print(round(time.time() - entireload,4), "| Defining 16 variables...")
+print("[======>    ] | 64%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 note3 = ""
 note4 = ""
 note5 = ""
@@ -112,7 +99,7 @@ note7 = ""
 cmd = ""
 promptver = "@pyterm-2.0-indev:~$ "
 promptver2 = "pyterm-2.0-indev:~$ "
-print(round(time.time() - entireload,4), "| Defined 8 of 17 varibles...")
+print("[=======>   ] | 72%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 place = ""
 drink = ""
 feeling = ""
@@ -122,8 +109,7 @@ action = ""
 tell = ""
 st = True
 restart_prog = 'pterm.py'
-print(round(time.time() - entireload,4), "| Defined 17 variables!")
-print(round(time.time() - entireload,4), "| Defining version variables...")
+print("[========>  ] | 79%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 help_ver = "3.0"
 restart_ver = "1.0"
 ping_ver = "0ms"
@@ -140,6 +126,7 @@ poem_ver = "1.3"
 about_ver = "1.7"
 farmstate_ver = "2.0.1-legacy"
 setup_ver = "2.1"
+print("[========>  ] | 83%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 shutdown_ver = "1.1"
 madlibs_ver = "1.0"
 textadventure_ver = "1.0.2"
@@ -149,8 +136,7 @@ sysinfo_ver = "1.0"
 diagnosticsong_ver = "1.1-legacy"
 clock_ver = "2.0.1"
 stopwatch_ver = "1.0"
-print(round(time.time() - entireload,4), "| Defined version variables!")
-print(round(time.time() - entireload,4), "| Defining version data variables...")
+print("[=========> ] | 91%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 version = "2.0-indev"
 aboutversion = "2.0 In Dev"
 build = "no"
@@ -161,7 +147,9 @@ lts_build = False
 stable_build = False
 beta_build = False
 dev_build = True
-print(round(time.time() - entireload,4), "| Startup finished! Welcome to PyTerm!")
+print("[==========>] | 100%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
+print("Boot finished. It took", round(time.time() - entireload,4), "seconds to boot.")
+print("Enjoy PyTerm!")
 print("")
 print(greeting + " " + username + "!")
 print("You are running PyTerm version " + version)
