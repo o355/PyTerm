@@ -134,13 +134,15 @@ sysinfo_ver = "1.0"
 diagnosticsong_ver = "1.1-legacy"
 clock_ver = "2.0.1"
 stopwatch_ver = "1.0"
+update_ver = "1.0"
 print("[=========> ] | 91%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 version = "2.0-indev"
 aboutversion = "2.0 In Dev"
 build = "no"
-buildnumber = "no"
+buildnumber = "2001"
 builddate = "no"
-buildtype = "indev build"
+buildtype = "indev"
+clean_ver = "2.0 Indev"
 lts_build = False
 stable_build = False
 beta_build = False
@@ -184,6 +186,49 @@ while not done:
         print("vercheck | Checking versions has never been so much fun.")
         print("sysinfo | Checking system information has never been so much fun.")
         cmd = ""
+        continue
+    elif cmd == "update":
+        print(round(time.time() - entireload,4), "| Launching program: PyTerm Update (version " + update_ver + ")")
+        print("")
+        cmd = ""
+        print("Importing necessary libraries...0%")
+        try:
+            import urllib.request
+        except ImportError:
+            print("Failed to import necessary libraries. Please install urllib.request to run this program.")
+            continue
+        print("Importing necessary libraries...50%")
+        try:
+            import shutil
+        except ImportError:
+            print("Failed to import necessary libraries. Please install shutil to run this program.")
+        print("Checking for updates. This should take just a few seconds (even on dial-up!)")
+        if buildtype == "beta":
+            print("The updater cannot be run on indev builds.")
+            continue
+        elif buildtype == "indev":
+            with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/betacheck.txt') as update_response, open('//assets//update//bn.txt', 'wb') as update_out_file:
+                shutil.copyfile(update_response, update_out_file)
+            with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/betalatest.txt') as update_response, open('//assets//update//bv.txt', 'wb') as update_out_file:
+                shutil.copyfile(update_response, update_out_file)
+            update_latest = open('//assets//update//bv.txt', 'wb')    
+            update_build = open('//assets//update//bn.txt', 'wb')
+            update_build = float(update_build)
+            if update_build > buildnumber:
+                print("An update for PyTerm is available!")
+                print("You're running version " + clean_ver + ", while the latest version is " + update_latest + ".")
+                continue
+            if update_build =< buildnumber:
+                print("You're running the latest version of PyTerm.")
+                print("You're running version " + clean_ver + ", and the server reports the latest version is " + update_latest + ".")
+                continue
+        elif buildtype == "stable":
+            with urllib.request.urlopen()
+        elif buildtype == "lts":
+            with urllib.requst.urlopen()
+        else:
+            print("Unknown build type.")
+        with urllib.request.urlopen()
         continue
     elif cmd == "diagnosticsong":
         print(round(time.time() - entireload,4), "| Launching program: Diagnostic Song (version " + diagnosticsong_ver + ")")
