@@ -638,68 +638,68 @@ while not done:
         notes_done = False
         while not notes_done:
             print("Would you like to open, edit, clear, or exit?")
-            notes_start = input("notes_start-userinput@notes-prgm-" + promptver2).lower()
+            notes_start = input("Please choose an option: ").lower()
             if notes_start == "open":
                 notes_open = False
                 while not notes_open:
                     print("Which note would you like to open? Enter a number between 1 and 10 (for note 1, note 2, etc.). Enter cancel to cancel.")
-                    notes_open_input = input("notes_open_input-userinput@notes-prgm-" + promptver2).lower()
+                    notes_open_input = input("Input: ").lower()
                     if notes_open_input == "1":
-                        notes_n1 = open('assets/\notes/\note1.txt')
+                        notes_n1 = open('assets//notes//note1.txt')
                         print("Note 1 output:")
                         print(notes_n1.read())
                         notes_n1.close()
                         break
                     elif notes_open_input == "2":
-                        notes_n2 = open('assets/\notes/\note2.txt')
+                        notes_n2 = open('assets//notes//note2.txt')
                         print("Note 2 output:")
                         print(notes_n2.read())
                         notes_n2.close()
                         break
                     elif notes_open_input == "3":
-                        notes_n3 = open('assets/\notes/\note3.txt')
+                        notes_n3 = open('assets//notes//note3.txt')
                         print("Note 3 output:")
                         print(notes_n3.read())
                         notes_n3.close()
                         break
                     elif notes_open_input == "4":
-                        notes_n4 = open('assets/\notes/\note4.txt')
+                        notes_n4 = open('assets//notes//note4.txt')
                         print("Note 4 output:")
                         print(notes_n4.read())
                         notes_n4.close()
                         break
                     elif notes_open_input == "5":
-                        notes_n5 = open('assets/\notes/\note5.txt')
+                        notes_n5 = open('assets//notes//note5.txt')
                         print("Note 5 output:")
                         print(notes_n5.read())
                         notes_n5.close()
                         break
                     elif notes_open_input == "6":
-                        notes_n6 = open('assets/\notes/\note6.txt')
+                        notes_n6 = open('assets//notes//note6.txt')
                         print("Note 6 output:")
                         print(notes_n6.read())
                         notes_n6.close()
                         break
                     elif notes_open_input == "7":
-                        notes_n7 = open('assets/\notes/\note7.txt')
+                        notes_n7 = open('assets//notes//note7.txt')
                         print("Note 7 output:")
                         print(notes_n7.read())
                         notes_n7.close()
                         break
                     elif notes_open_input == "8":
-                        notes_n8 = open('assets/\notes/\note8.txt')
+                        notes_n8 = open('assets//notes//note8.txt')
                         print("Note 8 output:")
                         print(notes_n8.read())
                         notes_n8.close()
                         break
                     elif notes_open_input == "9":
-                        notes_n9 = open('assets/\notes/\note9.txt')
+                        notes_n9 = open('assets//notes//note9.txt')
                         print("Note 9 output:")
                         print(notes_n9.read())
                         notes_n9.close()
                         break
                     elif notes_open_input == "10":
-                        notes_n10 = open('assets/\notes/\note10.txt')
+                        notes_n10 = open('assets//notes//note10.txt')
                         print("Note 10 output:")
                         print(notes_n10.read())
                         notes_n10.close()
@@ -715,9 +715,9 @@ while not done:
                 while not notes_edit:
                     # This program has to break unification, for obvious reasons. A warning is provided, don't hate. Now you will hate since I put this comment here.
                     print("Which note would you like to edit? Enter a number between 1 and 10 (for note 1, note 2, etc.). Enter cancel to cancel.")
-                    notes_edit_input = input("notes_edit_input-userinput@notes-prgm-" + promptver2).lower()
+                    notes_edit_input = input("Input: ").lower()
                     if notes_edit_input == "1":
-                        notes_n1fn = "assets/\notes/\note1.txt"
+                        notes_n1fn = "assets//notes//note1.txt"
                         print("Edit Note 1 in the empty prompt below.")
                         notes_n1write = input("")
                         with open(notes_n1fn, 'a') as out:
@@ -726,7 +726,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "2":
-                        notes_n2fn = "assets/\notes/\note2.txt"
+                        notes_n2fn = "assets//notes//note2.txt"
                         print("Edit Note 2 in the empty prompt below.")
                         notes_n2write = input("")
                         with open(notes_n2fn, 'a') as out:
@@ -735,7 +735,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "3":
-                        notes_n3fn = "assets/\notes/\note3.txt"
+                        notes_n3fn = "assets//notes//note3.txt"
                         print("Edit Note 3 in the empty prompt below.")
                         notes_n3write = input("")
                         with open(notes_n3fn, 'a') as out:
@@ -744,7 +744,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "4":
-                        notes_n4fn = "assets/\notes/\note4.txt"
+                        notes_n4fn = "assets//notes//note4.txt"
                         print("Edit Note 4 in the empty prompt below.")
                         notes_n4write = input("")
                         with open(notes_n4fn, 'a') as out:
@@ -753,7 +753,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "5":
-                        notes_n5fn = "assets/\notes/\note5.txt"
+                        notes_n5fn = "assets//notes//note5.txt"
                         print("Edit Note 5 in the empty prompt below.")
                         notes_n5write = input("")
                         with open(notes_n5fn, 'a') as out:
@@ -762,7 +762,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "6":
-                        notes_n6fn = "assets/\notes/\note6.txt"
+                        notes_n6fn = "assets//notes//note6.txt"
                         print("Edit Note 6 in the empty prompt below.")
                         notes_n6write = input("")
                         with open(notes_n6fn, 'a') as out:
@@ -771,7 +771,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "7":
-                        notes_n7fn = "assets/\notes/\note7.txt"
+                        notes_n7fn = "assets//notes//note7.txt"
                         print("Edit Note 7 in the empty prompt below.")
                         notes_n7write = input("")
                         with open(notes_n7fn, 'a') as out:
@@ -780,7 +780,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "8":
-                        notes_n8fn = "assets/\notes/\note8.txt"
+                        notes_n8fn = "assets//notes//note8.txt"
                         print("Edit Note 8 in the empty prompt below.")
                         notes_n8write = input("")
                         with open(notes_n8fn, 'a') as out:
@@ -789,7 +789,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "9":
-                        notes_n9fn = "assets/\notes/\note9.txt"
+                        notes_n9fn = "assets//notes//note9.txt"
                         print("Edit Note 9 in the empty prompt below.")
                         notes_n9write = input("")
                         with open(notes_n9fn, 'a') as out:
@@ -798,7 +798,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "10":
-                        notes_n10fn = "assets/\notes/\note10.txt"
+                        notes_n10fn = "assets//notes//note10.txt"
                         print("Edit Note 10 in the empty prompt below.")
                         notes_n10write = input("")
                         with open(notes_n10fn, 'a') as out:
@@ -819,54 +819,54 @@ while not done:
                 print("Which note would you like to delete? Enter a number between 1 and 10 (1 for Note 1, etc.), or enter cancel to cancel.")
                 notes_clear = False
                 while not notes_clear:
-                    notes_clear_input = input("notes_clear_input-userinput@notes-prgm-" + promptver2).lower()
+                    notes_clear_input = input("Input: ").lower()
                     if notes_clear_input == "1":
-                        notes_fName1 = "assets/\notes/\note1.txt"
+                        notes_fName1 = "assets//notes//note1.txt"
                         open(notes_fName1, 'w').close()
                         print("Note 1 cleared.")
                         break
                     elif notes_clear_input == "2":
-                        notes_fName2 = "assets/\notes/\note2.txt"
+                        notes_fName2 = "assets//notes//note2.txt"
                         open(notes_fName2, 'w').close()
                         print("Note 2 cleared.")
                         break
                     elif notes_clear_input == "3":
-                        notes_fName3 = "assets/\notes/\note3.txt"
+                        notes_fName3 = "assets//notes//note3.txt"
                         open(notes_fName3, 'w').close()
                         print("Note 3 cleared.")
                         break
                     elif notes_clear_input == "4":
-                        notes_fName4 = "assets/\notes/\note4.txt"
+                        notes_fName4 = "assets//notes//note4.txt"
                         open(notes_fName4, 'w').close()
                         print("Note 4 cleared.")
                         break
                     elif notes_clear_input == "5":
-                        notes_fName5 = "assets/\notes/\note5.txt"
+                        notes_fName5 = "assets//notes//note5.txt"
                         open(notes_fName5, 'w').close()
                         print("Note 5 cleared.")
                         break
                     elif notes_clear_input == "6":
-                        notes_fName6 = "assets/\notes/\note6.txt"
+                        notes_fName6 = "assets//notes//note6.txt"
                         open(notes_fName6, 'w').close()
                         print("Note 6 cleared.")
                         break
                     elif notes_clear_input == "7":
-                        notes_fName7 = "assets/\notes/\note7.txt"
+                        notes_fName7 = "assets//notes//note7.txt"
                         open(notes_fName7, 'w').close()
                         print("Note 7 cleared.")
                         break
                     elif notes_clear_input == "8":
-                        notes_fName8 = "assets/\notes/\note8.txt"
+                        notes_fName8 = "assets//notes//note8.txt"
                         open(notes_fName8, 'w').close()
                         print("Note 8 cleared.")
                         break
                     elif notes_clear_input == "9":
-                        notes_fName9 = "assets/\notes/\note9.txt"
+                        notes_fName9 = "assets//notes//note9.txt"
                         open(notes_fName9, 'w').close()
                         print("Note 9 cleared.")
                         break
                     elif notes_clear_input == "10":
-                        notes_fName10 = "assets/\notes/\note10.txt"
+                        notes_fName10 = "assets//notes//note10.txt"
                         open(notes_fName10, 'w').close()
                         print("Note 10 cleared.")
                         break
