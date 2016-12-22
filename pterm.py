@@ -66,6 +66,13 @@ def print_slow(str):
         sys.stdout.write(letter)
         sys.stdout.flush()
         time.sleep(0.07)
+
+def print_medium(str):
+    for letter in str:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(0.035)
+
 def print_fast(str):
     for letter in str:
         sys.stdout.write(letter)
@@ -90,7 +97,7 @@ usernme = open('assets//essential//username.txt')
 username = usernme.read()
 usernme.close()
 
-nme = open('assets//essential/\name.txt')
+nme = open('assets//essential//name.txt')
 name = nme.read()
 nme.close()
 print("[======>    ] | 64%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
