@@ -29,30 +29,35 @@ except ImportError:
     raise ImportError("You don't have sys! Please install sys to run PyTerm.")
 print("[==>        ] | 15%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 if sys.version_info[0] >= 3.5:
+    print("")
     print(" ERROR | Install Python 3.5 or greater to run PyTerm!")
     sys.exit()
 print("[==>        ] | 21%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 try:
     from time import gmtime
 except ImportError:
+    print("")
     print(" ERROR | Install gmtime to run PyTerm!")
     sys.exit()
 print("[===>       ] | 27%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 try:
     import os
 except ImportError:
+    print("")
     print(" ERROR | Install os to run PyTerm!")
     sys.exit()
 print("[===>       ] | 34%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 try:
     from time import strftime
 except ImportError:
+    print("")
     print(" ERROR | Install strftime to run PyTerm!")
     sys.exit()
 print("[====>      ] | 42%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 try:
     import platform
 except ImportError:
+    print("")
     print(" ERROR | Install platform to run PyTerm!")
     sys.exit()
 print("[=====>     ] | 49%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
@@ -203,14 +208,33 @@ while not done:
         except ImportError:
             print("Failed to import necessary libraries. Please install shutil to run this program.")
         print("Checking for updates. This should take just a few seconds (even on dial-up!)")
-        if buildtype == "beta":
+        if buildtype == "indev":
             print("The updater cannot be run on indev builds.")
+            print("Sorry!")
             continue
-        elif buildtype == "indev":
+        elif buildtype == "beta":
             with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/betacheck.txt') as update_response, open('assets//update//bn.txt', 'wb') as update_out_file:
-                shutil.copyfileobj(update_response, update_out_file)
+                try:
+                    shutil.copyfileobj(update_response, update_out_file)
+                except socket.gaierror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 46: Socket Error")
+                    continue
+                except urllib.error.URLerror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 47: URL Error")
+                    continue
             with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/betalatest.txt') as update_response, open('assets//update//bv.txt', 'wb') as update_out_file:
-                shutil.copyfileobj(update_response, update_out_file)
+                try:
+                    shutil.copyfileobj(update_response, update_out_file)
+                except socket.gaierror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 46: Socket Error")
+                    continue
+                except urllib.error.URLerror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 47: URL Error")
+                    continue
             update_1 = open('assets//update//bn.txt')
             update_bn = update_1.read()
             update_bn = float(update_bn)
@@ -225,11 +249,90 @@ while not done:
                 print("You're running version " + clean_ver + ", and the server reports the latest version is " + update_bv + ".")
                 continue
             else:
-                print("Something odd happened...")
+                print("Shucks. Something happened when comparing build nubers.")
+                print("Please try again, or submit a bug report to GitHub (github.com/o355/pyterm).")
+                continue
         elif buildtype == "stable":
+            with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/stablecheck.txt') as update_response, open('assets//update//bn.txt', 'wb') as update_out_file:
+                try:
+                    shutil.copyfileobj(update_response, update_out_file)
+                except socket.gaierror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 46: Socket Error")
+                    continue
+                except urllib.error.URLerror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 47: URL Error")
+                    continue
+            with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/betalatest.txt') as update_response, open('assets//update//bv.txt', 'wb') as update_out_file:
+                try:
+                    shutil.copyfileobj(update_response, update_out_file)
+                except socket.gaierror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 46: Socket Error")
+                    continue
+                except urllib.error.URLerror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 47: URL Error")
+                    continue
+            update_1 = open('assets//update//bn.txt')
+            update_bn = update_1.read()
+            update_bn = float(update_bn)
+            update_2 = open('assets//update//bv.txt')
+            update_bv = update_2.read()
+            if update_bn > buildnumber:
+                print("An update for PyTerm is available!")
+                print("You're running version " + clean_ver + ", while the latest version is " + update_bv + ".")
+                continue
+            if update_bn <= buildnumber:
+                print("You're running the latest version of PyTerm.")
+                print("You're running version " + clean_ver + ", and the server reports the latest version is " + update_bv + ".")
+                continue
+            else:
+                print("Shucks. Something happened when comparing build nubers.")
+                print("Please try again, or submit a bug report to GitHub (github.com/o355/pyterm).")
+                continue
             continue
         elif buildtype == "lts":
-            continue
+            with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/ltscheck.txt') as update_response, open('assets//update//bn.txt', 'wb') as update_out_file:
+                try:
+                    shutil.copyfileobj(update_response, update_out_file)
+                except socket.gaierror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 46: Socket Error")
+                    continue
+                except urllib.error.URLerror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 47: URL Error")
+                    continue
+            with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/ltslatest.txt') as update_response, open('assets//update//bv.txt', 'wb') as update_out_file:
+                try:
+                    shutil.copyfileobj(update_response, update_out_file)
+                except socket.gaierror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 46: Socket Error")
+                    continue
+                except urllib.error.URLerror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 47: URL Error")
+                    continue
+            update_1 = open('assets//update//bn.txt')
+            update_bn = update_1.read()
+            update_bn = float(update_bn)
+            update_2 = open('assets//update//bv.txt')
+            update_bv = update_2.read()
+            if update_bn > buildnumber:
+                print("An update for PyTerm is available!")
+                print("You're running version " + clean_ver + ", while the latest version is " + update_bv + ".")
+                continue
+            if update_bn <= buildnumber:
+                print("You're running the latest version of PyTerm.")
+                print("You're running version " + clean_ver + ", and the server reports the latest version is " + update_bv + ".")
+                continue
+            else:
+                print("Shucks. Something happened when comparing build nubers.")
+                print("Please try again, or submit a bug report to GitHub (github.com/o355/pyterm).")
+                continue
         else:
             print("Unknown build type.")
         continue
