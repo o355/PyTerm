@@ -1,6 +1,6 @@
 exeversion = False
 # ;)
-#Python Terminal - v2.0-indev
+#Python Terminal - v2.0-beta3
 #THIS IS AN INDEV BUILD. EXPECT BROKEN AND UNTESTED STUFF.
 
 #LEAVE THIS PART IN FOR CREDITS, AND YOU ARE FREE TO DO WHATEVER UNDER THE LICENSE:
@@ -11,7 +11,7 @@ exeversion = False
 #This part is for checking essential components of PyTerm. It gets 100% handled.
 #Beyond here is just importing stuff for the functions of PyTerm.
 
-print("Python Terminal - Version 2.0 (In Development)")
+print("Python Terminal - Version 2.0 (Beta 3)")
 print("Now starting up.")
 print("[>          ] | 0%, 0.00 seconds elapsed", end="\r")
 #We now handle importing with a try/handle.
@@ -107,8 +107,8 @@ note5 = ""
 note6 = ""
 note7 = ""
 cmd = ""
-promptver = "@pyterm-2.0-indev:~$ "
-promptver2 = "pyterm-2.0-indev:~$ "
+promptver = "@pyterm-2.0-beta3:~$ "
+promptver2 = "pyterm-2.0-beta3:~$ "
 print("[=======>   ] | 72%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 place = ""
 drink = ""
@@ -148,13 +148,13 @@ clock_ver = "2.0.1"
 stopwatch_ver = "1.0"
 update_ver = "1.0"
 print("[=========> ] | 91%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
-version = "2.0-indev"
-aboutversion = "2.0 In Dev"
+version = "2.0-beta3"
+aboutversion = "2.0 Beta 3"
 build = "no"
-buildnumber = 2001
-builddate = "no"
-buildtype = "indev"
-clean_ver = "2.0 Indev"
+buildnumber = 2003
+builddate = "December 26, 2016"
+buildtype = "beta"
+clean_ver = "2.0 Beta 3"
 lts_build = False
 stable_build = False
 beta_build = False
