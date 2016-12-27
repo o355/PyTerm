@@ -1,16 +1,12 @@
 # PyTerm (Python Terminal)
-At the basic level, PyTerm is a "terminal emulator" for Python. But not really. It adds some cool, extra stuff.
+At the basic level, PyTerm is a "terminal emulator" for Python. But not really. It includes some...other stuff.
 
-Right now, the much needed Version 2.0 is coming, under rapid development. Version 2.0 is basically a whole overhaul in PyTerm. Everything is getting changed. UI changes, functionality changes, and lots of new programs.
+**Please be noted: The master branch currently stuck in Version 1.14, due to a version screwup. Instead, please use the LTS' branch v1.15 instead, as that is maintained. Version 2.0 is coming along soon, in which semantic versioning will get used.**
 
-Let's clear up all the branches around here, before going any future.
+# Current Versions
+* Stable - 1.14 (updated a LONG time ago)
+* LTS - 1.15 (updated some time ago)
+* Beta - 2.0 Beta 2
+* Indev - 2.0 Beta 2/Beta 3
 
-The master branch (where you are currently) is where the stable, good code godes. No betas, no indev builds, the stable builds.
-
-The lts branch is where older, but still supported versions of PyTerm go. It's like a mini-archive for PyTerm, but it still gets bug fixes.
-
-The beta branch is where beta code of PyTerm goes. Still somewhat stable, but it's your chance to take a peek at what's coming soon.
-
-Lastly, the indev branch is where I develop PyTerm in. It's extremely unstable, and I push updates on a daily basis. I don't mind even posting a build that doesn't work at all.
-
-Version 2.0 should be finished in Early 2017. It's a huge update, and requires 30-40 hours of coding time, even more.
+Use the Stable/LTS branch for the best experience. If you want to take a look at new features, albeit at the risk of bad stability, use the Beta/Indev branch.
