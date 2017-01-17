@@ -35,3 +35,16 @@
 - Text Adventure is improved, now restarts PyTerm when you hit the end
 - Adds dependency warnings to programs that need dependencies
 - Other smaller improvements
+
+2.0 beta 3:
+- Replaces the time program with a cross-platform time program
+- Input unification is gone
+- CPU bench is improved by miles
+- There's a brand new boot loader
+- Some programs have gotten retired
+- There's an actual update program
+- The vercheck program is fixed
+- Lots of programs have been enhanced
+- A stopwatch was added
+- Bugs fixed
+- Other improvements I forgot about
