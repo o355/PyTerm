@@ -422,7 +422,7 @@ while not done:
         print(round(time.time() - entireload,4), "| Launching program: Restart (version " + restart_ver + ")")
         print("")
         print("Restarting PyTerm...")
-        exec(open(restart_prog).read())
+        pterm_restart()
     elif cmd == "ping":
         ping_ver = "0ms"
         print(round(time.time() - entireload,4), "| Launching program: Ping (version " + ping_ver + ")")
@@ -990,7 +990,7 @@ while not done:
                                 print("\nThis story has ended. To exit this program, PyTerm must be restarted.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             elif ta_d4 == "go right on the trail":
                                 print_slow("\nYou begin hiking. But, you keep going up and up. You realize, this isn't the right way to go.")
                                 print_slow("\nYou're running low on water and food, yet, there seems to be another trail that might go down the mountain.")
@@ -1007,7 +1007,7 @@ while not done:
                                         print("\nThis story has ended. To exit this program, PyTerm must be restarted.")
                                         print("Now restarting...")
                                         time.sleep(1)
-                                        exec(open(restart_prog).read())
+                                        pterm_restart()
                                     elif ta_d5 == "take the other trail":
                                         print_slow("\nYou start taking the other trail. After 2 hours of upwards climbing, you start getting sleepy, and are very thirsty.")
                                         print_slow("\nYou decide to take a rest. Due to dehydration, you pass away in your sleep.")
@@ -1016,12 +1016,12 @@ while not done:
                                         print("\nThis story has ended. To exit this program, PyTerm must be restarted.")
                                         print("Now restarting...")
                                         time.sleep(1)
-                                        exec(open(restart_prog).read())
+                                        pterm_restart()
                                     elif ta_d5 == "exit":
                                         print("Now exiting this program. To do so, PyTerm must be restarted.")
                                         print("Now restarting...")
                                         time.sleep(1)
-                                        exec(open(restart_prog).read())
+                                        pterm_restart()
                                     else:
                                         print("Not a valid option. Options are: Turn around, Take the other trail")
                                         continue
@@ -1029,7 +1029,7 @@ while not done:
                                 print("Now exiting this program. To do so, PyTerm must be restarted.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             else:
                                 print("Not a valid option. Options are: Go left on the trail, Go right on the trail.")
                     elif ta_d2 == "try to meet shia labeouf":
@@ -1050,7 +1050,7 @@ while not done:
                                 print("\nThis story has ended. To quit this program, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             if ta_d7 == "ask if shia has a newer trail map":
                                 print_slow("\nYou ask Shia for a newer trail map. He says that the map he gave you was the newest one.")
                                 print_slow("\nHe said that there haven't been any trails made up in the forest for 8 years.")
@@ -1059,12 +1059,12 @@ while not done:
                                 print("\nThis story has ended. To quit this program, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                     elif ta_d2 == "exit":
                         print("Now exiting this program. To do so, PyTerm must be restarted.")
                         print("Now restarting...")
                         time.sleep(1)
-                        exec(open(restart_prog).read())
+                        pterm_restart()
                     else:
                         print_slow("Not a valid option. Options are: Run for your life, Try to meet Shia LaBeouf.")
 
@@ -1092,7 +1092,7 @@ while not done:
                                 print("\nThis story has ended. To quit this program, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             elif ta_d6 == "go right":
                                 print_slow("\nYou start heading right on the road. After about 30 minutes. You see a sign for the trailhead you were just on.")
                                 print_slow("\nAfter a little pondering, you start heading towards where the trailhead sign goes.")
@@ -1102,12 +1102,12 @@ while not done:
                                 print("\nThis story has ended. To quit this program, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             elif ta_d6 == "exit":
                                 print("\nNow exiting this program. To do so we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             else:
                                 print("Not a valid option. Options are: Go left, Go right")
                     elif ta_d3 == "try to go into the cabin":
@@ -1126,7 +1126,7 @@ while not done:
                                 print("\nThis story has ended. To quit this program, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             elif ta_d8 == "quietly exit the cabin":
                                 print_slow("\nYou attempt to quietly exit the cabin. But...")
                                 print_slow("\nShia LaBeouf catches you try to exit the cabin.")
@@ -1135,19 +1135,19 @@ while not done:
                                 print("\nThis story has ended. To quit this program, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             elif ta_d8 == "exit":
                                 print_slow("\nNow exiting the program. To do so, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             else:
                                 print_slow("\nThat's not a valid option. Options are: Try to meet with Shia LaBeouf, Quietly exit the cabin")
                     elif ta_d3 == "exit":
                         print_slow("\nNow exiting the program. To do so, we need to restart PyTerm.")
                         print("Now restarting...")
                         time.sleep(1)
-                        exec(open(restart_prog).read())
+                        pterm_restart()
                     else:
                         print("\nNot a valid option. Options are: Follow the electricity line, Try to go into the cabin.")
                         break
