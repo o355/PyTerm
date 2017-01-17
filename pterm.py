@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-#Python Terminal - v2.0-beta2
-#THIS IS A BETA BUILD. THIS SHOULD WORK, BUT MAYBE NOT.
-=======
 exeversion = False
 # ;)
 #Python Terminal - v2.0-beta3
@@ -13,27 +9,6 @@ exeversion = False
 #fully coded and designed by o355.
 #(c) 2016 under the MIT license.
 
-<<<<<<< HEAD
-#importing time - necessary for counting load time
-print("Python Terminal - Version 2.0 (Beta 2)")
-print("Built on November 16, 2016")
-print("Starting up...")
-print("Beginning pre-load...")
-print("Pre-Load | Importing time...")
-import time
-print("Pre-Load | Imported time!")
-print("Pre-Load | Starting clock for load time/uptime...")
-#begins load timer for the entire terminal
-entireload = time.time()
-print(round(time.time() - entireload,4), "| Pre-load complete, clock for load time/uptime loaded!")
-print(round(time.time() - entireload,4), "| Now converting variable entireload from a float into an int through variable entireload_int...")
-entireload_int = int(time.time() - entireload)
-print(round(time.time() - entireload,4), "| Operation completed. Output from type(entireload_int):", type(entireload_int))
-#Entire load sequence
-=======
-#This part is for checking essential components of PyTerm. It gets 100% handled.
-#Beyond here is just importing stuff for the functions of PyTerm.
->>>>>>> refs/remotes/origin/indev
 
 print("Python Terminal - Version 2.0 (Beta 3)")
 print("Now starting up.")
@@ -131,32 +106,11 @@ note5 = ""
 note6 = ""
 note7 = ""
 cmd = ""
-<<<<<<< HEAD
-promptver = "@pyterm-2.0-beta2:~$ "
-promptver2 = "pyterm-2.0-beta2:~$ "
-print(round(time.time() - entireload,4), "| Defined 8 of 17 varibles...")
-=======
 promptver = "@pyterm-2.0-beta3:~$ "
 promptver2 = "pyterm-2.0-beta3:~$ "
 print("[=======>   ] | 72%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
->>>>>>> refs/remotes/origin/indev
-place = ""
-drink = ""
-feeling = ""
-num1 = ""
-instructor = ""
-action = ""
-tell = ""
-st = True
-restart_prog = 'pterm.py'
-<<<<<<< HEAD
-print(round(time.time() - entireload,4), "| Defined 17 variables!")
-print(round(time.time() - entireload,4), "| Defining version variables...")
-help_ver = "2.0"
-=======
 print("[========>  ] | 79%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 help_ver = "3.0"
->>>>>>> refs/remotes/origin/indev
 restart_ver = "1.0"
 ping_ver = "0ms"
 alwayssave_ver = "NUL"
@@ -176,16 +130,6 @@ print("[========>  ] | 83%,", "%.4f" % round(time.time() - entireload,4), "secon
 shutdown_ver = "1.1"
 madlibs_ver = "1.0"
 textadventure_ver = "1.0.2"
-<<<<<<< HEAD
-cpubench_ver = "2.2"
-print(round(time.time() - entireload,4), "| Defined version variables!")
-print(round(time.time() - entireload,4), "| Defining version data variables...")
-version = "2.0-beta2"
-build = "1801"
-build_date = "Nov. 16, 2016"
-lts_build = "no"
-print(round(time.time() - entireload,4), "| Startup finished! Welcome to PyTerm!")
-=======
 cpubench_ver = "4.0"
 vercheck_ver = "1.0"
 sysinfo_ver = "1.0"
@@ -196,9 +140,9 @@ update_ver = "1.0"
 print("[=========> ] | 91%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 version = "2.0-beta3"
 aboutversion = "2.0 Beta 3"
-build = "no"
+build = "2003"
 buildnumber = 2003
-builddate = "December 26, 2016"
+builddate = "January 16, 2017"
 buildtype = "beta"
 clean_ver = "2.0 Beta 3"
 lts_build = False
@@ -208,7 +152,6 @@ dev_build = True
 print("[==========>] | 100%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 print("Boot finished. It took", round(time.time() - entireload,4), "seconds to boot.")
 print("Enjoy PyTerm!")
->>>>>>> refs/remotes/origin/indev
 print("")
 print(greeting + " " + username + "!")
 print("You are running PyTerm version " + version)
