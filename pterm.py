@@ -893,7 +893,7 @@ while not done:
         print("Version " + aboutversion)
         print("Coded in Python 3.2 and 3.5")
         print("Build date: " + builddate)
-        print("Build number: " + buildnumber)
+        print("Build number:", buildnumber)
         print("Build type: " + buildtype)
         cmd = ""
         continue
