@@ -627,7 +627,6 @@ while not done:
         print("Fun fact: Once, the master indev build of PyTerm got corrupted. I lost a lot of progress. 8 hours, to be exact. PyTerm was 50,000 NUL NUL NULs. Such, the indev branch was created.")
         print("FYI: I don't have a Minecraft server anymore. I ask you NOT to spam my GitHub inbox with the question: What's the IP to ur MC server!!!!1???!!!")
         print("Fun fact: The old ASCII text was made in Notepad, and then I copy & pasted the print("" suffix and "") to the ASCII text afterwards.")
-        prin
         cmd = ""
         continue
     elif cmd == "notes":
