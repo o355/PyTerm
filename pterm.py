@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 #Python Terminal - v2.0-beta2
 #THIS IS A BETA BUILD. THIS SHOULD WORK, BUT MAYBE NOT.
+=======
+exeversion = False
+# ;)
+#Python Terminal - v2.0-beta3
+#THIS IS AN INDEV BUILD. EXPECT BROKEN AND UNTESTED STUFF.
+>>>>>>> refs/remotes/origin/indev
 
 #LEAVE THIS PART IN FOR CREDITS, AND YOU ARE FREE TO DO WHATEVER UNDER THE LICENSE:
 #originally found on GitHub: github.com/o355/pyterm
 #fully coded and designed by o355.
 #(c) 2016 under the MIT license.
 
+<<<<<<< HEAD
 #importing time - necessary for counting load time
 print("Python Terminal - Version 2.0 (Beta 2)")
 print("Built on November 16, 2016")
@@ -22,67 +30,116 @@ print(round(time.time() - entireload,4), "| Now converting variable entireload f
 entireload_int = int(time.time() - entireload)
 print(round(time.time() - entireload,4), "| Operation completed. Output from type(entireload_int):", type(entireload_int))
 #Entire load sequence
+=======
+#This part is for checking essential components of PyTerm. It gets 100% handled.
+#Beyond here is just importing stuff for the functions of PyTerm.
+>>>>>>> refs/remotes/origin/indev
 
-print(round(time.time() - entireload,4), "| Importing sys...")
-import sys
-print(round(time.time() - entireload,4), "| Imported sys!")
-print(round(time.time() - entireload,4), "| Importing gmtime from time...")
-from time import gmtime
-print(round(time.time() - entireload,4), "| Imported gmtime from time!")
-print(round(time.time() - entireload,4), "| Importing os...")
-import os
-print(round(time.time() - entireload,4), "| Imported os!")
-print(round(time.time() - entireload,4), "| Importing strftime from time...")
-from time import strftime
-print(round(time.time() - entireload,4), "| Imported strftime from time!")
-print(round(time.time() - entireload,4), "| Importing tkinter...")
-import tkinter
-print(round(time.time() - entireload,4), "| Defining variable username...")
-username = "user"
-print(round(time.time() - entireload,4), "| Defined variable username to: user!")
-print(round(time.time() - entireload,4), "| Defining functions: print_slow, print_fast...")
+print("Python Terminal - Version 2.0 (Beta 3)")
+print("Now starting up.")
+print("[>          ] | 0%, 0.00 seconds elapsed", end="\r")
+#We now handle importing with a try/handle.
+#Before we import sys we have to raise the error, instead of sys.exit().
+try:
+    import time
+except ImportError:
+    raise ImportError("You don't have time! Please install time to run PyTerm!")
+print("[>          ] | 2%, 0.00 seconds elapsed", end="\r")
+entireload = time.time()
+print("[=>         ] | 7%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
+try:
+    import sys
+except ImportError:
+    raise ImportError("You don't have sys! Please install sys to run PyTerm.")
+print("[==>        ] | 15%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
+if sys.version_info[0] >= 3.5:
+    print("")
+    print(" ERROR | Install Python 3.5 or greater to run PyTerm!")
+    sys.exit()
+print("[==>        ] | 21%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
+try:
+    from time import gmtime
+except ImportError:
+    print("")
+    print(" ERROR | Install gmtime to run PyTerm!")
+    sys.exit()
+print("[===>       ] | 27%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
+try:
+    import os
+except ImportError:
+    print("")
+    print(" ERROR | Install os to run PyTerm!")
+    sys.exit()
+print("[===>       ] | 34%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
+try:
+    from time import strftime
+except ImportError:
+    print("")
+    print(" ERROR | Install strftime to run PyTerm!")
+    sys.exit()
+print("[====>      ] | 42%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
+try:
+    import platform
+except ImportError:
+    print("")
+    print(" ERROR | Install platform to run PyTerm!")
+    sys.exit()
+print("[=====>     ] | 49%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
         time.sleep(0.07)
+
+def print_medium(str):
+    for letter in str:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(0.035)
+
 def print_fast(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
         time.sleep(0.035)
-print(round(time.time() - entireload,4), "| Defined functions: print_slow, print_fast!")
-print(round(time.time() - entireload,4), "| Defining 4 variables...")
+
+def pterm_restart():
+    exec(open(restart_prog).read())
+time.sleep(0.2)
+print("[=====>     ] | 52%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 done = False
 greeting2 = "Welcome to PyTerm,"
 note1 = ""
 note2 = ""
-print(round(time.time() - entireload,4), "| Defined 4 variables!")
-print(round(time.time() - entireload,4), "| Defining 3 functions, 3 variables, and reading/closing 3 files...")
+print("[======>    ] | 58%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 
-greet = open('assets\\essential\\greeting.txt')
+greet = open('assets//essential//greeting.txt')
 greeting = greet.read()
 greet.close()
 
-usernme = open('assets\\essential\\username.txt')
+usernme = open('assets//essential//username.txt')
 username = usernme.read()
 usernme.close()
 
-nme = open('assets\\essential\\name.txt')
+nme = open('assets//essential//name.txt')
 name = nme.read()
 nme.close()
-
-print(round(time.time() - entireload,4), "| Defined 2 functions, 2 variables, and read/closed 2 files!")
-print(round(time.time() - entireload,4), "| Defining 16 variables...")
+print("[======>    ] | 64%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 note3 = ""
 note4 = ""
 note5 = ""
 note6 = ""
 note7 = ""
 cmd = ""
+<<<<<<< HEAD
 promptver = "@pyterm-2.0-beta2:~$ "
 promptver2 = "pyterm-2.0-beta2:~$ "
 print(round(time.time() - entireload,4), "| Defined 8 of 17 varibles...")
+=======
+promptver = "@pyterm-2.0-beta3:~$ "
+promptver2 = "pyterm-2.0-beta3:~$ "
+print("[=======>   ] | 72%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
+>>>>>>> refs/remotes/origin/indev
 place = ""
 drink = ""
 feeling = ""
@@ -92,27 +149,34 @@ action = ""
 tell = ""
 st = True
 restart_prog = 'pterm.py'
+<<<<<<< HEAD
 print(round(time.time() - entireload,4), "| Defined 17 variables!")
 print(round(time.time() - entireload,4), "| Defining version variables...")
 help_ver = "2.0"
+=======
+print("[========>  ] | 79%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
+help_ver = "3.0"
+>>>>>>> refs/remotes/origin/indev
 restart_ver = "1.0"
 ping_ver = "0ms"
 alwayssave_ver = "NUL"
 uptime_ver = "1.0"
 ascii_ver = "1.0.1"
-time_ver = "1.0.1"
+time_ver = "1.3-legacy"
 timer_ver = "1.1.1"
-salesbuster_ver = "3.1"
+stopwatch_ver = "1.0"
+salesbuster_ver = "3.1-legacy"
 notes_ver = "5.0"
 coolthingz_ver = "1.3.3.7"
 poem_ver = "1.3"
-update_ver = "2.3"
-about_ver = "1.6"
-farmstate_ver = "2.0.1"
+about_ver = "1.7"
+farmstate_ver = "2.0.1-legacy"
 setup_ver = "2.1"
+print("[========>  ] | 83%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
 shutdown_ver = "1.1"
 madlibs_ver = "1.0"
 textadventure_ver = "1.0.2"
+<<<<<<< HEAD
 cpubench_ver = "2.2"
 print(round(time.time() - entireload,4), "| Defined version variables!")
 print(round(time.time() - entireload,4), "| Defining version data variables...")
@@ -121,68 +185,311 @@ build = "1801"
 build_date = "Nov. 16, 2016"
 lts_build = "no"
 print(round(time.time() - entireload,4), "| Startup finished! Welcome to PyTerm!")
+=======
+cpubench_ver = "4.0"
+vercheck_ver = "1.0"
+sysinfo_ver = "1.0"
+diagnosticsong_ver = "1.1-legacy"
+clock_ver = "2.0.1"
+stopwatch_ver = "1.0"
+update_ver = "1.0"
+print("[=========> ] | 91%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
+version = "2.0-beta3"
+aboutversion = "2.0 Beta 3"
+build = "no"
+buildnumber = 2003
+builddate = "December 26, 2016"
+buildtype = "beta"
+clean_ver = "2.0 Beta 3"
+lts_build = False
+stable_build = False
+beta_build = False
+dev_build = True
+print("[==========>] | 100%,", "%.4f" % round(time.time() - entireload,4), "seconds elapsed", end="\r")
+print("Boot finished. It took", round(time.time() - entireload,4), "seconds to boot.")
+print("Enjoy PyTerm!")
+>>>>>>> refs/remotes/origin/indev
 print("")
 print(greeting + " " + username + "!")
 print("You are running PyTerm version " + version)
 print("This is a beta build, and will be unfinished and unstable.")
 print("The current date is", strftime("%A, %B %d, %Y. The time is %I:%M %p"))
 print("Enter a command in the prompt below. Type help for help.")
-#entire cmd loop
 while not done:
-    #start of the cmd loop
     cmd = input(username + promptver).lower()
     if cmd == "help":
         print(round(time.time() - entireload,4), "| Launching program: Help (version " + help_ver + ")")
         print("")
         print("PyTerm Commands:")
-        print("help - Lists this command.")
-        print("about - Lists information about this Python Terminal.")
-        print("restart - Restarts PyTerm. Legendary.")
-        print("shutdown - Shuts down the terminal.")
-        print("madlibs - A little fun mad libs.")
-        print("(BROKEN UNTIL BETA 4) setup - Sets up Python Terminal for you")
-        print("notes - Launches the notes program")
-        print("ascii - ASCII Art")
-        print("farmstate - Prints out a poem about State Farm")
-        print("poem - Prints out a Python poem")
-        print("textadventure - You venture into Shia's forest. It doesn't end well.")
-        print("salesbuster - Launches you into a great game called Sales Buster.")
-        print("uptime - Best way to check your uptime of PyTerm.")
-        print("(COMING IN BETA 4) securenotes - Notes, but somewhat more secure.")
-        print("(COMING IN BETA 4) lock - Locks PyTerm.")
-        print("(COMING IN BETA 5) reset - Resets PyTerm.")
-        print("(COMING IN BETA 5) whattypeofbuildisthisbuildofpyterm - ")
-        print("--- Diagnostic Tools --- ")
-        print("(COMING IN BETA 3) varcheck - Checks all the variables in PyTerm. Quick note: It's A LOT of variables.")
-        print("(COMING IN BETA 3) vercheck - Lists all program versions that are included with PyTerm.")
-        print("ping - I'm pretty sure this tool helps you fix network issues. Not sure honestly.")
+        print("--- Normal Programs ---")
+        print("help | Lists this command.")
+        print("restart | Restarts PyTerm.")
+        print("alwayssave | What's up with the weird programs?")
+        print("uptime | See your glorious amount of uptime for PyTerm.")
+        print("ascii | ASCII image.")
+        print("clock | Tick, tock. Goes the clock.")
+        print("timer | It's a timer.")
+        print("stopwatch | It's a stopwatch.")
+        print("notes | Taking notes in a terminal is fun!")
+        print("poem | Poem.")
+        print("about | About PyTerm.")
+        print("setup | Setup PyTerm for you. (broken until Beta 6)")
+        print("shutdown | *Windows XP Shutdown Sound Plays*")
+        print("madlibs | Because libs are pretty mad!")
+        print("textadventure | Adventure with text.")
+        print("cpubench | Benchmark your CPU. It's better than the old one.")
+        print("oldcpubench | pygame.init(), pygame.quit()")
+        print("oldprograms | Run some old programs, with a 99% chance of crash.")
+        print("--- Diagnostic Programs ---")
+        print("ping | A simple ping application to fix internet issues. ;)")
+        print("vercheck | Checking versions has never been so much fun.")
+        print("sysinfo | Checking system information has never been so much fun.")
         cmd = ""
+        continue
+    elif cmd == "update":
+        print(round(time.time() - entireload,4), "| Launching program: PyTerm Update (version " + update_ver + ")")
+        print("")
+        cmd = ""
+        print("Importing necessary libraries...0%")
+        try:
+            import urllib.request
+        except ImportError:
+            print("Failed to import necessary libraries. Please install urllib.request to run this program.")
+            continue
+        print("Importing necessary libraries...50%")
+        try:
+            import shutil
+        except ImportError:
+            print("Failed to import necessary libraries. Please install shutil to run this program.")
+        print("Checking for updates. This should take just a few seconds (even on dial-up!)")
+        if buildtype == "indev":
+            print("The updater cannot be run on indev builds.")
+            print("Sorry!")
+            continue
+        elif buildtype == "beta":
+            with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/betacheck.txt') as update_response, open('assets//update//bn.txt', 'wb') as update_out_file:
+                try:
+                    shutil.copyfileobj(update_response, update_out_file)
+                except socket.gaierror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 46: Socket Error")
+                    continue
+                except urllib.error.URLerror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 47: URL Error")
+                    continue
+            with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/betalatest.txt') as update_response, open('assets//update//bv.txt', 'wb') as update_out_file:
+                try:
+                    shutil.copyfileobj(update_response, update_out_file)
+                except socket.gaierror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 46: Socket Error")
+                    continue
+                except urllib.error.URLerror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 47: URL Error")
+                    continue
+            update_1 = open('assets//update//bn.txt')
+            update_bn = update_1.read()
+            update_bn = float(update_bn)
+            update_2 = open('assets//update//bv.txt')
+            update_bv = update_2.read()
+            if update_bn > buildnumber:
+                print("An update for PyTerm is available!")
+                print("You're running version " + clean_ver + ", while the latest version is " + update_bv + ".")
+                continue
+            if update_bn <= buildnumber:
+                print("You're running the latest version of PyTerm.")
+                print("You're running version " + clean_ver + ", and the server reports the latest version is " + update_bv + ".")
+                continue
+            else:
+                print("Shucks. Something happened when comparing build nubers.")
+                print("Please try again, or submit a bug report to GitHub (github.com/o355/pyterm).")
+                continue
+        elif buildtype == "stable":
+            with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/stablecheck.txt') as update_response, open('assets//update//bn.txt', 'wb') as update_out_file:
+                try:
+                    shutil.copyfileobj(update_response, update_out_file)
+                except socket.gaierror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 46: Socket Error")
+                    continue
+                except urllib.error.URLerror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 47: URL Error")
+                    continue
+            with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/betalatest.txt') as update_response, open('assets//update//bv.txt', 'wb') as update_out_file:
+                try:
+                    shutil.copyfileobj(update_response, update_out_file)
+                except socket.gaierror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 46: Socket Error")
+                    continue
+                except urllib.error.URLerror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 47: URL Error")
+                    continue
+            update_1 = open('assets//update//bn.txt')
+            update_bn = update_1.read()
+            update_bn = float(update_bn)
+            update_2 = open('assets//update//bv.txt')
+            update_bv = update_2.read()
+            if update_bn > buildnumber:
+                print("An update for PyTerm is available!")
+                print("You're running version " + clean_ver + ", while the latest version is " + update_bv + ".")
+                continue
+            if update_bn <= buildnumber:
+                print("You're running the latest version of PyTerm.")
+                print("You're running version " + clean_ver + ", and the server reports the latest version is " + update_bv + ".")
+                continue
+            else:
+                print("Shucks. Something happened when comparing build nubers.")
+                print("Please try again, or submit a bug report to GitHub (github.com/o355/pyterm).")
+                continue
+            continue
+        elif buildtype == "lts":
+            with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/ltscheck.txt') as update_response, open('assets//update//bn.txt', 'wb') as update_out_file:
+                try:
+                    shutil.copyfileobj(update_response, update_out_file)
+                except socket.gaierror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 46: Socket Error")
+                    continue
+                except urllib.error.URLerror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 47: URL Error")
+                    continue
+            with urllib.request.urlopen('https://raw.githubusercontent.com/o355/pyterm/master/buildcheck/ltslatest.txt') as update_response, open('assets//update//bv.txt', 'wb') as update_out_file:
+                try:
+                    shutil.copyfileobj(update_response, update_out_file)
+                except socket.gaierror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 46: Socket Error")
+                    continue
+                except urllib.error.URLerror:
+                    print("Whoops! The internet is having troubles. Make sure you have an active internet connection, and DNS is working!")
+                    print("Error Type 47: URL Error")
+                    continue
+            update_1 = open('assets//update//bn.txt')
+            update_bn = update_1.read()
+            update_bn = float(update_bn)
+            update_2 = open('assets//update//bv.txt')
+            update_bv = update_2.read()
+            if update_bn > buildnumber:
+                print("An update for PyTerm is available!")
+                print("You're running version " + clean_ver + ", while the latest version is " + update_bv + ".")
+                continue
+            if update_bn <= buildnumber:
+                print("You're running the latest version of PyTerm.")
+                print("You're running version " + clean_ver + ", and the server reports the latest version is " + update_bv + ".")
+                continue
+            else:
+                print("Shucks. Something happened when comparing build nubers.")
+                print("Please try again, or submit a bug report to GitHub (github.com/o355/pyterm).")
+                continue
+        else:
+            print("Unknown build type.")
+        continue
+    elif cmd == "diagnosticsong":
+        print(round(time.time() - entireload,4), "| Launching program: Diagnostic Song (version " + diagnosticsong_ver + ")")
+        print("")
+        cmd = ""
+        print("The program Diagnostic Song is unsupported.")
+        print("You can find the old code in the folder:")
+        print("legacycode//diagnosticsong//")
+        print("Diagnostic Song was unsupported due to the fact that the program was mainly a joke, and was never meant to stay.")
+        print("We're sorry for any issues this may have caused.")
+        continue
+    elif cmd == "sysinfo":
+        print(round(time.time() - entireload,4), "| Launching program: System Information (version " + sysinfo_ver + ")")
+        print("")
+        cmd = ""
+        print("Predefining a few variables, this shouldn't take long.")
+        sysinfo_system = platform.system()
+        sysinfo_release = platform.release()
+        sysinfo_version = platform.version()
+        print("System information:")
+        print("Machine type: " + platform.machine())
+        print("Computer name: " + platform.node())
+        print("Processor name: " + platform.processor())
+        print("OS information: " + sysinfo_system + " " + sysinfo_release + " (version " + sysinfo_version + ")")
+        print("OS specific information:")
+        #Only tested on win32/debian (aka linux).
+        if sys.platform.startswith('linux'):
+            print(str(platform.linux_distribution(full_distrubiton_name=1)))
+            print("Key: Distribution Name, Version, ID (codename) of the version")
+            continue
+        elif sys.platform.startswith('win32'):
+            print(str(platform.win32_ver()))
+            print("Key: Release, Version, Service Pack, OS type (multi/single procesor) and Debugging Code check")
+            continue
+        elif sys.platform.startswith('darwin'):
+            print(str(platform.mac_ver()))
+            print("Key: Release, Version, Dev Stage, Non Release Version, Machine")
+            continue
+        else:
+            print("Can't get detailed information for your operating system.")
+            print("But that's pretty rad you're using an uncommon OS ;)")
+            continue
+        continue
+    elif cmd == "vercheck":
+        print(round(time.time() - entireload,4), "| Launching program: Veriable Check (version " + vercheck_ver + ")")
+        print("")
+        cmd = ""
+        print("Printing versions for all PyTerm programs...")
+        print("Help: version " + help_ver)
+        print("Restart: version " + restart_ver)
+        print("Ping: version " + ping_ver)
+        print("Always Save: version " + alwayssave_ver)
+        print("Uptime: version " + uptime_ver)
+        print("ASCII: version " + ascii_ver)
+        print("Time: version " + time_ver)
+        print("Timer: version " + timer_ver)
+        print("Sales Buster: version " + salesbuster_ver)
+        print("Notes: version " + notes_ver)
+        print("Cool Thingz: version " + coolthingz_ver)
+        print("Poem: version " + poem_ver)
+        print("About: version " + about_ver)
+        print("Farm State: version " + farmstate_ver)
+        print("Setup: version " + setup_ver)
+        print("Shut Down: version " + shutdown_ver)
+        print("Mad Libs: version " + madlibs_ver)
+        print("Text Adventure: version " + textadventure_ver)
+        print("CPU Bench: version " + cpubench_ver)
+        print("Version Check: version " + vercheck_ver)
+        print("System Information: version " + sysinfo_ver)
+        print("Diagnostic Song: version " + diagnosticsong_ver)
+        print("Clock: version " + clock_ver)
+        print("Stopwatch: version " + stopwatch_ver)
+        print("Update: version " + update_ver)
+        print("Done!")
         continue
     elif cmd == "restart":
         print(round(time.time() - entireload,4), "| Launching program: Restart (version " + restart_ver + ")")
         print("")
         print("Restarting PyTerm...")
-        #This line varies if it's a indev build/good build. Indevs will always be ipterm.py, real ones are always pterm.py.
-        #It's called: Not uploading a lot of python built-in stuff to GitHub!
-        exec(open(restart_prog).read())
+        pterm_restart()
     elif cmd == "ping":
         ping_ver = "0ms"
         print(round(time.time() - entireload,4), "| Launching program: Ping (version " + ping_ver + ")")
-        from random import randint
+        try:
+            from random import randint
+        except ImportError:
+            print("Sorry! randint isn't installed. Please install randint to run this program!")
+            continue
         print("")
         ping_score = 0
         ping_mistakes = 0
         ping_loop = False
         while not ping_loop:
-            print("Do you ping or do you pong?")
             ping_int = randint(0, 3)
-            ping_input = input("ping_input-userinput@ping-prgm-" + promptver2).lower()
+            ping_input = input("Do you ping, or do you pong? ").lower()
             if (ping_input == "ping" and ping_int == 0):
                 print("Your ball went missing.")
                 print("Your score:", ping_score)
                 break
             elif (ping_input == "ping" and ping_int == 1):
-                print("You pinged too hard.")
+                print("Hurrah! Let's keep pinging.")
                 ping_score = ping_score + 1
                 continue
             elif (ping_input == "ping" and ping_int == 2):
@@ -230,7 +537,7 @@ while not done:
         print("So, now, everything gets saved to GitHub.")
         print("I ask you to always save. In multiple locations.")
         print("Please do.")
-        print("A PSA from o355.")
+        print("A PSA from me.")
         cmd = ""
         continue
     elif cmd == "uptime":
@@ -279,27 +586,62 @@ while not done:
         print("|    /     ---------------  |")
         print("   " + version + "           ")
         print("=============================")
+        continue
     elif cmd == "time":
-        print(round(time.time() - entireload,4), "| Launching program: Current Time (version " + time_ver + ")")
+        print(round(time.time() - entireload,4), "| Launching program: Time (version " + time_ver + ")")
         print("")
-        print("Here is the current time:")
-        print(strftime("%A, %B %d, %Y, %I:%M:%S %p"))
         cmd = ""
+        print("CLOCK HAS REPLACED TIME. PLEASE USE THE CLOCK PROGRAM!")
+        print("")
+        print("The program Time is unsupported.")
+        print("You can find the old code in the folder:")
+        print("legacycode//time//")
+        print("Time was unsupported as it was merged with Clock.")
+        print("We're sorry for any issues this may have caused.")
+        continue
+    elif cmd == "clock":
+        print(round(time.time() - entireload,4), "| Launching program: Clock (version " + clock_ver + ")")
+        print("")
+        cmd = ""
+        print("Here's a lovely clock! Press Control + C to quit.")
+        try:
+            while True:
+                print(strftime("%A, %B %d, %Y, %I:%M:%S %p"), end="\r")
+        except KeyboardInterrupt:
+            print("")
+            print("Quitting clock...")
+            print("")
+            continue
+        continue
+    elif cmd == "stopwatch":
+        print(round(time.time() - entireload,4), "| Launching program: Stopwatch (version " + stopwatch_ver + ")")
+        print("")
+        stopwatch_time = 0
+        print("Starting the stopwatch. Press Control + C to quit.")
+        try:
+            while True:
+                print("%.2f" % round(stopwatch_time,2), "seconds.", end="\r")
+                stopwatch_time = stopwatch_time + 0.010
+                time.sleep(0.010)
+        except KeyboardInterrupt:
+            print("Quitting stopwatch...")
+            print("Final stopwatch time:", "%.2f" % round(stopwatch_time,2), "seconds.")
+            continue
         continue
     elif cmd == "timer":
         print(round(time.time() - entireload,4), "| Launching program: Timer (version " + timer_ver + ")")
         print("")
         print("Welcome to Timer!")
-        print("Please input the amount of seconds you want the timer to run below. Didn't mean to open up timer? Just input 0.")
-        timer_secs = input("timer_secs-userinput@timer-prgm-" + promptver2)
+        print("Please input the amount of seconds (up to 1 decimal place) you want the timer to run below. Didn't mean to open up timer? Just input 0.")
+        timer_secs = input("Input: ")
         timer_secs = float(timer_secs)
-        print("Starting timer. Timer will display how many seconds are left every 1 second.")
+        print("Starting timer. Timer will display how many seconds are left every 0.1 seconds.")
         timer_loop = False
         while not timer_loop:
             if timer_secs > 0:
-                print(round(timer_secs, 1), "seconds remain.")
-                timer_secs = timer_secs - 1
-                time.sleep(1)
+                print(round(timer_secs, 2), "seconds remain.", end="\r")
+                timer_secs = timer_secs - 0.1
+                time.sleep(0.1)
                 continue
             else:
                 print("Beep boop beep! Timer is up.")
@@ -309,16 +651,17 @@ while not done:
         print("")
         print("The program Sales Buster is unsupported.")
         print("You can find the old code in the folder:")
-        print("legacycode\\salesbuster\\")
+        print("legacycode//salesbuster//")
         print("Sales Buster was unsupported due to the lack of remaining knowledge on PyGame.")
         print("We're sorry for any issues this may have caused.")
         continue
     elif cmd == "coolthingz":
         print(round(time.time() - entireload,4), "| Launching program - Coolthingz (version " + coolthingz_ver + ")")
         print("")
+        print("Fun fact: PyTerm (What was first known to be Gaming Terminal) was founded at a tech camp.")
         print("Fun fact: I made the entire base for PyTerm (basically the initial games and commands, and the style for how extra commands/games would be added) in around a day, 4-5 hours. The instructor was VERY impressed.")
         print("Fun fact: I think my instructor got pissed at me for going ham on my project")
-        print("Fun fact: Python has been the only language I've gone after, and for one reason: It's simple. REALLY simple. $750 well paid.")
+        print("Fun fact: Python has been the only language I've gone after, and for one reason: It's simple. REALLY simple. 3 figures well paid.")
         print("Fun fact: I took a Unity and Java class later. Java is complex, and I don't know if I forgot Unity")
         print("Fun fact: Out of the 3 weeks that I scheduled for tech camp, I thought Python would be the most boring, I didn't look forward to it. Well look where it got me...")
         print("Fun fact: On the last day of camp (family presentations day), a Tornado Warning was issued during family presentations, and the power went out at the college were it was at.")
@@ -326,8 +669,10 @@ while not done:
         print("Fun fact: During that tornado warning, my good friend was going to his car in the worst of it, and his umbrella flew away. He said visibility was about 10 feet.")
         print("Fun fact: PyTerm was made (and still is made) with only a basic knowledge of how Python works, and Stack Overflow. I kid you not.")
         print("Fun fact: Originally, PyTerm was going to be named Gaming Terminal, in which you would launch games from the terminal. PyTerm has 3 games, but obviously got many other functions.")
-        print("I ended up wanting to spruce up the terminal by adding some Linux-like commands, since I had a decent basic knowledge of Linux then (after my MC server switched to a VPS earlier in late April).")
+        print("I ended up wanting to spruce up the terminal by adding some Linux-like commands, since I had a decent basic knowledge of Linux then (after my MC server switched to a VPS in late April 2016).")
+        print("Fun fact: Once, the master indev build of PyTerm got corrupted. I lost a lot of progress. 8 hours, to be exact. PyTerm was 50,000 NUL NUL NULs. Such, the indev branch was created.")
         print("FYI: I don't have a Minecraft server anymore. I ask you NOT to spam my GitHub inbox with the question: What's the IP to ur MC server!!!!1???!!!")
+        print("Fun fact: The old ASCII text was made in Notepad, and then I copy & pasted the print("" suffix and "") to the ASCII text afterwards.")
         cmd = ""
         continue
     elif cmd == "notes":
@@ -335,71 +680,71 @@ while not done:
         print("")
         print("Notes has been redone now using a filesystem system. It's cool.")
         print("Welcome to Notes!")
-        ndone = False
-        while not ndone:
+        notes_done = False
+        while not notes_done:
             print("Would you like to open, edit, clear, or exit?")
-            notes_start = input("notes_start-userinput@notes-prgm-" + promptver2).lower()
+            notes_start = input("Please choose an option: ").lower()
             if notes_start == "open":
                 notes_open = False
                 while not notes_open:
                     print("Which note would you like to open? Enter a number between 1 and 10 (for note 1, note 2, etc.). Enter cancel to cancel.")
-                    notes_open_input = input("notes_open_input-userinput@notes-prgm-" + promptver2).lower()
+                    notes_open_input = input("Input: ").lower()
                     if notes_open_input == "1":
-                        notes_n1 = open('assets\\notes\\note1.txt')
+                        notes_n1 = open('assets//notes//note1.txt')
                         print("Note 1 output:")
                         print(notes_n1.read())
                         notes_n1.close()
                         break
                     elif notes_open_input == "2":
-                        notes_n2 = open('assets\\notes\\note2.txt')
+                        notes_n2 = open('assets//notes//note2.txt')
                         print("Note 2 output:")
                         print(notes_n2.read())
                         notes_n2.close()
                         break
                     elif notes_open_input == "3":
-                        notes_n3 = open('assets\\notes\\note3.txt')
+                        notes_n3 = open('assets//notes//note3.txt')
                         print("Note 3 output:")
                         print(notes_n3.read())
                         notes_n3.close()
                         break
                     elif notes_open_input == "4":
-                        notes_n4 = open('assets\\notes\\note4.txt')
+                        notes_n4 = open('assets//notes//note4.txt')
                         print("Note 4 output:")
                         print(notes_n4.read())
                         notes_n4.close()
                         break
                     elif notes_open_input == "5":
-                        notes_n5 = open('assets\\notes\\note5.txt')
+                        notes_n5 = open('assets//notes//note5.txt')
                         print("Note 5 output:")
                         print(notes_n5.read())
                         notes_n5.close()
                         break
                     elif notes_open_input == "6":
-                        notes_n6 = open('assets\\notes\\note6.txt')
+                        notes_n6 = open('assets//notes//note6.txt')
                         print("Note 6 output:")
                         print(notes_n6.read())
                         notes_n6.close()
                         break
                     elif notes_open_input == "7":
-                        notes_n7 = open('assets\\notes\\note7.txt')
+                        notes_n7 = open('assets//notes//note7.txt')
                         print("Note 7 output:")
                         print(notes_n7.read())
                         notes_n7.close()
                         break
                     elif notes_open_input == "8":
-                        notes_n8 = open('assets\\notes\\note8.txt')
+                        notes_n8 = open('assets//notes//note8.txt')
                         print("Note 8 output:")
                         print(notes_n8.read())
                         notes_n8.close()
                         break
                     elif notes_open_input == "9":
-                        notes_n9 = open('assets\\notes\\note9.txt')
+                        notes_n9 = open('assets//notes//note9.txt')
                         print("Note 9 output:")
                         print(notes_n9.read())
                         notes_n9.close()
                         break
                     elif notes_open_input == "10":
-                        notes_n10 = open('assets\\notes\\note10.txt')
+                        notes_n10 = open('assets//notes//note10.txt')
                         print("Note 10 output:")
                         print(notes_n10.read())
                         notes_n10.close()
@@ -415,9 +760,9 @@ while not done:
                 while not notes_edit:
                     # This program has to break unification, for obvious reasons. A warning is provided, don't hate. Now you will hate since I put this comment here.
                     print("Which note would you like to edit? Enter a number between 1 and 10 (for note 1, note 2, etc.). Enter cancel to cancel.")
-                    notes_edit_input = input("notes_edit_input-userinput@notes-prgm-" + promptver2).lower()
+                    notes_edit_input = input("Input: ").lower()
                     if notes_edit_input == "1":
-                        notes_n1fn = "assets\\notes\\note1.txt"
+                        notes_n1fn = "assets//notes//note1.txt"
                         print("Edit Note 1 in the empty prompt below.")
                         notes_n1write = input("")
                         with open(notes_n1fn, 'a') as out:
@@ -426,7 +771,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "2":
-                        notes_n2fn = "assets\\notes\\note2.txt"
+                        notes_n2fn = "assets//notes//note2.txt"
                         print("Edit Note 2 in the empty prompt below.")
                         notes_n2write = input("")
                         with open(notes_n2fn, 'a') as out:
@@ -435,7 +780,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "3":
-                        notes_n3fn = "assets\\notes\\note3.txt"
+                        notes_n3fn = "assets//notes//note3.txt"
                         print("Edit Note 3 in the empty prompt below.")
                         notes_n3write = input("")
                         with open(notes_n3fn, 'a') as out:
@@ -444,7 +789,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "4":
-                        notes_n4fn = "assets\\notes\\note4.txt"
+                        notes_n4fn = "assets//notes//note4.txt"
                         print("Edit Note 4 in the empty prompt below.")
                         notes_n4write = input("")
                         with open(notes_n4fn, 'a') as out:
@@ -453,7 +798,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "5":
-                        notes_n5fn = "assets\\notes\\note5.txt"
+                        notes_n5fn = "assets//notes//note5.txt"
                         print("Edit Note 5 in the empty prompt below.")
                         notes_n5write = input("")
                         with open(notes_n5fn, 'a') as out:
@@ -462,7 +807,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "6":
-                        notes_n6fn = "assets\\notes\\note6.txt"
+                        notes_n6fn = "assets//notes//note6.txt"
                         print("Edit Note 6 in the empty prompt below.")
                         notes_n6write = input("")
                         with open(notes_n6fn, 'a') as out:
@@ -471,7 +816,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "7":
-                        notes_n7fn = "assets\\notes\\note7.txt"
+                        notes_n7fn = "assets//notes//note7.txt"
                         print("Edit Note 7 in the empty prompt below.")
                         notes_n7write = input("")
                         with open(notes_n7fn, 'a') as out:
@@ -480,7 +825,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "8":
-                        notes_n8fn = "assets\\notes\\note8.txt"
+                        notes_n8fn = "assets//notes//note8.txt"
                         print("Edit Note 8 in the empty prompt below.")
                         notes_n8write = input("")
                         with open(notes_n8fn, 'a') as out:
@@ -489,7 +834,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "9":
-                        notes_n9fn = "assets\\notes\\note9.txt"
+                        notes_n9fn = "assets//notes//note9.txt"
                         print("Edit Note 9 in the empty prompt below.")
                         notes_n9write = input("")
                         with open(notes_n9fn, 'a') as out:
@@ -498,7 +843,7 @@ while not done:
                             break
                         break
                     elif notes_edit_input == "10":
-                        notes_n10fn = "assets\\notes\\note10.txt"
+                        notes_n10fn = "assets//notes//note10.txt"
                         print("Edit Note 10 in the empty prompt below.")
                         notes_n10write = input("")
                         with open(notes_n10fn, 'a') as out:
@@ -519,54 +864,54 @@ while not done:
                 print("Which note would you like to delete? Enter a number between 1 and 10 (1 for Note 1, etc.), or enter cancel to cancel.")
                 notes_clear = False
                 while not notes_clear:
-                    notes_clear_input = input("notes_clear_input-userinput@notes-prgm-" + promptver2).lower()
+                    notes_clear_input = input("Input: ").lower()
                     if notes_clear_input == "1":
-                        notes_fName1 = "assets\\notes\\note1.txt"
+                        notes_fName1 = "assets//notes//note1.txt"
                         open(notes_fName1, 'w').close()
                         print("Note 1 cleared.")
                         break
                     elif notes_clear_input == "2":
-                        notes_fName2 = "assets\\notes\\note2.txt"
+                        notes_fName2 = "assets//notes//note2.txt"
                         open(notes_fName2, 'w').close()
                         print("Note 2 cleared.")
                         break
                     elif notes_clear_input == "3":
-                        notes_fName3 = "assets\\notes\\note3.txt"
+                        notes_fName3 = "assets//notes//note3.txt"
                         open(notes_fName3, 'w').close()
                         print("Note 3 cleared.")
                         break
                     elif notes_clear_input == "4":
-                        notes_fName4 = "assets\\notes\\note4.txt"
+                        notes_fName4 = "assets//notes//note4.txt"
                         open(notes_fName4, 'w').close()
                         print("Note 4 cleared.")
                         break
                     elif notes_clear_input == "5":
-                        notes_fName5 = "assets\\notes\\note5.txt"
+                        notes_fName5 = "assets//notes//note5.txt"
                         open(notes_fName5, 'w').close()
                         print("Note 5 cleared.")
                         break
                     elif notes_clear_input == "6":
-                        notes_fName6 = "assets\\notes\\note6.txt"
+                        notes_fName6 = "assets//notes//note6.txt"
                         open(notes_fName6, 'w').close()
                         print("Note 6 cleared.")
                         break
                     elif notes_clear_input == "7":
-                        notes_fName7 = "assets\\notes\\note7.txt"
+                        notes_fName7 = "assets//notes//note7.txt"
                         open(notes_fName7, 'w').close()
                         print("Note 7 cleared.")
                         break
                     elif notes_clear_input == "8":
-                        notes_fName8 = "assets\\notes\\note8.txt"
+                        notes_fName8 = "assets//notes//note8.txt"
                         open(notes_fName8, 'w').close()
                         print("Note 8 cleared.")
                         break
                     elif notes_clear_input == "9":
-                        notes_fName9 = "assets\\notes\\note9.txt"
+                        notes_fName9 = "assets//notes//note9.txt"
                         open(notes_fName9, 'w').close()
                         print("Note 9 cleared.")
                         break
                     elif notes_clear_input == "10":
-                        notes_fName10 = "assets\\notes\\note10.txt"
+                        notes_fName10 = "assets//notes//note10.txt"
                         open(notes_fName10, 'w').close()
                         print("Note 10 cleared.")
                         break
@@ -582,29 +927,19 @@ while not done:
     elif cmd == "poem":
         print(round(time.time() - entireload,4), "| Launching program: Poem (version " + poem_ver + ")")
         print("")
-        poem_file = open('assets\\poem\\poem.txt')
+        poem_file = open('assets//poem//poem.txt')
         print(poem_file.read())
         poem_file.close()
-        continue
-    elif cmd == "update":
-        print(round(time.time() - entireload,4), "| Launching program: Update (version " + update_ver + ")")
-        print("")
-        print("You have version " + version + ", build " + build)
-        print("Built on " + build_date + "")
-        print("Automated updates are disabled.")
-        print("Check github.com/o355/pyterm for the latest updates.")
-        print("Compare your build numbers, versions, and build dates. The lower the build number, the older the version is.")
-        cmd = ""
         continue
     elif cmd == "about":
         print(round(time.time() - entireload,4), "| Launching program: About PyTerm (version " + about_ver + ")")
         print("")
-        print("  -= PyTerm =-   ")
-        print("Version " + version)
+        print("Python Terminal (PyTerm)")
+        print("Version " + aboutversion)
         print("Coded in Python 3.2 and 3.5")
         print("Build date: " + builddate)
-        print("Build number: " + build)
-        print("LTS build? " + lts_build)
+        print("Build number:", buildnumber)
+        print("Build type: " + buildtype)
         cmd = ""
         continue
     elif cmd == "farmstate":
@@ -612,7 +947,7 @@ while not done:
         print("")
         print("The program Farmstate is unsupported.")
         print("You can find the old code in the folder:")
-        print("legacycode\\farmstate")
+        print("legacycode//farmstate")
         print("We're sorry for any issues this may have caused.")
         continue
     elif cmd == "setup":
@@ -630,27 +965,23 @@ while not done:
     elif cmd == "madlibs":
         print("Launching program: Mad Libs (version " + madlibs_ver + ")")
         print("")
-        print("Starting Mad Libs.")
-        print("Loading Mad Libs")
         print_slow("\nWelcome to Mad Libs!")
-        print_slow("\nGame starting up.")
-        print("")
         print_slow("\nPlease type in a name")
-        name = input("")
+        madlibs_name = input("madlibs_name-userinput@madlibs-prgm-" + promptver2)
         print_slow("\nPlease type in a place")
-        place = input("")
+        madlibs_place = input("madlibs_place-userinput@madlibs-prgm-" + promptver2)
         print_slow("\nPlease type in a drink")
-        drink = input("")
+        madlibs_drink = input("madlibs_drink-userinput@madlibs-prgm-" + promptver2)
         print_slow("\nPlease type in a feeling")
-        feeling = input("")
+        madlibs_feeling = input("madlibs_feeling-userinput@madlibs-prgm-" + promptver2)
         print_slow("\nPlease enter a number")
-        num1 = input("")
+        madlibs_num1 = input("madlibs_num1-userinput@madlibs-prgm-" + promptver2)
         print_slow("\nPlease enter an instructor from somewhere")
-        instructor = input("")
+        madlibs_instructor = input("madlibs_instructor-userinput@madlibs-prgm-" + promptver2)
         print_slow("\nPlease enter an action you would take")
-        action = input("")
+        madlibs_action = input("")
         print_slow("\nPlease enter something you would tell another person")
-        tell = input("")
+        madlibs_tell = input("")
         print_slow("\nYour Mad Libs is finished. We're now making your Mad Libs.")
         print_slow("\nYou were with Xan. You were walking with Xan. Xan says to you: Hey, " + name + ", want to go somewhere? You say: Sure! Let's go to " + place + "! Xan says, Maybe while we are there, we should get a drink of " + drink + ". You said: That sounds " + feeling + "!")
         print_slow("\nAbout " + num1 + " hours later...")
@@ -704,7 +1035,7 @@ while not done:
                                 print("\nThis story has ended. To exit this program, PyTerm must be restarted.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             elif ta_d4 == "go right on the trail":
                                 print_slow("\nYou begin hiking. But, you keep going up and up. You realize, this isn't the right way to go.")
                                 print_slow("\nYou're running low on water and food, yet, there seems to be another trail that might go down the mountain.")
@@ -721,7 +1052,7 @@ while not done:
                                         print("\nThis story has ended. To exit this program, PyTerm must be restarted.")
                                         print("Now restarting...")
                                         time.sleep(1)
-                                        exec(open(restart_prog).read())
+                                        pterm_restart()
                                     elif ta_d5 == "take the other trail":
                                         print_slow("\nYou start taking the other trail. After 2 hours of upwards climbing, you start getting sleepy, and are very thirsty.")
                                         print_slow("\nYou decide to take a rest. Due to dehydration, you pass away in your sleep.")
@@ -730,12 +1061,12 @@ while not done:
                                         print("\nThis story has ended. To exit this program, PyTerm must be restarted.")
                                         print("Now restarting...")
                                         time.sleep(1)
-                                        exec(open(restart_prog).read())
+                                        pterm_restart()
                                     elif ta_d5 == "exit":
                                         print("Now exiting this program. To do so, PyTerm must be restarted.")
                                         print("Now restarting...")
                                         time.sleep(1)
-                                        exec(open(restart_prog).read())
+                                        pterm_restart()
                                     else:
                                         print("Not a valid option. Options are: Turn around, Take the other trail")
                                         continue
@@ -743,7 +1074,7 @@ while not done:
                                 print("Now exiting this program. To do so, PyTerm must be restarted.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             else:
                                 print("Not a valid option. Options are: Go left on the trail, Go right on the trail.")
                     elif ta_d2 == "try to meet shia labeouf":
@@ -764,7 +1095,7 @@ while not done:
                                 print("\nThis story has ended. To quit this program, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             if ta_d7 == "ask if shia has a newer trail map":
                                 print_slow("\nYou ask Shia for a newer trail map. He says that the map he gave you was the newest one.")
                                 print_slow("\nHe said that there haven't been any trails made up in the forest for 8 years.")
@@ -773,12 +1104,12 @@ while not done:
                                 print("\nThis story has ended. To quit this program, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                     elif ta_d2 == "exit":
                         print("Now exiting this program. To do so, PyTerm must be restarted.")
                         print("Now restarting...")
                         time.sleep(1)
-                        exec(open(restart_prog).read())
+                        pterm_restart()
                     else:
                         print_slow("Not a valid option. Options are: Run for your life, Try to meet Shia LaBeouf.")
 
@@ -806,7 +1137,7 @@ while not done:
                                 print("\nThis story has ended. To quit this program, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             elif ta_d6 == "go right":
                                 print_slow("\nYou start heading right on the road. After about 30 minutes. You see a sign for the trailhead you were just on.")
                                 print_slow("\nAfter a little pondering, you start heading towards where the trailhead sign goes.")
@@ -816,12 +1147,12 @@ while not done:
                                 print("\nThis story has ended. To quit this program, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             elif ta_d6 == "exit":
                                 print("\nNow exiting this program. To do so we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             else:
                                 print("Not a valid option. Options are: Go left, Go right")
                     elif ta_d3 == "try to go into the cabin":
@@ -840,7 +1171,7 @@ while not done:
                                 print("\nThis story has ended. To quit this program, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             elif ta_d8 == "quietly exit the cabin":
                                 print_slow("\nYou attempt to quietly exit the cabin. But...")
                                 print_slow("\nShia LaBeouf catches you try to exit the cabin.")
@@ -849,19 +1180,19 @@ while not done:
                                 print("\nThis story has ended. To quit this program, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             elif ta_d8 == "exit":
                                 print_slow("\nNow exiting the program. To do so, we need to restart PyTerm.")
                                 print("Now restarting...")
                                 time.sleep(1)
-                                exec(open(restart_prog).read())
+                                pterm_restart()
                             else:
                                 print_slow("\nThat's not a valid option. Options are: Try to meet with Shia LaBeouf, Quietly exit the cabin")
                     elif ta_d3 == "exit":
                         print_slow("\nNow exiting the program. To do so, we need to restart PyTerm.")
                         print("Now restarting...")
                         time.sleep(1)
-                        exec(open(restart_prog).read())
+                        pterm_restart()
                     else:
                         print("\nNot a valid option. Options are: Follow the electricity line, Try to go into the cabin.")
                         break
@@ -875,46 +1206,99 @@ while not done:
     elif cmd == "cpubench":
         print("Launching program: CPU Bench (version " + cpubench_ver + ")")
         print("")
-        cputest = 1
-        testcount = 200
-        cpubench_depwarning = ""
-        cpubench_depwarning_loop = False
-        print("DEPENDENCIES WARNING:")
-        print("CPU Bench needs these dependencies to work properly:")
-        print("PyGame")
-        print("Please ensure you have these dependencies installed to start the program!")
-        print("Would you like to start the program? Yes or No.")
-        while not cpubench_depwarning_loop:
-            cpubench_depwarning = input("cpubench_depwarning-userinput@cpubench-prgm-" + promptver2).lower()
-            if cpubench_depwarning == "yes":
-                cpubench_depwarning = ""
-                print("Welcome to CPU Bench!")
-                print("This program uses PyGame going on/off to test your CPU!")
-                print("This program performs 200 cycles of PyGame. This test can take upwards of a few minutes.")
-                print("Starting in 7 seconds...")
-                time.sleep(7)
-                cputesttime = time.time()
-
-                for x in range(1, testcount):
-
-
-                    cputesttimeind = time.time()
-                    pygame.init()
-                    pygame.quit()
-                    print("Test", x , "of 200 completed! (",time.time() - cputesttimeind,"s.)")
-
-                print("Test 200 of 200 completed!")
-                print("All tests completed!")
-                print("BASELINE - 135 seconds on an AMD A10-7300 Radeon R6")
-                print("It took", time.time() - cputesttime, "seconds to run the test.")
-                break
-            elif cpubench_depwarning == "no":
-                print("Exiting out of CPU Bench")
-                cpubench_depwarning = ""
-                break
-            else:
-                print("Invalid input! Valid inputs are: yes, no.")
-                continue
+        print("Welcome to CPU Bench.")
+        print("This test is comprised of your computer finding prime numbers.")
+        print("We can run a very short, short, normal, or long test.")
+        print("Which test would you like to run?")
+        cpubench_benchselect = input("cpubench_benchselect-userinput@cpubench-prgm-" + promptver2).lower()
+        if cpubench_benchselect == "very short":
+            cpubench_start = 0
+            cpubench_end = 10000
+            cpubench_totaltime = time.time()
+            print("Now starting...")
+            for cpubench_num in range(cpubench_start,cpubench_end + 1):
+                if cpubench_num > 1:
+                    for i in range(2,cpubench_num):
+                        if (cpubench_num % i) == 0:
+                            break
+                    else:
+                        print("Now benchmarking... Elapsed time:", round(time.time() - cpubench_totaltime,4), "seconds. Prime found:", cpubench_num, end='\r')
+            print("")
+            print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
+            print("Baselines:")
+            print("1.6416 seconds on an Intel Core i7 4650U")
+            print("0.8637 seconds on an Intel Core i5 6500")
+            print("1.1354 seconds on an Intel Core i7 3615QM")
+            print("1.2441 seconds on an Intel Pentium E5800")
+            print("3.9104 seconds on an Intel Pentium 4")
+            continue
+        elif cpubench_benchselect == "short":
+            cpubench_start = 0
+            cpubench_end = 50000
+            cpubench_totaltime = time.time()
+            print("Now starting...")
+            for cpubench_num in range(cpubench_start,cpubench_end + 1):
+                if cpubench_num > 1:
+                    for i in range(2,cpubench_num):
+                        if (cpubench_num % i) == 0:
+                            break
+                    else:
+                        print("Now benchmarking... Elapsed time:", round(time.time() - cpubench_totaltime,4), "seconds. Prime found:", cpubench_num, end='\r')
+            print("")
+            print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
+            print("Baselines:")
+            print("30.5881 seconds on an Intel Core i7 4650U")
+            print("16.9732 seconds on an Intel Core i5 6500")
+            print("22.1646 seconds on an Intel Core i7 3615QM")
+            print("24.9308 seconds on an Intel Pentium E5800")
+            print("82.9629 seconds (1 min, 22.9629 secs) on an Intel Pentium 4")
+            continue
+        elif cpubench_benchselect == "normal":
+            cpubench_start = 0
+            cpubench_end = 200000
+            cpubench_totaltime = time.time()
+            print("Now starting...")
+            for cpubench_num in range(cpubench_start,cpubench_end + 1):
+                if cpubench_num > 1:
+                    for i in range(2,cpubench_num):
+                        if (cpubench_num % i) == 0:
+                            break
+                    else:
+                        print("Now benchmarking... Elapsed time:", round(time.time() - cpubench_totaltime,4), "seconds. Prime found:", cpubench_num, end='\r')
+            print("")
+            print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
+            print("Baselines:")
+            print("?? on an Intel Core i7 4650U")
+            print("235.0407 seconds (3 mins, 55.0407 secs)on an Intel Core i5 6500")
+            print("306.5036 seconds (5 mins, 6.5036 secs) on an Intel Core i7 3615QM")
+            print("343.3961 seconds (5 mins, 43.3961 secs) on an Intel Pentium E5800")
+            print("1305.7635 seconds (21 mins, 45.7635 secs) on an Intel Pentium 4")
+            continue
+        elif cpubench_benchselect == "long":
+            cpubench_start = 0
+            cpubench_end = 500000
+            cpubench_totaltime = time.time()
+            print("Now starting...")
+            for cpubench_num in range(cpubench_start,cpubench_end + 1):
+                if cpubench_num > 1:
+                    for i in range(2,cpubench_num):
+                        if (cpubench_num % i) == 0:
+                            break
+                    else:
+                        print("Now benchmarking... Elapsed time:", round(time.time() - cpubench_totaltime,4), "seconds. Prime found:", cpubench_num, end='\r')
+            print("")
+            print("Done! The benchmark took", round(time.time() - cpubench_totaltime,4), "seconds.")
+            print("Baselines:")
+            print("1764.9318 seconds (29 mins, 24.9318 secs) on an Intel Core i7 4650U")
+            print("1392.7389 seconds (23 mins, 12.7389 secs) on an Intel Core i5 6500")
+            print("1773.7427 seconds (29 mins, 33.7427 secs) on an Intel Core i7 3615QM")
+            print("1936.0202 seconds (30 mins, 16.0202 secs) on an Intel Pentium E5800")
+            print("7558.1717 seconds (2 hrs, 5 mins, 58.1717 secs) on an Intel Pentium 4")
+            continue
+        else:
+            print("Not a valid option. Valid options are: very short, short, normal, long")
+            
+            
         
     else:
         print("Not a valid command. Type in help to list all commands.")
