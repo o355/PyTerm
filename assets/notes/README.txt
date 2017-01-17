@@ -1,3 +1,3 @@
-this is where the notes program stores files.
+This is, as you guessed, where the notes program stores it's files.
 
-also this file is mainly here for GitHub to push the folder
+Touching files is not a good idea.
