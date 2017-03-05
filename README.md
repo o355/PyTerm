@@ -1,7 +1,10 @@
+# End of Development Notice:
+PyTerm is no longer in development. I have shifted my efforts to PyWeather, and I generally don't want to work on PyTerm any more. Everything will stay as-is, including betas, indevs, etc. I'm happy to accept pull requests that fix issues, add features, etc.
+
+Thank you for your understanding! PyTerm was a huge milestone in my Python career, and the first big program I made. PyWeather is now the successor to what PyTerm was.
+
 # PyTerm (Python Terminal)
 At the basic level, PyTerm is a "terminal emulator" for Python. But not really. It includes some...other stuff.
-
-**PLEASE NOTE: PyTerm 2.0 is under development, which is a complete rewrite for PyTerm. It'll include lots of stuff, and lots of API changes. For now, if you want stability, use the LTS branch (1.15). Versioning is messed up, please blame me for that.**
 
 # Current Versions
 * Stable - 1.14 (updated a LONG time ago)
